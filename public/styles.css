@@ -294,12 +294,22 @@ button {
   text-wrap: pretty;
 }
 
+.note,
 .summary,
 .reason {
   margin: 0 0 10px;
   color: var(--muted);
   font-size: 15px;
   line-height: 1.65;
+}
+
+.note {
+  display: inline-flex;
+  width: fit-content;
+  border-radius: 999px;
+  background: var(--surface-soft);
+  padding: 4px 9px;
+  font-size: 12px;
 }
 
 .reason {

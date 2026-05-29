@@ -116,6 +116,9 @@ function renderItem(item) {
   node.querySelector(".label").textContent = item.upstreamLabel || item.angle;
   node.querySelector(".source").textContent = sourceLabel(item);
   node.querySelector("h2").textContent = item.title;
+  const note = node.querySelector(".note");
+  note.textContent = item.sourceNote || "";
+  note.hidden = !item.sourceNote;
   node.querySelector(".summary").textContent = item.summary;
   node.querySelector(".reason").textContent = item.selectionReason || item.topicReason || "";
   const link = node.querySelector(".read-link");

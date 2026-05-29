@@ -88,6 +88,7 @@ async function fetchJson(url) {
 }
 
 function normalizeKey(item) {
+  if (item.sourceType === "waytoagi" && item.id) return item.id;
   const base = item.url || item.title || "";
   return base.toLowerCase().replace(/^https?:\/\//, "").replace(/[?#].*$/, "").replace(/\W+/g, "");
 }
@@ -98,6 +99,21 @@ function cleanTitle(title) {
 
 function inferSummaryFromTitle(title) {
   return title.length > 80 ? title.slice(0, 80) : title;
+}
+
+function splitWaytoAGIDescription(description) {
+  const clean = cleanTitle(description);
+  const parts = clean.split(/(?<=[。！？!?])\s*/).filter(Boolean);
+  if (parts.length >= 2) {
+    return {
+      title: parts[0].replace(/[。！？!?]$/, ""),
+      summary: parts.slice(1).join("")
+    };
+  }
+  return {
+    title: clean.length > 42 ? `${clean.slice(0, 42)}...` : clean,
+    summary: clean
+  };
 }
 
 function classifyAngle(title, summary, sourceType) {
@@ -273,17 +289,18 @@ async function loadWaytoAGI() {
   const data = await fetchJson(config.radar.waytoagi7d);
   const updates = Array.isArray(data.updates_7d) ? data.updates_7d : [];
   return updates.map((item, index) => {
-    const title = cleanTitle(item.title);
-    const isStrongTool = /codex|claude code|cursor|mcp|cli|agent|智能体|开源|skill|工作流|自动化|开发者|画板|效率/i.test(title);
+    const parsed = splitWaytoAGIDescription(item.title);
+    const isStrongTool = /codex|claude code|cursor|mcp|cli|agent|智能体|开源|skill|工作流|自动化|开发者|画板|效率/i.test(item.title);
     return {
-      id: `waytoagi-${item.date || "unknown"}-${index}-${normalizeKey({ url: item.url, title })}`,
+      id: `waytoagi-${item.date || "unknown"}-${index}-${normalizeKey({ url: item.url, title: item.title })}`,
       sourceType: "waytoagi",
       sourceName: "WaytoAGI 7d",
-      title,
+      title: parsed.title,
       url: item.url || data.root_url,
-      summary: inferSummaryFromTitle(title),
+      summary: parsed.summary || inferSummaryFromTitle(parsed.title),
       upstreamScore: isStrongTool ? 8.8 : 7.2,
       upstreamLabel: "workflow_update",
+      sourceNote: "WaytoAGI 上游中文描述，未做事实核验",
       publishedAt: item.date ? `${item.date}T08:00:00+08:00` : data.generated_at || new Date().toISOString(),
       raw: item
     };
@@ -575,6 +592,7 @@ const merged = dedupe([...horizonItems, ...radarItems, ...waytoagiItems, ...podc
       publishedAt: item.publishedAt,
       upstreamScore: Number((item.upstreamScore || 0).toFixed(1)),
       upstreamLabel: item.upstreamLabel,
+      sourceNote: item.sourceNote || "",
       angle: classifyAngle(item.title, summary, item.sourceType),
       summary,
       topicReason: topicReason({ ...item, summary }),
@@ -582,7 +600,7 @@ const merged = dedupe([...horizonItems, ...radarItems, ...waytoagiItems, ...podc
       searchText
     };
   })
-  .filter(isAiIndustrySignal)
+  .filter((item) => item.sourceType === "horizon" || item.sourceType === "waytoagi" || isAiIndustrySignal(item))
   .map((item) => ({
     ...item,
     categoryIds: categoryIdsFor(item)
@@ -614,6 +632,22 @@ let selections = [
     "小但重要的工具、功能、开源项目和工作流变化，优先看普通技术受众会不会马上关心。",
     todayItems.filter(isPracticalSignal),
     "today_practical",
+    todayKey
+  ),
+  buildSelection(
+    "horizon_watch",
+    "Horizon 摘要观察",
+    "单独查看 Horizon 中文日报条目。这个来源通常有中文摘要、背景说明和 0-10 分，适合评估上游 AI 摘要质量。",
+    weekItems.filter((item) => item.sourceType === "horizon"),
+    "horizon_watch",
+    todayKey
+  ),
+  buildSelection(
+    "waytoagi_watch",
+    "WaytoAGI 7d 观察",
+    "单独查看 WaytoAGI 最近一周工具/工作流内容。这里显示的是上游中文描述，适合看灵感，但需要点开原文核验。",
+    weekItems.filter((item) => item.sourceType === "waytoagi"),
+    "waytoagi_watch",
     todayKey
   ),
   buildSelection(
