@@ -11,6 +11,112 @@
     {
       "name": "AI Podcast Aggregation",
       "url": "https://zacfire.github.io/newpodcastforAI/rss/filtered_podcast_rss.xml",
+      "website": "https://github.com/zacfire/newpodcastforAI",
+      "language": "zh",
+      "priority": 7.2,
+      "limit": 18,
+      "note": "开源中文 AI 播客聚合，主要覆盖国内播客里 AI 相关单集。",
+      "enabled": true
+    },
+    {
+      "name": "Dwarkesh Podcast",
+      "url": "https://api.substack.com/feed/podcast/69345.rss",
+      "website": "https://www.dwarkesh.com/podcast",
+      "language": "en",
+      "priority": 9.4,
+      "limit": 12,
+      "includeKeywords": [
+        "ai",
+        "artificial intelligence",
+        "agi",
+        "openai",
+        "anthropic",
+        "deepmind",
+        "nvidia",
+        "gpu",
+        "tpu",
+        "chip",
+        "compute",
+        "llm",
+        "alphago",
+        "reinforcement learning",
+        "automated research",
+        "robot"
+      ],
+      "note": "深度长访谈，适合人物、公司、技术路线和产业判断选题。",
+      "enabled": true
+    },
+    {
+      "name": "Latent Space",
+      "url": "https://api.substack.com/feed/podcast/1084089.rss",
+      "website": "https://www.latent.space/",
+      "language": "en",
+      "priority": 9.0,
+      "limit": 12,
+      "note": "AI Engineer 方向，适合模型、Agent、基础设施和开发者生态选题。",
+      "enabled": true
+    },
+    {
+      "name": "No Priors",
+      "url": "https://feeds.megaphone.fm/nopriors",
+      "website": "https://www.no-priors.com/",
+      "language": "en",
+      "priority": 8.6,
+      "limit": 10,
+      "note": "AI 创业、投资、产品和实验室人物访谈，适合产业判断。",
+      "enabled": true
+    },
+    {
+      "name": "The Cognitive Revolution",
+      "url": "https://feeds.megaphone.fm/RINTP3108857801",
+      "website": "https://www.cognitiverevolution.ai/",
+      "language": "en",
+      "priority": 8.8,
+      "limit": 12,
+      "note": "AI builders/researchers 深访，适合提炼行业路线和人物观点。",
+      "enabled": true
+    },
+    {
+      "name": "Practical AI",
+      "url": "https://feeds.transistor.fm/practical-ai-machine-learning-data-science-llm",
+      "website": "https://practicalai.fm/",
+      "language": "en",
+      "priority": 7.4,
+      "limit": 8,
+      "note": "偏实践和工程落地，适合工具、MLOps、Agent 工作流观察。",
+      "enabled": true
+    },
+    {
+      "name": "The TWIML AI Podcast",
+      "url": "https://feeds.megaphone.fm/MLN2155636147",
+      "website": "https://twimlai.com/podcast/twimlai/",
+      "language": "en",
+      "priority": 7.6,
+      "limit": 8,
+      "note": "机器学习与 AI 技术访谈，适合研究、工程和企业 AI 选题。",
+      "enabled": true
+    },
+    {
+      "name": "Lex Fridman Podcast",
+      "url": "https://lexfridman.com/feed/podcast/",
+      "website": "https://lexfridman.com/podcast/",
+      "language": "en",
+      "priority": 7.0,
+      "limit": 6,
+      "includeKeywords": [
+        "ai",
+        "artificial intelligence",
+        "agi",
+        "openai",
+        "deepmind",
+        "anthropic",
+        "nvidia",
+        "robot",
+        "llm",
+        "machine learning",
+        "neural network"
+      ],
+      "note": "泛科技长访谈，只保留 AI/AGI/机器人/模型相关单集。",
       "enabled": true
     }
   ],

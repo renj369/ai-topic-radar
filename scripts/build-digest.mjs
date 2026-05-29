@@ -65,21 +65,47 @@ function getContent(entry) {
   return "";
 }
 
+function getFieldValue(entry, ...keys) {
+  for (const key of keys) {
+    const value = entry?.[key];
+    if (value == null) continue;
+    if (typeof value === "string" || typeof value === "number") return String(value);
+    if (value["#text"]) return String(value["#text"]);
+    if (value["__cdata"]) return String(value["__cdata"]);
+    if (value.href) return String(value.href);
+  }
+  return "";
+}
+
+function firstValidDate(...values) {
+  for (const value of values) {
+    if (!value) continue;
+    const date = new Date(value);
+    if (!Number.isNaN(date.getTime())) return date.toISOString();
+  }
+  return new Date().toISOString();
+}
+
 async function fetchText(url) {
+  try {
+    const { stdout } = await execFileAsync("curl", ["-fsSL", "--max-time", "30", "-A", "ai-topic-radar/0.1", url], {
+      maxBuffer: 20 * 1024 * 1024
+    });
+    if (stdout) return stdout;
+  } catch {
+    // Fall through to fetch for environments where curl is unavailable.
+  }
   try {
     const res = await fetch(url, {
       headers: {
         "user-agent": "ai-topic-radar/0.1"
-      }
+      },
+      signal: AbortSignal.timeout(8000)
     });
     if (!res.ok) throw new Error(`${url} returned ${res.status}`);
     return res.text();
   } catch (error) {
-    const { stdout } = await execFileAsync("curl", ["-fsSL", "--max-time", "30", url], {
-      maxBuffer: 20 * 1024 * 1024
-    });
-    if (!stdout) throw error;
-    return stdout;
+    throw error;
   }
 }
 
@@ -89,6 +115,7 @@ async function fetchJson(url) {
 
 function normalizeKey(item) {
   if (item.sourceType === "waytoagi" && item.id) return item.id;
+  if (item.sourceType === "podcast" && item.id) return item.id;
   const base = item.url || item.title || "";
   return base.toLowerCase().replace(/^https?:\/\//, "").replace(/[?#].*$/, "").replace(/\W+/g, "");
 }
@@ -316,18 +343,39 @@ async function loadPodcasts() {
       const parsed = parser.parse(xml);
       const channel = parsed?.rss?.channel;
       const items = Array.isArray(channel?.item) ? channel.item : [channel?.item].filter(Boolean);
-      for (const item of items.slice(0, 20)) {
+      const limit = Number(feedConfig.limit || 12);
+      const keywords = (feedConfig.includeKeywords || []).map((keyword) => keyword.toLowerCase());
+      const filtered = keywords.length
+        ? items.filter((item) => {
+          const haystack = text(`${getFieldValue(item, "title")} ${getFieldValue(item, "description", "itunes:summary", "content:encoded")}`).toLowerCase();
+          return keywords.some((keyword) => haystack.includes(keyword));
+        })
+        : items;
+      for (const item of filtered.slice(0, limit)) {
+        const title = cleanTitle(getFieldValue(item, "title"));
+        const itemLink = getFieldValue(item, "link");
+        const url = itemLink || feedConfig.website || feedConfig.url;
+        const summary = text(getFieldValue(item, "description", "itunes:summary", "content:encoded")).slice(0, 360);
+        const idKey = normalizeKey({ url: itemLink || "", title: `${feedConfig.name}-${title}` });
         all.push({
-          id: `podcast-${normalizeKey({ url: item.link, title: item.title })}`,
+          id: `podcast-${idKey}`,
           sourceType: "podcast",
           sourceName: feedConfig.name,
-          title: cleanTitle(item.title),
-          url: item.link,
-          summary: text(item.description).slice(0, 180),
-          upstreamScore: 5.5,
-          upstreamLabel: "podcast",
-          publishedAt: item.pubDate ? new Date(item.pubDate).toISOString() : new Date().toISOString(),
-          raw: { feed: feedConfig.name }
+          title,
+          url,
+          summary,
+          upstreamScore: Number(feedConfig.priority || 6.5),
+          upstreamLabel: "podcast_interview",
+          sourceNote: feedConfig.language === "en"
+            ? `英文播客 RSS 简介，暂未转写核验。${feedConfig.note || ""}`.trim()
+            : `播客 RSS 简介，未做转写核验。${feedConfig.note || ""}`.trim(),
+          publishedAt: firstValidDate(item.pubDate, item.published, item.updated),
+          raw: {
+            feed: feedConfig.name,
+            feedUrl: feedConfig.url,
+            website: feedConfig.website || "",
+            language: feedConfig.language || ""
+          }
         });
       }
     } catch (error) {
@@ -400,9 +448,14 @@ function heuristicScore(item, mode, todayKey) {
   let score = Number(item.upstreamScore || 0);
   if (item.sourceType === "horizon") score += 1.1;
   if (item.sourceType === "waytoagi") score += 0.4;
+  if (item.sourceType === "podcast") score += mode.includes("podcast") ? 0.3 : 0.2;
   if (mode.includes("practical") || mode.includes("tools")) {
     if (/developer_tool|agent_workflow|curated_hotlist|workflow_update/.test(item.upstreamLabel || "")) score += 1.4;
     if (/ai_product_update/.test(item.upstreamLabel || "") && !isPracticalSignal(item)) score -= 2;
+  }
+  if (mode.includes("podcast")) {
+    if (/transcript|timestamps?|chapters?|访谈|interview|对谈|founder|ceo|researcher|engineer|scientist|deepmind|openai|anthropic|nvidia|karpathy|jensen|altman|ilya|alphago|reinforcement|黄仁勋|马斯克/.test(h)) score += 0.8;
+    if (/physics|history|economics|politics|philosophy/.test(h) && !/ai|agi|artificial intelligence|robot|llm|machine learning|nvidia/.test(h)) score -= 1.5;
   }
   if (isBigSignal(item)) score += mode.includes("briefing") || mode.includes("deep") ? 1.6 : 0.4;
   if (isPracticalSignal(item)) score += mode.includes("practical") || mode.includes("tools") ? 2.3 : 0.5;
@@ -414,6 +467,11 @@ function heuristicScore(item, mode, todayKey) {
 
 function selectionReason(item, mode) {
   const h = item.searchText || itemSearchText(item);
+  if (mode.includes("podcast")) {
+    if (/founder|ceo|researcher|engineer|scientist|karpathy|jensen|altman|ilya|黄仁勋|马斯克/.test(h)) return "人物或一线从业者访谈，适合提炼观点、路线判断和公司/人物选题。";
+    if (/agent|llm|model|模型|芯片|gpu|infra|inference|coding|mcp/.test(h)) return "围绕技术路线或工程实践，适合补充深度解读素材。";
+    return "播客线索适合先判断嘉宾和主题质量，后续可接转写稿做深挖。";
+  }
   if (mode.includes("practical") || mode.includes("tools")) {
     if (/codex|claude code|cursor|replit|mcp|cli|agent|智能体/.test(h)) return "贴近开发者/从业者工作流，容易转成实用型播报选题。";
     return "属于工具、产品或工作流变化，适合判断普通技术受众是否会立刻关心。";
@@ -442,6 +500,54 @@ function buildSelection(id, title, description, items, mode, todayKey, limit = s
     mode,
     count: ranked.length,
     items: ranked
+  };
+}
+
+function buildBalancedSelection(id, title, description, items, mode, todayKey, limit = selectionSize, perSourceLimit = 6) {
+  const ranked = items
+    .map((item) => ({
+      ...item,
+      selectionScore: heuristicScore(item, mode, todayKey),
+      selectionReason: item.modelReason || selectionReason(item, mode)
+    }))
+    .sort((a, b) => b.selectionScore - a.selectionScore || compareByUpstream(a, b));
+  const grouped = new Map();
+  for (const item of ranked) {
+    if (!grouped.has(item.sourceName)) grouped.set(item.sourceName, []);
+    grouped.get(item.sourceName).push(item);
+  }
+  const sources = Array.from(grouped.keys()).sort((a, b) => {
+    const topA = grouped.get(a)[0];
+    const topB = grouped.get(b)[0];
+    return topB.selectionScore - topA.selectionScore || compareByUpstream(topA, topB);
+  });
+  const balanced = [];
+  let round = 0;
+  while (balanced.length < limit) {
+    let added = false;
+    for (const source of sources) {
+      if (balanced.length >= limit) break;
+      if (round >= perSourceLimit) continue;
+      const item = grouped.get(source)[round];
+      if (!item) continue;
+      balanced.push(item);
+      added = true;
+    }
+    if (!added) break;
+    round += 1;
+  }
+  for (const item of ranked) {
+    if (balanced.length >= limit) break;
+    if (balanced.some((picked) => picked.id === item.id)) continue;
+    balanced.push(item);
+  }
+  return {
+    id,
+    title,
+    description,
+    mode,
+    count: balanced.length,
+    items: balanced
   };
 }
 
@@ -650,6 +756,16 @@ let selections = [
     "waytoagi_watch",
     todayKey
   ),
+  buildBalancedSelection(
+    "podcast_watch",
+    "播客访谈观察",
+    "单独查看 AI 访谈和播客线索。这里优先放高质量英文深访和少量中文聚合，后续接转写稿后可升级为深度选题库。",
+    monthItems.filter((item) => item.sourceType === "podcast"),
+    "podcast_watch",
+    todayKey,
+    selectionSize,
+    6
+  ),
   buildSelection(
     "week_deep",
     "本周深度选题",
@@ -736,7 +852,8 @@ const sourceCoverage = {
   },
   podcasts: {
     totalLoaded: podcastItems.length,
-    note: "播客源目前是补充线索，后续需要接转写稿后才能做更强的深度筛选。"
+    sourceCount: (config.podcasts || []).filter((feed) => feed.enabled).length,
+    note: "播客源已接入开源中文 AI 播客聚合与多个高质量英文官方 RSS。当前摘要主要来自 RSS 简介，后续接转写稿后才能做更强的深度筛选。"
   },
   waytoagi: {
     totalLoaded: waytoagiItems.length,
