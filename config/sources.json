@@ -20,7 +20,7 @@
     },
     {
       "name": "Dwarkesh Podcast",
-      "url": "https://api.substack.com/feed/podcast/69345.rss",
+      "url": "https://apple.dwarkesh-podcast.workers.dev/feed.rss",
       "website": "https://www.dwarkesh.com/podcast",
       "language": "en",
       "priority": 9.4,
@@ -48,7 +48,7 @@
     },
     {
       "name": "Latent Space",
-      "url": "https://api.substack.com/feed/podcast/1084089.rss",
+      "url": "https://rss.flightcast.com/vgnxzgiwwzwke85ym53fjnzu.xml",
       "website": "https://www.latent.space/",
       "language": "en",
       "priority": 9.0,

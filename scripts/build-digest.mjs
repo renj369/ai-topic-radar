@@ -343,6 +343,7 @@ async function loadPodcasts() {
       const parsed = parser.parse(xml);
       const channel = parsed?.rss?.channel;
       const items = Array.isArray(channel?.item) ? channel.item : [channel?.item].filter(Boolean);
+      if (!channel || !items.length) throw new Error("RSS feed returned no podcast items");
       const limit = Number(feedConfig.limit || 12);
       const keywords = (feedConfig.includeKeywords || []).map((keyword) => keyword.toLowerCase());
       const filtered = keywords.length
