@@ -1,0 +1,16 @@
+{
+  "name": "ai-topic-radar",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-digest.mjs",
+    "serve": "python3 -m http.server 4173 --directory public"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.8.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

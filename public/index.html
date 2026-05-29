@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111827" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="AI Radar" />
+    <title>AI Topic Radar</title>
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">AI TOPIC RADAR</p>
+          <h1>今日 AI 产业选题</h1>
+        </div>
+        <div class="status">
+          <span id="generatedAt">加载中</span>
+        </div>
+      </header>
+
+      <section class="summary-band" aria-label="今日概览">
+        <div>
+          <span class="metric-label">候选选题</span>
+          <strong id="topCount">--</strong>
+        </div>
+        <div>
+          <span class="metric-label">上游来源</span>
+          <strong id="sourceCount">--</strong>
+        </div>
+        <div>
+          <span class="metric-label">浏览模式</span>
+          <strong>摘要</strong>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="筛选">
+        <input id="searchInput" type="search" placeholder="搜索公司、模型、芯片、监管、播客" />
+        <select id="angleSelect" aria-label="按方向筛选">
+          <option value="">全部方向</option>
+        </select>
+      </section>
+
+      <section id="newsList" class="news-list" aria-live="polite"></section>
+    </main>
+
+    <template id="itemTemplate">
+      <article class="topic-card">
+        <div class="card-meta">
+          <span class="score"></span>
+          <span class="angle"></span>
+          <span class="source"></span>
+        </div>
+        <h2></h2>
+        <p class="summary"></p>
+        <p class="reason"></p>
+        <a class="read-link" target="_blank" rel="noopener noreferrer">打开原文</a>
+      </article>
+    </template>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>

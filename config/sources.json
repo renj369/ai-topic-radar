@@ -1,0 +1,38 @@
+{
+  "radar": {
+    "latest24h": "https://learnprompt.github.io/ai-news-radar/data/latest-24h.json",
+    "sourceStatus": "https://learnprompt.github.io/ai-news-radar/data/source-status.json"
+  },
+  "horizon": {
+    "feedZh": "https://thysrael.github.io/Horizon/feed-zh.xml"
+  },
+  "podcasts": [
+    {
+      "name": "AI Podcast Aggregation",
+      "url": "https://zacfire.github.io/newpodcastforAI/rss/filtered_podcast_rss.xml",
+      "enabled": true
+    }
+  ],
+  "weights": {
+    "horizon": 1.4,
+    "radar": 0,
+    "podcast": -0.8
+  },
+  "topicTags": [
+    "模型",
+    "OpenAI",
+    "Anthropic",
+    "Google",
+    "DeepMind",
+    "Meta",
+    "NVIDIA",
+    "芯片",
+    "算力",
+    "融资",
+    "监管",
+    "开源",
+    "Agent",
+    "AI 编程",
+    "播客"
+  ]
+}
