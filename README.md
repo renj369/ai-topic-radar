@@ -31,8 +31,14 @@ http://localhost:4173
 需要的只有：
 
 - 一个独立 GitHub 仓库。
-- GitHub Pages 开启 `GitHub Actions` 发布。
+- GitHub Actions 自动更新日报数据。
 - 可选：后续如果要 LLM 二次改写摘要，再在 GitHub Secrets 里放模型 API Key。
+
+注意：GitHub Free 账号的私密仓库不能发布 GitHub Pages。当前仓库保持 private，Actions 只更新 `public/data/digest.json`。如果需要手机访问网页，有三种路线：
+
+- 升级 GitHub Pro 后给这个 private repo 开 Pages。
+- 另建一个 public 展示仓库，只发布生成后的 `public/`。
+- 使用 Cloudflare Pages，源码仍保持 private。
 
 ## 下一步
 
