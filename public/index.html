@@ -28,12 +28,12 @@
           <strong id="itemCount">--</strong>
         </div>
         <div>
-          <span class="metric-label">分类频道</span>
-          <strong id="categoryCount">--</strong>
+          <span class="metric-label">精选栏目</span>
+          <strong id="selectionCount">--</strong>
         </div>
         <div>
-          <span class="metric-label">上游来源</span>
-          <strong id="sourceCount">--</strong>
+          <span class="metric-label">资料频道</span>
+          <strong id="categoryCount">--</strong>
         </div>
       </section>
 
@@ -43,6 +43,11 @@
       </section>
 
       <section id="coverage" class="coverage" aria-label="上游覆盖"></section>
+      <section class="workspace-nav" aria-label="编辑台视图">
+        <button id="selectionModeBtn" class="workspace-btn active" type="button">精选编辑台</button>
+        <button id="categoryModeBtn" class="workspace-btn" type="button">分类资料库</button>
+      </section>
+      <nav id="selectionTabs" class="category-tabs" aria-label="精选栏目"></nav>
       <nav id="categoryTabs" class="category-tabs" aria-label="分类频道"></nav>
       <section id="newsList" class="news-list" aria-live="polite"></section>
     </main>
@@ -56,6 +61,7 @@
         </div>
         <h2></h2>
         <p class="summary"></p>
+        <p class="reason"></p>
         <a class="read-link" target="_blank" rel="noopener noreferrer">打开原文</a>
       </article>
     </template>

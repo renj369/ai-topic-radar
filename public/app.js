@@ -1,17 +1,22 @@
 const state = {
   digest: null,
   query: "",
+  view: "selection",
+  selectionId: "today_briefing",
   categoryId: "deep",
   showAll: false
 };
 
 const generatedAtEl = document.getElementById("generatedAt");
 const itemCountEl = document.getElementById("itemCount");
+const selectionCountEl = document.getElementById("selectionCount");
 const categoryCountEl = document.getElementById("categoryCount");
-const sourceCountEl = document.getElementById("sourceCount");
 const searchInputEl = document.getElementById("searchInput");
 const showAllBtnEl = document.getElementById("showAllBtn");
 const coverageEl = document.getElementById("coverage");
+const selectionModeBtnEl = document.getElementById("selectionModeBtn");
+const categoryModeBtnEl = document.getElementById("categoryModeBtn");
+const selectionTabsEl = document.getElementById("selectionTabs");
 const categoryTabsEl = document.getElementById("categoryTabs");
 const newsListEl = document.getElementById("newsList");
 const itemTemplate = document.getElementById("itemTemplate");
@@ -32,6 +37,7 @@ function sourceLabel(item) {
   const map = {
     horizon: "Horizon",
     radar: "AI News Radar",
+    waytoagi: "WaytoAGI",
     podcast: "Podcast"
   };
   return `${map[item.sourceType] || item.sourceType} · ${item.sourceName}`;
@@ -48,6 +54,7 @@ function renderCoverage() {
   const rows = [
     ["AI News Radar", `${coverage.aiNewsRadar.totalLoaded} 条`, "广覆盖：模型、Agent、产品、基础设施、开发者工具、热门清单"],
     ["Horizon", `${coverage.horizon.totalLoaded} 条`, "少量高分：中文摘要、背景解释、0-10 分"],
+    ["WaytoAGI 7d", `${coverage.waytoagi.totalLoaded} 条`, "一周工具、工作流、实践内容，适合贴身影响型选题"],
     ["Podcast", `${coverage.podcasts.totalLoaded} 条`, "补充播客线索，后续接转写稿后更有价值"]
   ];
   coverageEl.innerHTML = "";
@@ -59,18 +66,43 @@ function renderCoverage() {
   }
 }
 
+function setView(view) {
+  state.view = view;
+  state.showAll = false;
+  selectionModeBtnEl.classList.toggle("active", view === "selection");
+  categoryModeBtnEl.classList.toggle("active", view === "category");
+  selectionTabsEl.hidden = view !== "selection";
+  categoryTabsEl.hidden = view !== "category";
+  showAllBtnEl.textContent = view === "selection" ? "全部精选" : "全部频道";
+  renderTabs();
+  renderList();
+}
+
 function renderTabs() {
+  selectionTabsEl.innerHTML = "";
+  for (const selection of state.digest.selections) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = `tab ${state.view === "selection" && !state.showAll && state.selectionId === selection.id ? "active" : ""}`;
+    button.textContent = `${selection.title} ${selection.count}`;
+    button.addEventListener("click", () => {
+      state.selectionId = selection.id;
+      state.showAll = false;
+      setView("selection");
+    });
+    selectionTabsEl.appendChild(button);
+  }
+
   categoryTabsEl.innerHTML = "";
   for (const category of state.digest.categories) {
     const button = document.createElement("button");
     button.type = "button";
-    button.className = `tab ${!state.showAll && state.categoryId === category.id ? "active" : ""}`;
+    button.className = `tab ${state.view === "category" && !state.showAll && state.categoryId === category.id ? "active" : ""}`;
     button.textContent = `${category.title} ${category.count}`;
     button.addEventListener("click", () => {
       state.categoryId = category.id;
       state.showAll = false;
-      renderTabs();
-      renderList();
+      setView("category");
     });
     categoryTabsEl.appendChild(button);
   }
@@ -78,11 +110,14 @@ function renderTabs() {
 
 function renderItem(item) {
   const node = itemTemplate.content.firstElementChild.cloneNode(true);
-  node.querySelector(".score").textContent = `上游 ${item.upstreamScore}/10`;
+  node.querySelector(".score").textContent = item.selectionScore != null
+    ? `选题 ${item.selectionScore}/10`
+    : `上游 ${item.upstreamScore}/10`;
   node.querySelector(".label").textContent = item.upstreamLabel || item.angle;
   node.querySelector(".source").textContent = sourceLabel(item);
   node.querySelector("h2").textContent = item.title;
   node.querySelector(".summary").textContent = item.summary;
+  node.querySelector(".reason").textContent = item.selectionReason || item.topicReason || "";
   const link = node.querySelector(".read-link");
   link.href = item.url;
   return node;
@@ -104,12 +139,12 @@ function renderCategory(category) {
 
 function renderList() {
   newsListEl.innerHTML = "";
-  const categories = state.showAll
-    ? state.digest.categories
-    : state.digest.categories.filter((category) => category.id === state.categoryId);
+  const groups = state.view === "selection"
+    ? (state.showAll ? state.digest.selections : state.digest.selections.filter((selection) => selection.id === state.selectionId))
+    : (state.showAll ? state.digest.categories : state.digest.categories.filter((category) => category.id === state.categoryId));
 
-  for (const category of categories) {
-    const section = renderCategory(category);
+  for (const group of groups) {
+    const section = renderCategory(group);
     if (section) newsListEl.appendChild(section);
   }
 
@@ -128,12 +163,11 @@ async function init() {
 
   generatedAtEl.textContent = `更新于 ${formatDate(state.digest.generatedAt)}`;
   itemCountEl.textContent = state.digest.items.length;
+  selectionCountEl.textContent = state.digest.selections.length;
   categoryCountEl.textContent = state.digest.categories.length;
-  sourceCountEl.textContent = Object.values(state.digest.sources).reduce((sum, count) => sum + Number(count || 0), 0);
 
   renderCoverage();
-  renderTabs();
-  renderList();
+  setView("selection");
 }
 
 searchInputEl.addEventListener("input", (event) => {
@@ -143,10 +177,15 @@ searchInputEl.addEventListener("input", (event) => {
 
 showAllBtnEl.addEventListener("click", () => {
   state.showAll = !state.showAll;
-  showAllBtnEl.textContent = state.showAll ? "当前频道" : "全部频道";
+  showAllBtnEl.textContent = state.showAll
+    ? (state.view === "selection" ? "当前精选" : "当前频道")
+    : (state.view === "selection" ? "全部精选" : "全部频道");
   renderTabs();
   renderList();
 });
+
+selectionModeBtnEl.addEventListener("click", () => setView("selection"));
+categoryModeBtnEl.addEventListener("click", () => setView("category"));
 
 init().catch((error) => {
   generatedAtEl.textContent = "加载失败";

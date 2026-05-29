@@ -7,7 +7,9 @@ import { XMLParser } from "fast-xml-parser";
 const rootDir = path.resolve(new URL("..", import.meta.url).pathname);
 const configPath = path.join(rootDir, "config", "sources.json");
 const outputPath = path.join(rootDir, "public", "data", "digest.json");
+const historyDir = path.join(rootDir, "public", "history");
 const execFileAsync = promisify(execFile);
+const selectionSize = 30;
 
 const parser = new XMLParser({
   ignoreAttributes: false,
@@ -17,6 +19,25 @@ const parser = new XMLParser({
 });
 
 const config = JSON.parse(await fs.readFile(configPath, "utf8"));
+
+function shanghaiDateKey(date = new Date()) {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Shanghai",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).formatToParts(date);
+  const get = (type) => parts.find((part) => part.type === type)?.value;
+  return `${get("year")}-${get("month")}-${get("day")}`;
+}
+
+function dayNumber(dateKey) {
+  return Math.floor(new Date(`${dateKey}T00:00:00Z`).getTime() / 86400000);
+}
+
+function daysAgo(dateKey, todayKey) {
+  return dayNumber(todayKey) - dayNumber(dateKey);
+}
 
 function text(value) {
   if (value == null) return "";
@@ -75,6 +96,10 @@ function cleanTitle(title) {
   return text(title).replace(/\s*⭐️?\s*\d+(\.\d+)?\/10\s*$/i, "").trim();
 }
 
+function inferSummaryFromTitle(title) {
+  return title.length > 80 ? title.slice(0, 80) : title;
+}
+
 function classifyAngle(title, summary, sourceType) {
   const haystack = `${title} ${summary}`.toLowerCase();
   if (/融资|估值|revenue|funding|valuation|ipo|收购|并购/.test(haystack)) return "资本与公司格局";
@@ -97,6 +122,12 @@ const categoryDefs = [
       if (/融资|估值|入选|榜单|活动|公示|读书会|大会报名|招聘/.test(h)) return false;
       return /model_release|agent_workflow|developer_tool|ai_tech|research_paper|infra_compute|robotics|模型|评测|benchmark|agent|coding|codex|claude code|cursor|开源|github|推理|inference|算力|芯片|机器人|world model|世界模型|平台|生态|战略|马斯克|altman|黄仁勋/.test(`${label} ${h}`);
     }
+  },
+  {
+    id: "practical",
+    title: "贴身影响与工具更新",
+    description: "小但有用的功能、工作流、开源工具和从业者会立刻想试的更新。",
+    match: (item) => isPracticalSignal(item)
   },
   {
     id: "model_eval",
@@ -160,7 +191,9 @@ function topicReason(item) {
     ? "上游已经给出较高评分，适合先看。"
     : item.sourceType === "radar"
       ? "来自 24 小时 AI 信号池，适合作为候选线索。"
-      : "播客内容适合挖观点和人物判断。";
+      : item.sourceType === "waytoagi"
+        ? "来自 WaytoAGI 7 日工具/工作流更新，适合寻找贴身影响型选题。"
+        : "播客内容适合挖观点和人物判断。";
   return `${angle}方向；${sourceBoost}`;
 }
 
@@ -172,6 +205,9 @@ function makeSummary(item) {
   }
   if (item.sourceType === "podcast") {
     return "这是一条 AI 相关播客节目线索，适合先看标题和节目简介，后续可补转写稿再判断是否值得做视频。";
+  }
+  if (item.sourceType === "waytoagi") {
+    return item.summary || "这是一条 WaytoAGI 最近 7 天工具/工作流更新，适合判断是否能转成贴近从业者的实用选题。";
   }
   return "上游源提供了这条 AI 产业线索，建议点开原文做二次确认。";
 }
@@ -188,7 +224,7 @@ function categoryIdsFor(item) {
 }
 
 function compareByUpstream(a, b) {
-  const sourcePriority = { horizon: 3, radar: 2, podcast: 1 };
+  const sourcePriority = { horizon: 4, radar: 3, waytoagi: 2, podcast: 1 };
   return b.upstreamScore - a.upstreamScore
     || (sourcePriority[b.sourceType] || 0) - (sourcePriority[a.sourceType] || 0)
     || new Date(b.publishedAt) - new Date(a.publishedAt);
@@ -231,6 +267,27 @@ async function loadRadar() {
     publishedAt: item.published_at || item.first_seen_at,
     raw: item
   }));
+}
+
+async function loadWaytoAGI() {
+  const data = await fetchJson(config.radar.waytoagi7d);
+  const updates = Array.isArray(data.updates_7d) ? data.updates_7d : [];
+  return updates.map((item, index) => {
+    const title = cleanTitle(item.title);
+    const isStrongTool = /codex|claude code|cursor|mcp|cli|agent|智能体|开源|skill|工作流|自动化|开发者|画板|效率/i.test(title);
+    return {
+      id: `waytoagi-${item.date || "unknown"}-${index}-${normalizeKey({ url: item.url, title })}`,
+      sourceType: "waytoagi",
+      sourceName: "WaytoAGI 7d",
+      title,
+      url: item.url || data.root_url,
+      summary: inferSummaryFromTitle(title),
+      upstreamScore: isStrongTool ? 8.8 : 7.2,
+      upstreamLabel: "workflow_update",
+      publishedAt: item.date ? `${item.date}T08:00:00+08:00` : data.generated_at || new Date().toISOString(),
+      raw: item
+    };
+  });
 }
 
 async function loadPodcasts() {
@@ -286,16 +343,229 @@ function dedupe(items) {
   return result;
 }
 
-const [horizonItems, radarItems, podcastItems] = await Promise.all([
+function itemSearchText(item) {
+  return `${item.title} ${item.summary || ""} ${item.sourceName} ${item.upstreamLabel || ""} ${item.raw?.ai_signals?.join(" ") || ""}`.toLowerCase();
+}
+
+function isPracticalSignal(item) {
+  const h = item.searchText || itemSearchText(item);
+  const label = item.upstreamLabel || "";
+  const practicalTerms = /codex|claude code|cursor|replit|mcp|cli|插件|开源|工具|工作流|更新|上线|指南|skill|agent|智能体|画板|自动化|效率|开发者|office|浏览器|电脑|手机|mac|ios|搜索|集成|项目|github|repo|trending/.test(h);
+  if (/developer_tool|agent_workflow|curated_hotlist|workflow_update/.test(label)) return true;
+  if (/ai_product_update|model_release/.test(label) && practicalTerms) return true;
+  return practicalTerms && !/融资|估值|营收|投资|资本|ipo/.test(h);
+}
+
+function isBigSignal(item) {
+  const h = item.searchText || itemSearchText(item);
+  return /horizon_daily_pick|model_release|research_paper|infra_compute|industry_business|openai|anthropic|claude|gpt|gemini|deepmind|nvidia|英伟达|芯片|算力|模型|世界模型|监管|政策|版权|ipo|上市|并购|收购|生态|平台|战略|马斯克|altman|黄仁勋|李飞飞/.test(`${item.upstreamLabel || ""} ${h}`);
+}
+
+function isDeepSignal(item) {
+  const h = item.searchText || itemSearchText(item);
+  if (/活动|公示|报名|招聘|课程|榜单|入选/.test(h)) return false;
+  return /model_release|research_paper|ai_tech|infra_compute|agent_workflow|developer_tool|robotics|模型|路线|架构|评测|benchmark|agent|coding|codex|claude code|cuda|世界模型|机器人|芯片|算力|平台|生态|公司|创始人|马斯克|altman|黄仁勋|李飞飞/.test(`${item.upstreamLabel || ""} ${h}`);
+}
+
+function timeDecay(item, todayKey) {
+  const age = Math.max(0, daysAgo(item.observedDate || todayKey, todayKey));
+  if (age <= 0) return 1;
+  if (age === 1) return 0.92;
+  if (age === 2) return 0.84;
+  if (age <= 4) return 0.7;
+  if (age <= 7) return 0.58;
+  if (age <= 14) return 0.42;
+  return 0.28;
+}
+
+function heuristicScore(item, mode, todayKey) {
+  const h = item.searchText || itemSearchText(item);
+  let score = Number(item.upstreamScore || 0);
+  if (item.sourceType === "horizon") score += 1.1;
+  if (item.sourceType === "waytoagi") score += 0.4;
+  if (mode.includes("practical") || mode.includes("tools")) {
+    if (/developer_tool|agent_workflow|curated_hotlist|workflow_update/.test(item.upstreamLabel || "")) score += 1.4;
+    if (/ai_product_update/.test(item.upstreamLabel || "") && !isPracticalSignal(item)) score -= 2;
+  }
+  if (isBigSignal(item)) score += mode.includes("briefing") || mode.includes("deep") ? 1.6 : 0.4;
+  if (isPracticalSignal(item)) score += mode.includes("practical") || mode.includes("tools") ? 2.3 : 0.5;
+  if (/codex|claude code|cursor|replit|mcp|cli|agent|智能体/.test(h)) score += 0.9;
+  if (/融资|估值|营收|投资|资本/.test(h) && !/ipo|上市|openai|anthropic|xai|nvidia|英伟达|马斯克/.test(h)) score -= mode.includes("deep") ? 1.2 : 0.5;
+  if (/活动|公示|报名|招聘|课程|榜单|入选/.test(h)) score -= 1.8;
+  return Number(Math.max(0, Math.min(10, score * timeDecay(item, todayKey))).toFixed(2));
+}
+
+function selectionReason(item, mode) {
+  const h = item.searchText || itemSearchText(item);
+  if (mode.includes("practical") || mode.includes("tools")) {
+    if (/codex|claude code|cursor|replit|mcp|cli|agent|智能体/.test(h)) return "贴近开发者/从业者工作流，容易转成实用型播报选题。";
+    return "属于工具、产品或工作流变化，适合判断普通技术受众是否会立刻关心。";
+  }
+  if (mode.includes("deep")) {
+    if (/世界模型|cuda|芯片|算力|agent|模型|平台|生态|战略/.test(h)) return "背后有技术路线或产业结构变化，适合延展成深度主题。";
+    return "可作为人物、公司或技术路线视频的新闻入口。";
+  }
+  if (/openai|anthropic|nvidia|英伟达|google|meta|马斯克|altman|黄仁勋/.test(h)) return "高识别度主体，容易获得播报点击与背景延展空间。";
+  return "上游评分较高，且具备当天播报的新闻钩子。";
+}
+
+function buildSelection(id, title, description, items, mode, todayKey, limit = selectionSize) {
+  const ranked = items
+    .map((item) => ({
+      ...item,
+      selectionScore: heuristicScore(item, mode, todayKey),
+      selectionReason: item.modelReason || selectionReason(item, mode)
+    }))
+    .sort((a, b) => b.selectionScore - a.selectionScore || compareByUpstream(a, b))
+    .slice(0, limit);
+  return {
+    id,
+    title,
+    description,
+    mode,
+    count: ranked.length,
+    items: ranked
+  };
+}
+
+async function readHistoryItems(todayKey) {
+  try {
+    const files = await fs.readdir(historyDir);
+    const recentFiles = files
+      .filter((file) => /^\d{4}-\d{2}-\d{2}\.json$/.test(file))
+      .filter((file) => {
+        const dateKey = file.replace(".json", "");
+        return dateKey !== todayKey && daysAgo(dateKey, todayKey) >= 0 && daysAgo(dateKey, todayKey) <= 30;
+      });
+    const snapshots = await Promise.all(recentFiles.map(async (file) => {
+      const parsed = JSON.parse(await fs.readFile(path.join(historyDir, file), "utf8"));
+      return Array.isArray(parsed.items) ? parsed.items : [];
+    }));
+    return snapshots.flat();
+  } catch {
+    return [];
+  }
+}
+
+function dedupeForHistory(items) {
+  const byKey = new Map();
+  for (const item of items) {
+    const key = normalizeKey(item);
+    const previous = byKey.get(key);
+    if (!previous || Number(item.upstreamScore || 0) > Number(previous.upstreamScore || 0)) {
+      byKey.set(key, item);
+    }
+  }
+  return Array.from(byKey.values());
+}
+
+async function maybeRerankWithModel(selection, todayKey) {
+  if (!process.env.OPENAI_API_KEY || process.env.AI_TOPIC_RERANK !== "1") {
+    return { ...selection, rerank: { method: "script", enabled: false } };
+  }
+  const candidates = selection.items.slice(0, 80).map((item) => ({
+    id: item.id,
+    title: item.title,
+    source: `${item.sourceType}/${item.sourceName}`,
+    upstreamScore: item.upstreamScore,
+    upstreamLabel: item.upstreamLabel,
+    publishedAt: item.publishedAt,
+    summary: item.summary
+  }));
+  const prompt = [
+    "你是中文 AI 自媒体选题编辑。请从候选中选出最适合的 30 条。",
+    "频道定位：AI 产业变化、技术路线、开发者工作流、人物/公司/生态深度解读。",
+    "评审时不要只看大公司，也要保留对程序员和 AI 从业者有贴身影响的小功能、小工具、开源项目。",
+    `今天日期：${todayKey}`,
+    `栏目：${selection.title}`,
+    `栏目目标：${selection.description}`,
+    "只返回 JSON：{\"picks\":[{\"id\":\"...\",\"fitScore\":0-10,\"reason\":\"中文一句话\"}]}",
+    JSON.stringify(candidates)
+  ].join("\n\n");
+
+  try {
+    const res = await fetch("https://api.openai.com/v1/responses", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        model: process.env.OPENAI_MODEL || "gpt-5.1-mini",
+        input: prompt,
+        max_output_tokens: 4000,
+        text: {
+          format: {
+            type: "json_schema",
+            name: "topic_picks",
+            schema: {
+              type: "object",
+              additionalProperties: false,
+              properties: {
+                picks: {
+                  type: "array",
+                  items: {
+                    type: "object",
+                    additionalProperties: false,
+                    properties: {
+                      id: { type: "string" },
+                      fitScore: { type: "number" },
+                      reason: { type: "string" }
+                    },
+                    required: ["id", "fitScore", "reason"]
+                  }
+                }
+              },
+              required: ["picks"]
+            },
+            strict: true
+          }
+        }
+      })
+    });
+    if (!res.ok) throw new Error(`OpenAI rerank failed: ${res.status}`);
+    const data = await res.json();
+    const rawText = data.output_text || data.output?.flatMap((part) => part.content || []).map((part) => part.text || "").join("") || "";
+    const parsed = JSON.parse(rawText);
+    const itemMap = new Map(selection.items.map((item) => [item.id, item]));
+    const picks = parsed.picks
+      .map((pick) => {
+        const item = itemMap.get(pick.id);
+        return item ? {
+          ...item,
+          selectionScore: Number(pick.fitScore || item.selectionScore || 0),
+          selectionReason: pick.reason || item.selectionReason
+        } : null;
+      })
+      .filter(Boolean)
+      .slice(0, selectionSize);
+    return {
+      ...selection,
+      count: picks.length,
+      items: picks,
+      rerank: { method: "openai", enabled: true, model: process.env.OPENAI_MODEL || "gpt-5.1-mini" }
+    };
+  } catch (error) {
+    return {
+      ...selection,
+      rerank: { method: "script", enabled: false, error: error.message }
+    };
+  }
+}
+
+const todayKey = shanghaiDateKey();
+
+const [horizonItems, radarItems, waytoagiItems, podcastItems] = await Promise.all([
   loadHorizon(),
   loadRadar(),
+  loadWaytoAGI(),
   loadPodcasts()
 ]);
 
-const merged = dedupe([...horizonItems, ...radarItems, ...podcastItems])
+const merged = dedupe([...horizonItems, ...radarItems, ...waytoagiItems, ...podcastItems])
   .map((item) => {
     const summary = makeSummary(item);
-    const searchText = `${item.title} ${summary} ${item.sourceName} ${item.raw?.ai_signals?.join(" ") || ""}`.toLowerCase();
+    const searchText = itemSearchText({ ...item, summary });
     return {
       id: item.id,
       title: item.title,
@@ -308,6 +578,7 @@ const merged = dedupe([...horizonItems, ...radarItems, ...podcastItems])
       angle: classifyAngle(item.title, summary, item.sourceType),
       summary,
       topicReason: topicReason({ ...item, summary }),
+      observedDate: todayKey,
       searchText
     };
   })
@@ -317,6 +588,61 @@ const merged = dedupe([...horizonItems, ...radarItems, ...podcastItems])
     categoryIds: categoryIdsFor(item)
   }))
   .sort(compareByUpstream);
+
+const historyItems = await readHistoryItems(todayKey);
+const rollingItems = dedupeForHistory([...merged, ...historyItems]).map((item) => ({
+  ...item,
+  searchText: item.searchText || itemSearchText(item)
+}));
+
+const todayItems = rollingItems.filter((item) => item.observedDate === todayKey);
+const weekItems = rollingItems.filter((item) => daysAgo(item.observedDate || todayKey, todayKey) <= 7);
+const monthItems = rollingItems.filter((item) => daysAgo(item.observedDate || todayKey, todayKey) <= 30);
+
+let selections = [
+  buildSelection(
+    "today_briefing",
+    "今日播报精选",
+    "今天最适合做 10-15 分钟播报的信号：既看大事件，也看能吸引技术受众的变化。",
+    todayItems.filter((item) => isBigSignal(item) || isPracticalSignal(item)),
+    "today_briefing",
+    todayKey
+  ),
+  buildSelection(
+    "today_practical",
+    "今日贴身影响",
+    "小但重要的工具、功能、开源项目和工作流变化，优先看普通技术受众会不会马上关心。",
+    todayItems.filter(isPracticalSignal),
+    "today_practical",
+    todayKey
+  ),
+  buildSelection(
+    "week_deep",
+    "本周深度选题",
+    "过去 7 天适合延展成 20 分钟人物、公司、技术路线或生态格局视频的主题。",
+    weekItems.filter(isDeepSignal),
+    "week_deep",
+    todayKey
+  ),
+  buildSelection(
+    "week_tools",
+    "本周工具爆点",
+    "过去 7 天最值得技术受众关注的工具、项目和工作流更新。",
+    weekItems.filter(isPracticalSignal),
+    "week_tools",
+    todayKey
+  ),
+  buildSelection(
+    "month_top",
+    "近30天高价值选题",
+    "滚动保留近 30 天最值得回看和沉淀的选题库存，用于补选题和月度复盘。",
+    monthItems.filter((item) => isDeepSignal(item) || isBigSignal(item) || isPracticalSignal(item)),
+    "month_top",
+    todayKey
+  )
+];
+
+selections = await Promise.all(selections.map((selection) => maybeRerankWithModel(selection, todayKey)));
 
 const generalCategory = {
   id: "general",
@@ -334,7 +660,7 @@ const categories = [...categoryDefs, generalCategory].map((category) => {
     title: category.title,
     description: category.description,
     count: items.length,
-    items: items.slice(0, 20)
+    items: items.slice(0, selectionSize)
   };
 }).filter((category) => category.count > 0);
 
@@ -358,6 +684,12 @@ for (const category of categories) {
   }
 }
 
+for (const selection of selections) {
+  for (const item of selection.items) {
+    delete item.searchText;
+  }
+}
+
 const sourceCoverage = {
   aiNewsRadar: {
     totalLoaded: radarItems.length,
@@ -371,25 +703,42 @@ const sourceCoverage = {
   podcasts: {
     totalLoaded: podcastItems.length,
     note: "播客源目前是补充线索，后续需要接转写稿后才能做更强的深度筛选。"
+  },
+  waytoagi: {
+    totalLoaded: waytoagiItems.length,
+    note: "WaytoAGI 7d 提供最近一周的 AI 工具、工作流和实践内容，适合贴身影响型选题。"
   }
 };
 
 const digest = {
   generatedAt: new Date().toISOString(),
-  title: "AI 产业选题分频道雷达",
-  description: "基于 AI News Radar、Horizon 和 AI 播客 RSS 的中文候选选题摘要。排序优先尊重上游评分。",
+  dateKey: todayKey,
+  title: "AI 产业选题编辑台",
+  description: "基于 AI News Radar、Horizon、WaytoAGI 7d 和 AI 播客 RSS 的中文候选选题摘要。默认脚本排序，可选低成本大模型评审。",
   sources: {
     horizon: horizonItems.length,
     radar: radarItems.length,
+    waytoagi: waytoagiItems.length,
     podcast: podcastItems.length
   },
   sourceCoverage,
   categoryStats,
+  selectionStats: selections.reduce((acc, selection) => {
+    acc[selection.id] = selection.count;
+    return acc;
+  }, {}),
+  selections,
   items: merged,
   categories,
-  topItems: merged.slice(0, 20)
+  topItems: merged.slice(0, selectionSize)
 };
 
 await fs.mkdir(path.dirname(outputPath), { recursive: true });
+await fs.mkdir(historyDir, { recursive: true });
 await fs.writeFile(outputPath, JSON.stringify(digest, null, 2), "utf8");
-console.log(`Generated ${digest.items.length} items across ${digest.categories.length} categories at ${outputPath}`);
+await fs.writeFile(path.join(historyDir, `${todayKey}.json`), JSON.stringify({
+  generatedAt: digest.generatedAt,
+  dateKey: todayKey,
+  items: merged
+}, null, 2), "utf8");
+console.log(`Generated ${digest.items.length} items, ${digest.selections.length} selections, ${digest.categories.length} categories at ${outputPath}`);

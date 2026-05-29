@@ -1,6 +1,7 @@
 {
   "radar": {
     "latest24h": "https://learnprompt.github.io/ai-news-radar/data/latest-24h.json",
+    "waytoagi7d": "https://learnprompt.github.io/ai-news-radar/data/waytoagi-7d.json",
     "sourceStatus": "https://learnprompt.github.io/ai-news-radar/data/source-status.json"
   },
   "horizon": {

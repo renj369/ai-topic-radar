@@ -124,7 +124,7 @@ button {
 
 .coverage {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
   margin-bottom: 14px;
 }
@@ -154,6 +154,32 @@ button {
   color: var(--muted);
   font-size: 13px;
   line-height: 1.5;
+}
+
+.workspace-nav {
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  min-width: 280px;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  margin-bottom: 12px;
+}
+
+.workspace-btn {
+  min-height: 36px;
+  border-color: transparent;
+  background: transparent;
+  cursor: pointer;
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.workspace-btn.active {
+  color: var(--text);
+  background: var(--surface);
 }
 
 .category-tabs {
@@ -268,11 +294,16 @@ button {
   text-wrap: pretty;
 }
 
-.summary {
+.summary,
+.reason {
   margin: 0 0 10px;
   color: var(--muted);
   font-size: 15px;
   line-height: 1.65;
+}
+
+.reason {
+  color: var(--warn);
 }
 
 .read-link {
@@ -323,6 +354,10 @@ button {
 
   .coverage {
     grid-template-columns: 1fr;
+  }
+
+  .workspace-nav {
+    width: 100%;
   }
 
   .category-head {
