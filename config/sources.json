@@ -13,11 +13,6 @@
       "enabled": true
     }
   ],
-  "weights": {
-    "horizon": 1.4,
-    "radar": 0,
-    "podcast": -0.8
-  },
   "topicTags": [
     "模型",
     "OpenAI",

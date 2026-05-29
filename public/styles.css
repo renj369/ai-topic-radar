@@ -99,13 +99,14 @@ h1 {
 
 .controls {
   display: grid;
-  grid-template-columns: 1fr 220px;
+  grid-template-columns: 1fr 140px;
   gap: 10px;
   margin: 18px 0;
 }
 
 input,
-select {
+select,
+button {
   min-height: 44px;
   width: 100%;
   border: 1px solid var(--border);
@@ -116,9 +117,109 @@ select {
   font: inherit;
 }
 
+.secondary-action {
+  cursor: pointer;
+  font-weight: 750;
+}
+
+.coverage {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.coverage-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 14px;
+}
+
+.coverage-card span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.coverage-card strong {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.coverage-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.category-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 2px 0 14px;
+  scrollbar-width: thin;
+}
+
+.tab {
+  width: auto;
+  flex: 0 0 auto;
+  min-height: 38px;
+  padding: 0 12px;
+  cursor: pointer;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.tab.active {
+  color: #ffffff;
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
 .news-list {
   display: grid;
-  gap: 12px;
+  gap: 18px;
+}
+
+.category-section {
+  display: grid;
+  gap: 10px;
+}
+
+.category-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: end;
+  padding-top: 4px;
+}
+
+.category-head h2 {
+  margin: 0 0 4px;
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.category-head p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.category-count {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.category-list {
+  display: grid;
+  gap: 10px;
 }
 
 .topic-card {
@@ -139,7 +240,7 @@ select {
 }
 
 .score,
-.angle,
+.label,
 .source {
   display: inline-flex;
   min-height: 24px;
@@ -155,7 +256,7 @@ select {
   font-weight: 800;
 }
 
-.angle {
+.label {
   color: var(--accent-2);
 }
 
@@ -167,16 +268,11 @@ select {
   text-wrap: pretty;
 }
 
-.summary,
-.reason {
+.summary {
   margin: 0 0 10px;
   color: var(--muted);
   font-size: 15px;
   line-height: 1.65;
-}
-
-.reason {
-  color: var(--warn);
 }
 
 .read-link {
@@ -223,6 +319,19 @@ select {
 
   .controls {
     grid-template-columns: 1fr;
+  }
+
+  .coverage {
+    grid-template-columns: 1fr;
+  }
+
+  .category-head {
+    display: block;
+  }
+
+  .category-count {
+    display: inline-block;
+    margin-top: 8px;
   }
 
   .topic-card {
