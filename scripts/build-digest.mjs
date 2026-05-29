@@ -69,6 +69,13 @@ function getFieldValue(entry, ...keys) {
   for (const key of keys) {
     const value = entry?.[key];
     if (value == null) continue;
+    if (Array.isArray(value)) {
+      const preferred = value.find((item) => item.rel === "alternate") || value[0];
+      if (typeof preferred === "string" || typeof preferred === "number") return String(preferred);
+      if (preferred?.href) return String(preferred.href);
+      if (preferred?.["#text"]) return String(preferred["#text"]);
+      continue;
+    }
     if (typeof value === "string" || typeof value === "number") return String(value);
     if (value["#text"]) return String(value["#text"]);
     if (value["__cdata"]) return String(value["__cdata"]);
@@ -122,6 +129,18 @@ function normalizeKey(item) {
 
 function cleanTitle(title) {
   return text(title).replace(/\s*⭐️?\s*\d+(\.\d+)?\/10\s*$/i, "").trim();
+}
+
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function keywordMatches(haystack, keyword) {
+  const normalized = keyword.toLowerCase();
+  if (/^[a-z0-9.+-]{1,4}$/.test(normalized)) {
+    return new RegExp(`\\b${escapeRegExp(normalized)}\\b`).test(haystack);
+  }
+  return haystack.includes(normalized);
 }
 
 function inferSummaryFromTitle(title) {
@@ -341,23 +360,28 @@ async function loadPodcasts() {
     try {
       const xml = await fetchText(feedConfig.url);
       const parsed = parser.parse(xml);
-      const channel = parsed?.rss?.channel;
-      const items = Array.isArray(channel?.item) ? channel.item : [channel?.item].filter(Boolean);
+      const channel = parsed?.rss?.channel || parsed?.feed;
+      const rawItems = parsed?.rss?.channel?.item || parsed?.feed?.entry;
+      const items = Array.isArray(rawItems) ? rawItems : [rawItems].filter(Boolean);
       if (!channel || !items.length) throw new Error("RSS feed returned no podcast items");
       const limit = Number(feedConfig.limit || 12);
       const keywords = (feedConfig.includeKeywords || []).map((keyword) => keyword.toLowerCase());
       const filtered = keywords.length
         ? items.filter((item) => {
-          const haystack = text(`${getFieldValue(item, "title")} ${getFieldValue(item, "description", "itunes:summary", "content:encoded")}`).toLowerCase();
-          return keywords.some((keyword) => haystack.includes(keyword));
+          const summaryText = getFieldValue(item, "description", "summary", "content", "itunes:summary", "content:encoded")
+            || getFieldValue(item?.["media:group"], "media:description");
+          const haystack = text(feedConfig.matchTitleOnly ? getFieldValue(item, "title") : `${getFieldValue(item, "title")} ${summaryText}`).toLowerCase();
+          return keywords.some((keyword) => keywordMatches(haystack, keyword));
         })
         : items;
       for (const item of filtered.slice(0, limit)) {
         const title = cleanTitle(getFieldValue(item, "title"));
         const itemLink = getFieldValue(item, "link");
         const url = itemLink || feedConfig.website || feedConfig.url;
-        const summary = text(getFieldValue(item, "description", "itunes:summary", "content:encoded")).slice(0, 360);
-        const idKey = normalizeKey({ url: itemLink || "", title: `${feedConfig.name}-${title}` });
+        const summaryText = getFieldValue(item, "description", "summary", "content", "itunes:summary", "content:encoded")
+          || getFieldValue(item?.["media:group"], "media:description");
+        const summary = text(summaryText).slice(0, 360);
+        const idKey = normalizeKey({ title: `${feedConfig.name}-${title}` });
         all.push({
           id: `podcast-${idKey}`,
           sourceType: "podcast",
@@ -707,7 +731,7 @@ const merged = dedupe([...horizonItems, ...radarItems, ...waytoagiItems, ...podc
       searchText
     };
   })
-  .filter((item) => item.sourceType === "horizon" || item.sourceType === "waytoagi" || isAiIndustrySignal(item))
+  .filter((item) => item.sourceType === "horizon" || item.sourceType === "waytoagi" || item.sourceType === "podcast" || isAiIndustrySignal(item))
   .map((item) => ({
     ...item,
     categoryIds: categoryIdsFor(item)

@@ -48,12 +48,12 @@
     },
     {
       "name": "Latent Space",
-      "url": "https://rss.flightcast.com/vgnxzgiwwzwke85ym53fjnzu.xml",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCxBcwypKK-W3GHd_RZ9FZrQ",
       "website": "https://www.latent.space/",
       "language": "en",
       "priority": 9.0,
       "limit": 12,
-      "note": "AI Engineer 方向，适合模型、Agent、基础设施和开发者生态选题。",
+      "note": "AI Engineer 方向的官方 YouTube/RSS，适合模型、Agent、基础设施和开发者生态选题。",
       "enabled": true
     },
     {
@@ -103,6 +103,7 @@
       "language": "en",
       "priority": 7.0,
       "limit": 6,
+      "matchTitleOnly": true,
       "includeKeywords": [
         "ai",
         "artificial intelligence",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-29T16:54:33.954Z",
+  "generatedAt": "2026-05-29T17:01:20.029Z",
   "dateKey": "2026-05-30",
   "items": [
     {
@@ -1523,7 +1523,7 @@
       ]
     },
     {
-      "id": "podcast-wwwdwarkeshcompreinerpope2",
+      "id": "podcast-dwarkeshpodcastreinerpopechipdesignfromthebottomup",
       "title": "Reiner Pope – Chip design from the bottom up",
       "url": "https://www.dwarkesh.com/p/reiner-pope-2",
       "sourceType": "podcast",
@@ -1544,7 +1544,7 @@
       ]
     },
     {
-      "id": "podcast-wwwdwarkeshcompericjang",
+      "id": "podcast-dwarkeshpodcastericjangbuildingalphagofromscratch",
       "title": "Eric Jang – Building AlphaGo from scratch",
       "url": "https://www.dwarkesh.com/p/eric-jang",
       "sourceType": "podcast",
@@ -1562,7 +1562,25 @@
       ]
     },
     {
-      "id": "podcast-wwwdwarkeshcompreinerpope",
+      "id": "podcast-dwarkeshpodcastdavidreichwhythebronzeagewasaninflectionpointinhumanevolution",
+      "title": "David Reich – Why the Bronze Age was an inflection point in human evolution",
+      "url": "https://www.dwarkesh.com/p/david-reich-2",
+      "sourceType": "podcast",
+      "sourceName": "Dwarkesh Podcast",
+      "publishedAt": "2026-05-08T16:38:22.000Z",
+      "upstreamScore": 9.4,
+      "upstreamLabel": "podcast_interview",
+      "sourceNote": "英文播客 RSS 简介，暂未转写核验。深度长访谈，适合人物、公司、技术路线和产业判断选题。",
+      "angle": "播客观点",
+      "summary": "David Reich is back. He and collaborator Ali Akbari just published a paper that overturns a long-standing consensus about human evolution — that natural selection has been dormant in our species since the agricultural revolution. By scaling ancient DNA sequencing and developing a new statistical method, they found that selection has actually sped up. Selecti",
+      "topicReason": "播客观点方向；播客内容适合挖观点和人物判断。",
+      "observedDate": "2026-05-30",
+      "categoryIds": [
+        "podcast"
+      ]
+    },
+    {
+      "id": "podcast-dwarkeshpodcastreinerpopethemathbehindhowllmsaretrainedandserved",
       "title": "Reiner Pope – The math behind how LLMs are trained and served",
       "url": "https://www.dwarkesh.com/p/reiner-pope",
       "sourceType": "podcast",
@@ -1581,7 +1599,7 @@
       ]
     },
     {
-      "id": "podcast-wwwdwarkeshcompjensenhuang",
+      "id": "podcast-dwarkeshpodcastjensenhuangtpucompetitionwhyweshouldsellchipstochinanvidiassupplychainmoat",
       "title": "Jensen Huang – TPU competition, why we should sell chips to China, & Nvidia’s supply chain moat",
       "url": "https://www.dwarkesh.com/p/jensen-huang",
       "sourceType": "podcast",
@@ -1600,7 +1618,7 @@
       ]
     },
     {
-      "id": "podcast-wwwdwarkeshcompmichaelnielsen",
+      "id": "podcast-dwarkeshpodcastmichaelnielsenhowscienceactuallyprogresses",
       "title": "Michael Nielsen – How science actually progresses",
       "url": "https://www.dwarkesh.com/p/michael-nielsen",
       "sourceType": "podcast",
@@ -1619,7 +1637,7 @@
       ]
     },
     {
-      "id": "podcast-wwwdwarkeshcompterencetao",
+      "id": "podcast-dwarkeshpodcastterencetaokeplernewtonandthetruenatureofmathematicaldiscovery",
       "title": "Terence Tao – Kepler, Newton, and the true nature of mathematical discovery",
       "url": "https://www.dwarkesh.com/p/terence-tao",
       "sourceType": "podcast",
@@ -1637,7 +1655,7 @@
       ]
     },
     {
-      "id": "podcast-wwwdwarkeshcompdylanpatel",
+      "id": "podcast-dwarkeshpodcastdylanpateldeepdiveonthe3bigbottleneckstoscalingaicompute",
       "title": "Dylan Patel — Deep dive on the 3 big bottlenecks to scaling AI compute",
       "url": "https://www.dwarkesh.com/p/dylan-patel",
       "sourceType": "podcast",
@@ -1655,7 +1673,7 @@
       ]
     },
     {
-      "id": "podcast-wwwdwarkeshcompdowanthropic",
+      "id": "podcast-dwarkeshpodcastthemostimportantquestionnobodysaskingaboutai",
       "title": "The most important question nobody's asking about AI",
       "url": "https://www.dwarkesh.com/p/dow-anthropic",
       "sourceType": "podcast",
@@ -1675,7 +1693,7 @@
       ]
     },
     {
-      "id": "podcast-wwwdwarkeshcompadapalmer",
+      "id": "podcast-dwarkeshpodcastwhyleonardowasasaboteurgutenbergwentbrokeandflorencewasweirdadapalmer",
       "title": "Why Leonardo was a saboteur, Gutenberg went broke, and Florence was weird – Ada Palmer",
       "url": "https://www.dwarkesh.com/p/ada-palmer",
       "sourceType": "podcast",
@@ -1694,7 +1712,7 @@
       ]
     },
     {
-      "id": "podcast-wwwdwarkeshcompdarioamodei2",
+      "id": "podcast-dwarkeshpodcastdarioamodeiweareneartheendoftheexponential",
       "title": "Dario Amodei — \"We are near the end of the exponential\"",
       "url": "https://www.dwarkesh.com/p/dario-amodei-2",
       "sourceType": "podcast",
@@ -1713,7 +1731,7 @@
       ]
     },
     {
-      "id": "podcast-wwwdwarkeshcompelonmusk",
+      "id": "podcast-dwarkeshpodcastelonmuskin36monthsthecheapestplacetoputaiwillbespace",
       "title": "Elon Musk — \"In 36 months, the cheapest place to put AI will be space”",
       "url": "https://www.dwarkesh.com/p/elon-musk",
       "sourceType": "podcast",
@@ -1789,6 +1807,255 @@
         "infra",
         "company_strategy",
         "capital"
+      ]
+    },
+    {
+      "id": "podcast-latentspacedevins80momentbackgroundagents7xprsendofhandheldcodingwaldenyancolemurray",
+      "title": "Devin’s 80% Moment: Background Agents, 7x PRs, & End of Hand-Held Coding — Walden Yan & Cole Murray",
+      "url": "https://www.youtube.com/watch?v=0fgJPhYcbVk",
+      "sourceType": "podcast",
+      "sourceName": "Latent Space",
+      "publishedAt": "2026-05-28T17:57:06.000Z",
+      "upstreamScore": 9,
+      "upstreamLabel": "podcast_interview",
+      "sourceNote": "英文播客 RSS 简介，暂未转写核验。AI Engineer 方向的官方 YouTube/RSS，适合模型、Agent、基础设施和开发者生态选题。",
+      "angle": "AI 编程与 Agent",
+      "summary": "From coining “context engineering” to building the infrastructure behind Devin’s 7x PR growth and jump from 16% to 80% of commits across Cognition repos, Walden Yan has had a front-row seat to the background-agent shift. In this episode, Cognition co-founder and CPO Walden Yan joins swyx alongside Cole Murray, creator of OpenInspect, to unpack why everyone i",
+      "topicReason": "AI 编程与 Agent方向；播客内容适合挖观点和人物判断。",
+      "observedDate": "2026-05-30",
+      "categoryIds": [
+        "deep",
+        "practical",
+        "agent_dev",
+        "hot_projects",
+        "podcast"
+      ]
+    },
+    {
+      "id": "podcast-latentspacethebitterlessoniscomingforproteinsalexrivesbiohub",
+      "title": "🔬 The Bitter Lesson is Coming for Proteins - Alex Rives, BioHub",
+      "url": "https://www.youtube.com/watch?v=XdevS0GSuiQ",
+      "sourceType": "podcast",
+      "sourceName": "Latent Space",
+      "publishedAt": "2026-05-27T17:32:38.000Z",
+      "upstreamScore": 9,
+      "upstreamLabel": "podcast_interview",
+      "sourceNote": "英文播客 RSS 简介，暂未转写核验。AI Engineer 方向的官方 YouTube/RSS，适合模型、Agent、基础设施和开发者生态选题。",
+      "angle": "播客观点",
+      "summary": "Editor’s note: In our first BioHub pod with Priscilla and Mark they discussed their acquisition of EvoScale, led by Alex Rives, who is now Head of Science at BioHub. With ESM-1 they trained language models on millions of protein sequences drawn from across life, with a simple “next token” objective: predict the amino acids that have been randomly masked out,",
+      "topicReason": "播客观点方向；播客内容适合挖观点和人物判断。",
+      "observedDate": "2026-05-30",
+      "categoryIds": [
+        "podcast"
+      ]
+    },
+    {
+      "id": "podcast-latentspacegooglesopenaistrategyomarsansevierogoogledeepmind",
+      "title": "⚡️ Google's Open AI Strategy — Omar Sanseviero, Google DeepMind",
+      "url": "https://www.youtube.com/watch?v=Hxlayqs-IAs",
+      "sourceType": "podcast",
+      "sourceName": "Latent Space",
+      "publishedAt": "2026-05-24T17:42:02.000Z",
+      "upstreamScore": 9,
+      "upstreamLabel": "podcast_interview",
+      "sourceNote": "英文播客 RSS 简介，暂未转写核验。AI Engineer 方向的官方 YouTube/RSS，适合模型、Agent、基础设施和开发者生态选题。",
+      "angle": "算力与芯片",
+      "summary": "We chat with GDM's Head of Developer Experience to catch up on Gemma 4, their ultra efficient open source model featuring a new transformer architecture featuring per-layer embeddings, enabling effective parameter offloading where only a fraction (e.g., 2B of 5B parameters) needs to be loaded into the GPU for fast inference, ideal for on-device use. We also ",
+      "topicReason": "算力与芯片方向；播客内容适合挖观点和人物判断。",
+      "observedDate": "2026-05-30",
+      "categoryIds": [
+        "deep",
+        "model_eval",
+        "hot_projects",
+        "infra",
+        "company_strategy",
+        "podcast"
+      ]
+    },
+    {
+      "id": "podcast-latentspacewhyyoushouldbuildsciencefictionsunilpaicloudflare",
+      "title": "⚡️ Why you should build Science Fiction — Sunil Pai, Cloudflare",
+      "url": "https://www.youtube.com/watch?v=287Q-bs_pEU",
+      "sourceType": "podcast",
+      "sourceName": "Latent Space",
+      "publishedAt": "2026-05-24T17:31:16.000Z",
+      "upstreamScore": 9,
+      "upstreamLabel": "podcast_interview",
+      "sourceNote": "英文播客 RSS 简介，暂未转写核验。AI Engineer 方向的官方 YouTube/RSS，适合模型、Agent、基础设施和开发者生态选题。",
+      "angle": "监管与风险",
+      "summary": "We sit back down with our old friend Sunil Pai, keynote speaker at AIE Europe, to discuss how Cloudflare is leveraging Durable Objects (stateful serverless programming) and Dynamic Workers to build more efficient AI agent architectures, aiming to offer a competitive alternative to platforms like Anthropic’s cloud-managed agents (0:40 - 3:36). The Future of S",
+      "topicReason": "监管与风险方向；播客内容适合挖观点和人物判断。",
+      "observedDate": "2026-05-30",
+      "categoryIds": [
+        "deep",
+        "practical",
+        "agent_dev",
+        "infra",
+        "company_strategy",
+        "policy_safety",
+        "podcast"
+      ]
+    },
+    {
+      "id": "podcast-latentspaceaiagentsneedcomputers74momgrowth850kdayrunsnewagentcloudivanburazindaytona",
+      "title": "AI Agents Need Computers: 74% MoM Growth, 850K/Day Runs, & New Agent Cloud — Ivan Burazin, Daytona",
+      "url": "https://www.youtube.com/watch?v=kaX43RRRUKY",
+      "sourceType": "podcast",
+      "sourceName": "Latent Space",
+      "publishedAt": "2026-05-21T20:50:44.000Z",
+      "upstreamScore": 9,
+      "upstreamLabel": "podcast_interview",
+      "sourceNote": "英文播客 RSS 简介，暂未转写核验。AI Engineer 方向的官方 YouTube/RSS，适合模型、Agent、基础设施和开发者生态选题。",
+      "angle": "AI 编程与 Agent",
+      "summary": "From building one of the first browser-based IDEs to trying to kill localhost for the agent era, Ivan Burazin has spent more than a decade chasing the idea that development should not depend on your local machine. In this episode, Daytona’s CEO joins swyx to explain why AI agents need more than code execution boxes: they need composable computers, stateful s",
+      "topicReason": "AI 编程与 Agent方向；播客内容适合挖观点和人物判断。",
+      "observedDate": "2026-05-30",
+      "categoryIds": [
+        "deep",
+        "practical",
+        "agent_dev",
+        "infra",
+        "company_strategy",
+        "podcast"
+      ]
+    },
+    {
+      "id": "podcast-latentspacetheagentnativecloud3musers100ksignupswkdatacentersdeathprsjakecooperrailway",
+      "title": "The Agent-Native Cloud: 3M Users, 100K Signups/Wk, Data Centers, & Death PRs — Jake Cooper, Railway",
+      "url": "https://www.youtube.com/watch?v=LzCUYNP5UTI",
+      "sourceType": "podcast",
+      "sourceName": "Latent Space",
+      "publishedAt": "2026-05-20T22:44:03.000Z",
+      "upstreamScore": 9,
+      "upstreamLabel": "podcast_interview",
+      "sourceNote": "英文播客 RSS 简介，暂未转写核验。AI Engineer 方向的官方 YouTube/RSS，适合模型、Agent、基础设施和开发者生态选题。",
+      "angle": "AI 编程与 Agent",
+      "summary": "From rebuilding Railway’s network overlay over a weekend to moving the vast majority of workloads onto its own bare metal, Jake Cooper is trying to build a new cloud for an agent-native world. In this episode, Railway’s founder and “conductor” joins swyx and Alessio to unpack why the next era of software infrastructure is not just “Heroku but newer,” what ag",
+      "topicReason": "AI 编程与 Agent方向；播客内容适合挖观点和人物判断。",
+      "observedDate": "2026-05-30",
+      "categoryIds": [
+        "deep",
+        "practical",
+        "agent_dev",
+        "infra",
+        "company_strategy",
+        "podcast"
+      ]
+    },
+    {
+      "id": "podcast-latentspacethenextwarisalreadyhereyaroslavazhnyukthefourthlawnoahsmithnoahpinion",
+      "title": "The Next War Is Already Here — Yaroslav Azhnyuk, The Fourth Law & Noah Smith, Noahpinion",
+      "url": "https://www.youtube.com/watch?v=UmCZBwsibgs",
+      "sourceType": "podcast",
+      "sourceName": "Latent Space",
+      "publishedAt": "2026-05-18T13:00:48.000Z",
+      "upstreamScore": 9,
+      "upstreamLabel": "podcast_interview",
+      "sourceNote": "英文播客 RSS 简介，暂未转写核验。AI Engineer 方向的官方 YouTube/RSS，适合模型、Agent、基础设施和开发者生态选题。",
+      "angle": "播客观点",
+      "summary": "The future of war has been evolving before our eyes in Ukraine, yet the west still plans to fight the last war. In this special episode, guest host (@noahpinion) and sit down with Yaroslav Azhnyuk (@YaroslavAzhnyuk), a serial tech founder who went from building PetCube to founding The Fourth Law, one of the world’s most advanced AI-guided drone companies. Ov",
+      "topicReason": "播客观点方向；播客内容适合挖观点和人物判断。",
+      "observedDate": "2026-05-30",
+      "categoryIds": [
+        "podcast"
+      ]
+    },
+    {
+      "id": "podcast-latentspaceinsideabridgetheailisteningto100milliondoctorvisitsabridgesjanieleechaiasawa",
+      "title": "Inside Abridge: The AI Listening to 100 Million Doctor Visits — Abridge's Janie Lee & Chai Asawa",
+      "url": "https://www.youtube.com/watch?v=vUARtyOvh5U",
+      "sourceType": "podcast",
+      "sourceName": "Latent Space",
+      "publishedAt": "2026-05-14T22:16:14.000Z",
+      "upstreamScore": 9,
+      "upstreamLabel": "podcast_interview",
+      "sourceNote": "英文播客 RSS 简介，暂未转写核验。AI Engineer 方向的官方 YouTube/RSS，适合模型、Agent、基础设施和开发者生态选题。",
+      "angle": "播客观点",
+      "summary": "Janie Lee and Chaitanya “Chai” Asawa of Abridge join us for a crossover episode with Redpoint’s Jacob Effron to dive into how Abridge is building the clinical intelligence layer for healthcare starting with ambient documentation, then expanding into clinical decision support, prior authorization, payer/provider/pharma workflows, and eventually real-time agen",
+      "topicReason": "播客观点方向；播客内容适合挖观点和人物判断。",
+      "observedDate": "2026-05-30",
+      "categoryIds": [
+        "practical",
+        "agent_dev",
+        "hot_projects",
+        "podcast"
+      ]
+    },
+    {
+      "id": "podcast-latentspaceseniordevthisgrillmepromptisgoingviralamongtopengineers",
+      "title": "Senior Dev: This \"Grill Me\" Prompt Is Going Viral Among Top Engineers",
+      "url": "https://www.youtube.com/watch?v=rlM_fAKxB3Q",
+      "sourceType": "podcast",
+      "sourceName": "Latent Space",
+      "publishedAt": "2026-05-07T20:06:38.000Z",
+      "upstreamScore": 9,
+      "upstreamLabel": "podcast_interview",
+      "sourceNote": "英文播客 RSS 简介，暂未转写核验。AI Engineer 方向的官方 YouTube/RSS，适合模型、Agent、基础设施和开发者生态选题。",
+      "angle": "监管与风险",
+      "summary": "Matt Pocock (https://aihero.dev, @mattpocockuk ) is a teacher of TypeScript and now AI Engineering. His talk + workshop at AIE Europe (@aiDotEngineer ) just crossed 1m views in 13 days - the fastest to 1m in AIE history. swyx catches up with him",
+      "topicReason": "监管与风险方向；播客内容适合挖观点和人物判断。",
+      "observedDate": "2026-05-30",
+      "categoryIds": [
+        "policy_safety",
+        "podcast"
+      ]
+    },
+    {
+      "id": "podcast-latentspacehowgpt5derivednewresultsintheoreticalphysicsandquantumgravityalexlupsascaopenai",
+      "title": "🔬How GPT‑5 derived new results in theoretical physics and quantum gravity — Alex Lupsasca, OpenAI",
+      "url": "https://www.youtube.com/watch?v=9d899Ram9Bs",
+      "sourceType": "podcast",
+      "sourceName": "Latent Space",
+      "publishedAt": "2026-05-05T19:37:25.000Z",
+      "upstreamScore": 9,
+      "upstreamLabel": "podcast_interview",
+      "sourceNote": "英文播客 RSS 简介，暂未转写核验。AI Engineer 方向的官方 YouTube/RSS，适合模型、Agent、基础设施和开发者生态选题。",
+      "angle": "播客观点",
+      "summary": "Read: - https://openai.com/index/new-result-theoretical-physics/ - https://openai.com/index/extending-single-minus-amplitudes-to-gravitons/ “When GPT5 came out, it was able to reproduce one of my best papers (that took a very long time to come up with) in 30 minutes.\" This is a big deal coming from Alex Lupsasca - he is the recipient of the 2024 New Horizons",
+      "topicReason": "播客观点方向；播客内容适合挖观点和人物判断。",
+      "observedDate": "2026-05-30",
+      "categoryIds": [
+        "company_strategy",
+        "podcast"
+      ]
+    },
+    {
+      "id": "podcast-latentspacecompetingwithchatgptandsierrabuildinga10marrcompanyyasserelsaidfounderchatbase",
+      "title": "⚡️ Competing with ChatGPT and Sierra, building a $10M ARR company — Yasser Elsaid, Founder, Chatbase",
+      "url": "https://www.youtube.com/watch?v=CSYWbbP_OkY",
+      "sourceType": "podcast",
+      "sourceName": "Latent Space",
+      "publishedAt": "2026-05-02T03:45:06.000Z",
+      "upstreamScore": 9,
+      "upstreamLabel": "podcast_interview",
+      "sourceNote": "英文播客 RSS 简介，暂未转写核验。AI Engineer 方向的官方 YouTube/RSS，适合模型、Agent、基础设施和开发者生态选题。",
+      "angle": "播客观点",
+      "summary": "Resources: https://x.com/yasser_elsaid_/status/1632401916771590144 https://x.com/yasser_elsaid_/status/1878899512443379918 https://x.com/yasser_elsaid_/status/2039038515019997210 https://x.com/yasser_elsaid_/status/1874107667758932186 https://x.com/yasser_elsaid_/status/1791258718371283202 https://x.com/chatbase/status/2028882042549596281 https://x.com/yasse",
+      "topicReason": "播客观点方向；播客内容适合挖观点和人物判断。",
+      "observedDate": "2026-05-30",
+      "categoryIds": [
+        "podcast"
+      ]
+    },
+    {
+      "id": "podcast-latentspacethe15bphysicalaicompanysimulationautonomyosneuralsim1kengineersappliedintuition",
+      "title": "The $15B Physical AI Company: Simulation, Autonomy OS, Neural Sim, & 1K Engineers—Applied Intuition",
+      "url": "https://www.youtube.com/watch?v=rv23_KcHt4s",
+      "sourceType": "podcast",
+      "sourceName": "Latent Space",
+      "publishedAt": "2026-04-27T22:56:47.000Z",
+      "upstreamScore": 9,
+      "upstreamLabel": "podcast_interview",
+      "sourceNote": "英文播客 RSS 简介，暂未转写核验。AI Engineer 方向的官方 YouTube/RSS，适合模型、Agent、基础设施和开发者生态选题。",
+      "angle": "监管与风险",
+      "summary": "From building Applied Intuition from YC-era autonomy tooling into a $15B physical AI company, Qasar Younis and Peter Ludwig have spent the last decade living through the full arc of autonomy: from simulation and data infrastructure for robotaxi companies, to operating systems for safety-critical machines, to deploying AI onto cars, trucks, mining equipment, ",
+      "topicReason": "监管与风险方向；播客内容适合挖观点和人物判断。",
+      "observedDate": "2026-05-30",
+      "categoryIds": [
+        "practical",
+        "apps",
+        "policy_safety",
+        "podcast"
       ]
     },
     {
@@ -2219,7 +2486,7 @@
       ]
     },
     {
-      "id": "podcast-wwwcognitiverevolutionaiyourbiggestleverdesigningyouraicareerformaximumimpactwith80000hoursfounderbentodd",
+      "id": "podcast-thecognitiverevolutionyourbiggestleverdesigningyouraicareerformaximumimpactwith80000hoursfounderbentodd",
       "title": "Your Biggest Lever: Designing your AI Career for Maximum Impact, with 80,000 Hours founder Ben Todd",
       "url": "https://www.cognitiverevolution.ai/your-biggest-lever-designing-your-ai-career-for-maximum-impact-with-80000-hours-founder-ben-todd/",
       "sourceType": "podcast",
@@ -2237,7 +2504,7 @@
       ]
     },
     {
-      "id": "podcast-wwwcognitiverevolutionaiallcomputeisfoodpalisadesjeffreyladishonaishutdownresistanceselfreplicationecology",
+      "id": "podcast-thecognitiverevolutionallcomputeisfoodpalisadesjeffreyladishonaishutdownresistanceselfreplicationecology",
       "title": "All Compute Is Food: Palisade's Jeffrey Ladish on AI Shutdown Resistance, Self-Replication & Ecology",
       "url": "https://www.cognitiverevolution.ai/all-compute-is-food-palisade-s-jeffrey-ladish-on-ai-shutdown-resistance-self-replication-ecology/",
       "sourceType": "podcast",
@@ -2256,7 +2523,7 @@
       ]
     },
     {
-      "id": "podcast-wwwcognitiverevolutionaithemodeleatsthescaffoldingdeepmindslogankilpatricktulseedoshion35flashomnimore",
+      "id": "podcast-thecognitiverevolutionthemodeleatsthescaffoldingdeepmindslogankilpatricktulseedoshion35flashomnimore",
       "title": "The Model Eats the Scaffolding: DeepMind's Logan Kilpatrick & Tulsee Doshi on 3.5 Flash, Omni & More",
       "url": "https://www.cognitiverevolution.ai/the-model-eats-the-scaffolding-deepmind-s-logan-kilpatrick-tulsee-doshi-on-3-5-flash-omni-more/",
       "sourceType": "podcast",
@@ -2279,7 +2546,7 @@
       ]
     },
     {
-      "id": "podcast-wwwcognitiverevolutionaithreekindsofsoftwaresurvivetaskletsandrewleeoncompetingtobeahorizontalplatform",
+      "id": "podcast-thecognitiverevolutionthreekindsofsoftwaresurvivetaskletsandrewleeoncompetingtobeahorizontalplatform",
       "title": "Three Kinds of Software Survive: Tasklet's Andrew Lee on Competing to be a Horizontal Platform",
       "url": "https://www.cognitiverevolution.ai/three-kinds-of-software-survive-tasklet-s-andrew-lee-on-competing-to-be-a-horizontal-platform/",
       "sourceType": "podcast",
@@ -2303,7 +2570,7 @@
       ]
     },
     {
-      "id": "podcast-wwwcognitiverevolutionaimillisecondstomatchcriteosadtechaithefutureofcommercewdiarmuidgilllivaralaivola",
+      "id": "podcast-thecognitiverevolutionmillisecondstomatchcriteosadtechaithefutureofcommercewdiarmuidgilllivaralaivola",
       "title": "Milliseconds to Match: Criteo's AdTech AI & the Future of Commerce w/ Diarmuid Gill & Liva Ralaivola",
       "url": "https://www.cognitiverevolution.ai/milliseconds-to-match-criteo-s-adtech-ai-the-future-of-commerce-w-diarmuid-gill-liva-ralaivola/",
       "sourceType": "podcast",
@@ -2321,7 +2588,7 @@
       ]
     },
     {
-      "id": "podcast-wwwcognitiverevolutionaidescriptisntaslopmachinelauraburkhauserontheaitoolscreatorsloveandhate",
+      "id": "podcast-thecognitiverevolutiondescriptisntaslopmachinelauraburkhauserontheaitoolscreatorsloveandhate",
       "title": "\"Descript Isn't a Slop Machine\": Laura Burkhauser on the AI Tools Creators Love and Hate",
       "url": "https://www.cognitiverevolution.ai/descript-isn-t-a-slop-machine-laura-burkhauser-on-the-ai-tools-creators-love-and-hate/",
       "sourceType": "podcast",
@@ -2341,7 +2608,7 @@
       ]
     },
     {
-      "id": "podcast-wwwcognitiverevolutionaitherlfinetuningplaybookcoreweaveskylecorbittongrporubricsenvironmentsrewardhacking",
+      "id": "podcast-thecognitiverevolutiontherlfinetuningplaybookcoreweaveskylecorbittongrporubricsenvironmentsrewardhacking",
       "title": "The RL Fine-Tuning Playbook: CoreWeave's Kyle Corbitt on GRPO, Rubrics, Environments, Reward Hacking",
       "url": "https://www.cognitiverevolution.ai/the-rl-fine-tuning-playbook-coreweave-s-kyle-corbitt-on-grpo-rubrics-environments-reward-hacking/",
       "sourceType": "podcast",
@@ -2361,7 +2628,7 @@
       ]
     },
     {
-      "id": "podcast-wwwcognitiverevolutionaiaiintheam99offsearchgpt55iscleanmodelwelfareanalysisefficientanalogcompute",
+      "id": "podcast-thecognitiverevolutionaiintheam99offsearchgpt55iscleanmodelwelfareanalysisefficientanalogcompute",
       "title": "AI in the AM: 99% off search, GPT-5.5 is \"clean\", model welfare analysis, & efficient analog compute",
       "url": "https://www.cognitiverevolution.ai/ai-in-the-am-99-off-search-gpt-5-5-is-clean-model-welfare-analysis-efficient-analog-compute/",
       "sourceType": "podcast",
@@ -2380,7 +2647,7 @@
       ]
     },
     {
-      "id": "podcast-wwwcognitiverevolutionaidoeslearningrequirefeelingcameronbergonthelatestaiconsciousnesswelfareresearch",
+      "id": "podcast-thecognitiverevolutiondoeslearningrequirefeeling",
       "title": "Does Learning Require Feeling? Cameron Berg on the latest AI Consciousness & Welfare Research",
       "url": "https://www.cognitiverevolution.ai/does-learning-require-feeling-cameron-berg-on-the-latest-ai-consciousness-welfare-research/",
       "sourceType": "podcast",
@@ -2400,7 +2667,7 @@
       ]
     },
     {
-      "id": "podcast-wwwcognitiverevolutionaivibecodinganattentionfirewallwstevenewmancreatorofthecurve",
+      "id": "podcast-thecognitiverevolutionvibecodinganattentionfirewallwstevenewmancreatorofthecurve",
       "title": "Vibe-Coding an Attention Firewall, w/ Steve Newman, creator of The Curve",
       "url": "https://www.cognitiverevolution.ai/vibe-coding-an-attention-firewall-w-steve-newman-creator-of-the-curve/",
       "sourceType": "podcast",
@@ -2422,7 +2689,7 @@
       ]
     },
     {
-      "id": "podcast-wwwcognitiverevolutionaiwelcometoaiintheamrlforeeoversightwoutnationalizationthefirstairunretailstore",
+      "id": "podcast-thecognitiverevolutionwelcometoaiintheamrlforeeoversightwoutnationalizationthefirstairunretailstore",
       "title": "Welcome to AI in the AM: RL for EE, Oversight w/out Nationalization, & the first AI-Run Retail Store",
       "url": "https://www.cognitiverevolution.ai/welcome-to-ai-in-the-am-rl-for-ee-oversight-w-out-nationalization-the-first-ai-run-retail-store/",
       "sourceType": "podcast",
@@ -2440,7 +2707,7 @@
       ]
     },
     {
-      "id": "podcast-wwwcognitiverevolutionaiitscrunchtimeajeyacotraonrsiaipoweredaisafetyworkfromthe80000hourspodcast",
+      "id": "podcast-thecognitiverevolutionitscrunchtimeajeyacotraonrsiaipoweredaisafetyworkfromthe80000hourspodcast",
       "title": "It's Crunch Time: Ajeya Cotra on RSI & AI-Powered AI Safety Work, from the 80,000 Hours Podcast",
       "url": "https://www.cognitiverevolution.ai/it-s-crunch-time-ajeya-cotra-on-rsi-ai-powered-ai-safety-work-from-the-80000-hours-podcast/",
       "sourceType": "podcast",
@@ -2868,7 +3135,7 @@
       ]
     },
     {
-      "id": "podcast-twimlaicompodcasttwimlairelationalfoundationmodelsenterprisedata",
+      "id": "podcast-thetwimlaipodcastrelationalfoundationmodelsforenterprisedatawithjureleskovec",
       "title": "Relational Foundation Models for Enterprise Data with Jure Leskovec - #768",
       "url": "https://twimlai.com/podcast/twimlai/relational-foundation-models-enterprise-data",
       "sourceType": "podcast",
@@ -2886,7 +3153,7 @@
       ]
     },
     {
-      "id": "podcast-twimlaicompodcasttwimlaihowfindagentfailuresyourevalsmiss",
+      "id": "podcast-thetwimlaipodcasthowtofindtheagentfailuresyourevalsmisswithscottclark",
       "title": "How to Find the Agent Failures Your Evals Miss with Scott Clark - #767",
       "url": "https://twimlai.com/podcast/twimlai/how-find-agent-failures-your-evals-miss",
       "sourceType": "podcast",
@@ -2909,7 +3176,7 @@
       ]
     },
     {
-      "id": "podcast-twimlaicompodcasttwimlaihowengineeraiinferencesystems",
+      "id": "podcast-thetwimlaipodcasthowtoengineeraiinferencesystemswithphilipkiely",
       "title": "How to Engineer AI Inference Systems with Philip Kiely - #766",
       "url": "https://twimlai.com/podcast/twimlai/how-engineer-ai-inference-systems",
       "sourceType": "podcast",
@@ -2931,7 +3198,7 @@
       ]
     },
     {
-      "id": "podcast-twimlaicompodcasttwimlaihowcapitalonedeliversmultiagentsystems",
+      "id": "podcast-thetwimlaipodcasthowcapitalonedeliversmultiagentsystemswithrashmishetty",
       "title": "How Capital One Delivers Multi-Agent Systems with Rashmi Shetty - #765",
       "url": "https://twimlai.com/podcast/twimlai/how-capital-one-delivers-multi-agent-systems",
       "sourceType": "podcast",
@@ -2952,7 +3219,7 @@
       ]
     },
     {
-      "id": "podcast-twimlaicompodcasttwimlairaceproductiongradediffusionllms",
+      "id": "podcast-thetwimlaipodcasttheracetoproductiongradediffusionllmswithstefanoermon",
       "title": "The Race to Production-Grade Diffusion LLMs with Stefano Ermon - #764",
       "url": "https://twimlai.com/podcast/twimlai/race-production-grade-diffusion-llms",
       "sourceType": "podcast",
@@ -2973,7 +3240,7 @@
       ]
     },
     {
-      "id": "podcast-twimlaicompodcasttwimlaiagentswarmsknowledgegraphsautonomoussoftwaredevelopment",
+      "id": "podcast-thetwimlaipodcastagentswarmsandknowledgegraphsforautonomoussoftwaredevelopmentwithsiddhantpardeshi",
       "title": "Agent Swarms and Knowledge Graphs for Autonomous Software Development with Siddhant Pardeshi - #763",
       "url": "https://twimlai.com/podcast/twimlai/agent-swarms-knowledge-graphs-autonomous-software-development",
       "sourceType": "podcast",
@@ -2994,7 +3261,7 @@
       ]
     },
     {
-      "id": "podcast-twimlaicompodcasttwimlaiaitrends2026openclawagentsreasoningllms",
+      "id": "podcast-thetwimlaipodcastaitrends2026openclawagentsreasoningllmsandmorewithsebastianraschka",
       "title": "AI Trends 2026: OpenClaw Agents, Reasoning LLMs, and More with Sebastian Raschka - #762",
       "url": "https://twimlai.com/podcast/twimlai/ai-trends-2026-openclaw-agents-reasoning-llms",
       "sourceType": "podcast",
@@ -3016,7 +3283,7 @@
       ]
     },
     {
-      "id": "podcast-twimlaicompodcasttwimlaitheevolutionofreasoninginsmalllanguagemodels",
+      "id": "podcast-thetwimlaipodcasttheevolutionofreasoninginsmalllanguagemodelswithyejinchoi",
       "title": "The Evolution of Reasoning in Small Language Models with Yejin Choi - #761",
       "url": "https://twimlai.com/podcast/twimlai/the-evolution-of-reasoning-in-small-language-models/",
       "sourceType": "podcast",
@@ -3074,7 +3341,7 @@
       ]
     },
     {
-      "id": "podcast-sharetransistorfmsd76e02d5",
+      "id": "podcast-practicalairebootingenterpriseaiwithmcpandkubernetes",
       "title": "Rebooting Enterprise AI with MCP and Kubernetes",
       "url": "https://share.transistor.fm/s/d76e02d5",
       "sourceType": "podcast",
@@ -3098,7 +3365,7 @@
       ]
     },
     {
-      "id": "podcast-sharetransistorfms451da102",
+      "id": "podcast-practicalaihermesagentagentsthatgrowwithyou",
       "title": "Hermes Agent: Agents that grow with you",
       "url": "https://share.transistor.fm/s/451da102",
       "sourceType": "podcast",
@@ -3120,7 +3387,7 @@
       ]
     },
     {
-      "id": "podcast-sharetransistorfms9ac73d0a",
+      "id": "podcast-practicalaiuscongressmanbeyeronaichallengesfacingamericaandtheworld",
       "title": "U.S. Congressman Beyer on AI challenges facing America and the World",
       "url": "https://share.transistor.fm/s/9ac73d0a",
       "sourceType": "podcast",
@@ -3138,7 +3405,7 @@
       ]
     },
     {
-      "id": "podcast-sharetransistorfms6095edc5",
+      "id": "podcast-practicalaithemythofmodelwarsopenvsclosedaiin2026",
       "title": "The Myth of Model Wars: Open vs Closed AI in 2026",
       "url": "https://share.transistor.fm/s/6095edc5",
       "sourceType": "podcast",
@@ -3157,7 +3424,7 @@
       ]
     },
     {
-      "id": "podcast-sharetransistorfmsb11bd219",
+      "id": "podcast-practicalaithemythosofmythosandallbirdstakesflighttotheneocloud",
       "title": "The mythos of Mythos and Allbirds takes flight to the neocloud",
       "url": "https://share.transistor.fm/s/b11bd219",
       "sourceType": "podcast",
@@ -3179,7 +3446,7 @@
       ]
     },
     {
-      "id": "podcast-sharetransistorfms9d157a1b",
+      "id": "podcast-practicalaiopensourceselfdrivingwithcommaai",
       "title": "Open Source Self-Driving with Comma AI",
       "url": "https://share.transistor.fm/s/9d157a1b",
       "sourceType": "podcast",
@@ -3201,7 +3468,7 @@
       ]
     },
     {
-      "id": "podcast-sharetransistorfms44e59b0b",
+      "id": "podcast-practicalaipostmortemofanthropicsclaudecodeleak",
       "title": "Post-Mortem of Anthropic's Claude Code Leak",
       "url": "https://share.transistor.fm/s/44e59b0b",
       "sourceType": "podcast",
@@ -3226,7 +3493,7 @@
       ]
     },
     {
-      "id": "podcast-sharetransistorfms7d8e0293",
+      "id": "podcast-practicalaiagenticcodingandtheeconomicsofopensource",
       "title": "Agentic Coding and the Economics of Open Source",
       "url": "https://share.transistor.fm/s/7d8e0293",
       "sourceType": "podcast",
@@ -3495,7 +3762,7 @@
       ]
     },
     {
-      "id": "podcast-wwwxiaoyuzhoufmcomepisode6a100e7da7621e15d0c88337",
+      "id": "podcast-aipodcastaggregationaiinvokoai",
       "title": "一个 AI 创始人的虚荣心、装，和愚昧之巅｜对谈 invoko.ai 创始人梦琪",
       "url": "https://www.xiaoyuzhoufm.com/episode/6a100e7da7621e15d0c88337?utm_source=rss",
       "sourceType": "podcast",
@@ -3517,7 +3784,7 @@
       ]
     },
     {
-      "id": "podcast-wwwxiaoyuzhoufmcomepisode6a059d321b7bd50295257a5e",
+      "id": "podcast-aipodcastaggregationalbert",
       "title": "当软件容易被创作，新时代的产品长什么样？ | 对谈 Albert",
       "url": "https://www.xiaoyuzhoufm.com/episode/6a059d321b7bd50295257a5e?utm_source=rss",
       "sourceType": "podcast",
@@ -3538,7 +3805,7 @@
       ]
     },
     {
-      "id": "podcast-wwwxiaoyuzhoufmcomepisode69e999241e94ae6921f2901d",
+      "id": "podcast-aipodcastaggregationagent40agentsaislockairc",
       "title": "用 Agent 动力学，和 40 个 Agents 一起为「人 + AI」做产品｜对谈 Slock.ai 创始人 RC",
       "url": "https://www.xiaoyuzhoufm.com/episode/69e999241e94ae6921f2901d?utm_source=rss",
       "sourceType": "podcast",
@@ -3561,7 +3828,7 @@
       ]
     },
     {
-      "id": "podcast-wwwxiaoyuzhoufmcomepisode69bbc8ea3c625cc5ae21b461",
+      "id": "podcast-aipodcastaggregationopenclawforteamskusejuniorcto",
       "title": "我们是如何定义 OpenClaw for Teams 新产品形态的｜对谈 Kuse&Junior 联创兼 CTO 宇豪",
       "url": "https://www.xiaoyuzhoufm.com/episode/69bbc8ea3c625cc5ae21b461?utm_source=rss",
       "sourceType": "podcast",
@@ -3582,7 +3849,7 @@
       ]
     },
     {
-      "id": "podcast-wwwxiaoyuzhoufmcomepisode69b4d2f9f8b8079bfa3ae7f2",
+      "id": "podcast-aipodcastaggregationopenclaw36sheet0",
       "title": "OpenClaw 之后，我只想未来 3-6 个月的事情｜对谈 Sheet0 创始人王文锋",
       "url": "https://www.xiaoyuzhoufm.com/episode/69b4d2f9f8b8079bfa3ae7f2?utm_source=rss",
       "sourceType": "podcast",
@@ -3602,30 +3869,7 @@
       ]
     },
     {
-      "id": "podcast-wwwxiaoyuzhoufmcomepisode69abf2cec8cdeb38c24b2038",
-      "title": "优化胜率而非赔率，把一件事做到理论上该有的样子｜对谈连续创业者 Albert",
-      "url": "https://www.xiaoyuzhoufm.com/episode/69abf2cec8cdeb38c24b2038?utm_source=rss",
-      "sourceType": "podcast",
-      "sourceName": "AI Podcast Aggregation",
-      "publishedAt": "2026-03-07T14:00:00.000Z",
-      "upstreamScore": 7.2,
-      "upstreamLabel": "podcast_interview",
-      "sourceNote": "播客 RSS 简介，未做转写核验。开源中文 AI 播客聚合，主要覆盖国内播客里 AI 相关单集。",
-      "angle": "AI 编程与 Agent",
-      "summary": "我们又请来了 Albert。 他是我认识的最 sharp 的人之一。 过去三年，他一直在从「想象力」和「智能」这两个方向思考 AI 创业的机会，做过各种尝试，而我们的播客正好一路见证了他的探索： 23 年，他正在「追求赔率」，探索连接平台和互动内容方向的大机会（考古： 《拒绝三亿美金 offer 的人》 ）； 24 年，他转向「优化胜率」，很快就找到了一个又一个 PMF，甚至做出了一款几千万美金 ARR 的产品（考古： 《找 PMF 就是要做没壁垒的事》 ）。 前两年，他主要在做「想象力」方向的事情；而随着 25 年 AI Coding 的大爆发，他又准备把重心放在「智能」上，推倒重来。 不过，Albert 的这种反复横跳有时显得过于激进，以至于很多人都难以理解。在这期节目里，我们就聊了聊他过去三年创业思路的变",
-      "topicReason": "AI 编程与 Agent方向；播客内容适合挖观点和人物判断。",
-      "observedDate": "2026-05-30",
-      "categoryIds": [
-        "deep",
-        "agent_dev",
-        "hot_projects",
-        "apps",
-        "company_strategy",
-        "podcast"
-      ]
-    },
-    {
-      "id": "podcast-wwwxiaoyuzhoufmcomepisode69a0b34b66e2c303778cd3ce",
+      "id": "podcast-aipodcastaggregationaiwanaka",
       "title": "AI + 游戏 + 社交的新演绎 | 对谈 Wanaka 创始人张阳",
       "url": "https://www.xiaoyuzhoufm.com/episode/69a0b34b66e2c303778cd3ce?utm_source=rss",
       "sourceType": "podcast",
@@ -3647,7 +3891,7 @@
       ]
     },
     {
-      "id": "podcast-wwwxiaoyuzhoufmcomepisode698563a188663289fe80769a",
+      "id": "podcast-aipodcastaggregationclawdbot26aicodingpingcapcto",
       "title": "从 Clawdbot 到 26 年 AI Coding 主题大爆发｜对谈 PingCAP CTO 东旭",
       "url": "https://www.xiaoyuzhoufm.com/episode/698563a188663289fe80769a?utm_source=rss",
       "sourceType": "podcast",
@@ -3671,7 +3915,7 @@
       ]
     },
     {
-      "id": "podcast-wwwxiaoyuzhoufmcomepisode6961bd3af8b05f9f75c3edb8",
+      "id": "podcast-aipodcastaggregationallinai",
       "title": "All in AI 的第一个三年｜对谈绿洲资本合伙人张津剑",
       "url": "https://www.xiaoyuzhoufm.com/episode/6961bd3af8b05f9f75c3edb8?utm_source=rss",
       "sourceType": "podcast",
@@ -3692,7 +3936,7 @@
       ]
     },
     {
-      "id": "podcast-wwwxiaoyuzhoufmcomepisode694e181744647f77684bb4f1",
+      "id": "podcast-aipodcastaggregationaileoniscapitaljenny",
       "title": "中美 AI 创投的真实差异｜对谈 Leonis Capital 合伙人 Jenny",
       "url": "https://www.xiaoyuzhoufm.com/episode/694e181744647f77684bb4f1?utm_source=rss",
       "sourceType": "podcast",
@@ -3713,7 +3957,7 @@
       ]
     },
     {
-      "id": "podcast-wwwxiaoyuzhoufmcomepisode693285733fec3166cf688645",
+      "id": "podcast-aipodcastaggregationdifydify",
       "title": "Dify 从被低估到成为明星项目，到底做对了什么｜对谈 Dify 创始人路宇",
       "url": "https://www.xiaoyuzhoufm.com/episode/693285733fec3166cf688645?utm_source=rss",
       "sourceType": "podcast",
@@ -3737,7 +3981,7 @@
       ]
     },
     {
-      "id": "podcast-wwwxiaoyuzhoufmcomepisode692035926018cc2c98f08264",
+      "id": "podcast-aipodcastaggregationai",
       "title": "「你觉得 AI 有泡沫吗？」——有！｜对谈莫傑麟",
       "url": "https://www.xiaoyuzhoufm.com/episode/692035926018cc2c98f08264?utm_source=rss",
       "sourceType": "podcast",
@@ -3756,7 +4000,7 @@
       ]
     },
     {
-      "id": "podcast-wwwxiaoyuzhoufmcomepisode690d657baf4fc00da78badba",
+      "id": "podcast-aipodcastaggregation20182020lessieai",
       "title": "2018 - 2020，抖音超越快手的关键三年｜对谈 Lessie AI 创始人于北川",
       "url": "https://www.xiaoyuzhoufm.com/episode/690d657baf4fc00da78badba?utm_source=rss",
       "sourceType": "podcast",
@@ -3776,7 +4020,7 @@
       ]
     },
     {
-      "id": "podcast-wwwxiaoyuzhoufmcomepisode68fb18780156720321d444eb",
+      "id": "podcast-aipodcastaggregationopusclipopus",
       "title": "OpusClip 增长秘诀：如果每个阶段只让我选一件事做 | 对谈 Opus 前增长产品负责人君陶",
       "url": "https://www.xiaoyuzhoufm.com/episode/68fb18780156720321d444eb?utm_source=rss",
       "sourceType": "podcast",
@@ -3797,7 +4041,7 @@
       ]
     },
     {
-      "id": "podcast-wwwxiaoyuzhoufmcomepisode68e8a8fd525f51df3895a239",
+      "id": "podcast-aipodcastaggregationsvp",
       "title": "一个原教旨主义产品经理眼中的世界 | 对谈理想 SVP 范皓宇",
       "url": "https://www.xiaoyuzhoufm.com/episode/68e8a8fd525f51df3895a239?utm_source=rss",
       "sourceType": "podcast",
@@ -3817,7 +4061,7 @@
       ]
     },
     {
-      "id": "podcast-wwwxiaoyuzhoufmcomepisode68ccfa75a56ca3e0c438706c",
+      "id": "podcast-aipodcastaggregationaipalonaai",
       "title": "组织能力才是 AI 公司真正的壁垒 | 对谈 Palona AI 联创任川",
       "url": "https://www.xiaoyuzhoufm.com/episode/68ccfa75a56ca3e0c438706c?utm_source=rss",
       "sourceType": "podcast",
@@ -3837,7 +4081,7 @@
       ]
     },
     {
-      "id": "podcast-wwwxiaoyuzhoufmcomepisode68bbf7cc5faf3686594e9534",
+      "id": "podcast-aipodcastaggregationmercormercor",
       "title": "Mercor 高速增长的秘诀与其中的聪明人｜对谈 Mercor 首位中国员工虞快",
       "url": "https://www.xiaoyuzhoufm.com/episode/68bbf7cc5faf3686594e9534?utm_source=rss",
       "sourceType": "podcast",
@@ -3853,30 +4097,6 @@
       "categoryIds": [
         "company_strategy",
         "capital",
-        "podcast"
-      ]
-    },
-    {
-      "id": "podcast-wwwxiaoyuzhoufmcomepisode68a821c942cc2798e7dd1f4a",
-      "title": "硅谷 AI 大转弯与二级市场的牛市｜对谈莫傑麟",
-      "url": "https://www.xiaoyuzhoufm.com/episode/68a821c942cc2798e7dd1f4a?utm_source=rss",
-      "sourceType": "podcast",
-      "sourceName": "AI Podcast Aggregation",
-      "publishedAt": "2025-08-23T14:00:00.000Z",
-      "upstreamScore": 7.2,
-      "upstreamLabel": "podcast_interview",
-      "sourceNote": "播客 RSS 简介，未做转写核验。开源中文 AI 播客聚合，主要覆盖国内播客里 AI 相关单集。",
-      "angle": "AI 编程与 Agent",
-      "summary": "这又是一期录制于硅谷的节目。 差不多半年前，我来美国和莫傑麟聊了一期 「东升西落」的市场叙事 。彼时，DeepSeek 和 Manus 刚刚点燃了国内市场的信心和热度，也一度让美股跌入深坑。 半年过去，市场再次风云变幻：美股落了又升、GPT-5 发布、Agent 热潮冷却、以 Meta 为代表的大厂开启抢人大战……于是我又拉上莫傑麟，复盘过去半年硅谷和市场的新变化。 节目中我们聊出了一个核心结论： AI 正在进入一个全新的提速周期，但叙事的核心指标已从「Scaling Law」转向了「Token 消耗」。这意味着行业竞争正在从比「谁的模型更聪明」，转向拼「谁能把已有智能用得更好、更快、更省」。在这个趋势下，Infra 将成为下一个主战场，整合将成为关键词。 除此之外，我们还聊到许多值得反复咀嚼的话题，比如：英伟",
-      "topicReason": "AI 编程与 Agent方向；播客内容适合挖观点和人物判断。",
-      "observedDate": "2026-05-30",
-      "categoryIds": [
-        "deep",
-        "practical",
-        "model_eval",
-        "agent_dev",
-        "infra",
-        "company_strategy",
         "podcast"
       ]
     },
@@ -4023,7 +4243,7 @@
       ]
     },
     {
-      "id": "podcast-lexfridmancomjensenhuang",
+      "id": "podcast-lexfridmanpodcast",
       "title": "#494 – Jensen Huang: NVIDIA – The $4 Trillion Company & the AI Revolution",
       "url": "https://lexfridman.com/jensen-huang/?utm_source=rss&utm_medium=rss&utm_campaign=jensen-huang",
       "sourceType": "podcast",
@@ -4039,42 +4259,6 @@
       "categoryIds": [
         "infra",
         "company_strategy",
-        "podcast"
-      ]
-    },
-    {
-      "id": "podcast-lexfridmancomjeffkaplan",
-      "title": "#493 – Jeff Kaplan: World of Warcraft, Overwatch, Blizzard, and Future of Gaming",
-      "url": "https://lexfridman.com/jeff-kaplan/?utm_source=rss&utm_medium=rss&utm_campaign=jeff-kaplan",
-      "sourceType": "podcast",
-      "sourceName": "Lex Fridman Podcast",
-      "publishedAt": "2026-03-11T20:37:33.000Z",
-      "upstreamScore": 7,
-      "upstreamLabel": "podcast_interview",
-      "sourceNote": "英文播客 RSS 简介，暂未转写核验。泛科技长访谈，只保留 AI/AGI/机器人/模型相关单集。",
-      "angle": "播客观点",
-      "summary": "Jeff Kaplan is a legendary Blizzard game designer of World of Warcraft and Overwatch, now preparing to launch a new game, The Legend of California, from his new studio Kintsugiyama &#8211; available to wishlist on Steam today, with alpha later in March. Thank you for listening ❤ Check out our sponsors: https://lexfridman.com/sponsors/ep493-sc See below for t",
-      "topicReason": "播客观点方向；播客内容适合挖观点和人物判断。",
-      "observedDate": "2026-05-30",
-      "categoryIds": [
-        "podcast"
-      ]
-    },
-    {
-      "id": "podcast-lexfridmancomrickbeato",
-      "title": "#492 – Rick Beato: Greatest Guitarists of All Time, History & Future of Music",
-      "url": "https://lexfridman.com/rick-beato/?utm_source=rss&utm_medium=rss&utm_campaign=rick-beato",
-      "sourceType": "podcast",
-      "sourceName": "Lex Fridman Podcast",
-      "publishedAt": "2026-03-01T04:33:22.000Z",
-      "upstreamScore": 7,
-      "upstreamLabel": "podcast_interview",
-      "sourceNote": "英文播客 RSS 简介，暂未转写核验。泛科技长访谈，只保留 AI/AGI/机器人/模型相关单集。",
-      "angle": "播客观点",
-      "summary": "Rick Beato is a music educator, interviewer, producer, songwriter, and a true multi-instrument musician, playing guitar, bass, cello &#38; piano. His incredible YouTube channel celebrates great musicians &#38; musical ideas, and helps millions of people fall in love with great music all over again. Thank you for listening ❤ Check out our sponsors: https://le",
-      "topicReason": "播客观点方向；播客内容适合挖观点和人物判断。",
-      "observedDate": "2026-05-30",
-      "categoryIds": [
         "podcast"
       ]
     },
