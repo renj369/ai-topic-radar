@@ -7,9 +7,11 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
-  group: daily-digest
+  group: pages
   cancel-in-progress: false
 
 jobs:
@@ -23,6 +25,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - uses: actions/deploy-pages@v4
 
       - name: Commit generated digest
         run: |
