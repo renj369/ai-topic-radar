@@ -6,6 +6,7 @@ import { XMLParser } from "fast-xml-parser";
 
 const rootDir = path.resolve(new URL("..", import.meta.url).pathname);
 const configPath = path.join(rootDir, "config", "sources.json");
+const podcastRulesPath = path.join(rootDir, "config", "podcast-rules.json");
 const outputPath = path.join(rootDir, "public", "data", "digest.json");
 const historyDir = path.join(rootDir, "public", "history");
 const execFileAsync = promisify(execFile);
@@ -19,6 +20,7 @@ const parser = new XMLParser({
 });
 
 const config = JSON.parse(await fs.readFile(configPath, "utf8"));
+const podcastRules = JSON.parse(await fs.readFile(podcastRulesPath, "utf8"));
 
 function shanghaiDateKey(date = new Date()) {
   const parts = new Intl.DateTimeFormat("en-CA", {
@@ -143,6 +145,23 @@ function keywordMatches(haystack, keyword) {
   return haystack.includes(normalized);
 }
 
+function findPodcastPeople(title, summary) {
+  const haystack = text(`${title} ${summary}`).toLowerCase();
+  return (podcastRules.mustWatchPeople || [])
+    .filter((person) => (person.aliases || [person.name]).some((alias) => keywordMatches(haystack, alias)))
+    .map((person) => ({
+      name: person.name,
+      company: person.company,
+      tier: Number(person.tier || 0)
+    }))
+    .sort((a, b) => b.tier - a.tier);
+}
+
+function shouldDropPodcast(title, summary) {
+  const haystack = text(`${title} ${summary}`).toLowerCase();
+  return (podcastRules.dropTitlePatterns || []).some((pattern) => haystack.includes(pattern.toLowerCase()));
+}
+
 function inferSummaryFromTitle(title) {
   return title.length > 80 ? title.slice(0, 80) : title;
 }
@@ -249,13 +268,16 @@ const categoryDefs = [
 
 function topicReason(item) {
   const angle = classifyAngle(item.title, item.summary, item.sourceType);
+  const people = (item.peopleMatches || []).map((person) => `${person.name}（${person.company}）`).join("、");
   const sourceBoost = item.sourceType === "horizon"
     ? "上游已经给出较高评分，适合先看。"
     : item.sourceType === "radar"
       ? "来自 24 小时 AI 信号池，适合作为候选线索。"
       : item.sourceType === "waytoagi"
         ? "来自 WaytoAGI 7 日工具/工作流更新，适合寻找贴身影响型选题。"
-        : "播客内容适合挖观点和人物判断。";
+        : people
+          ? `命中必看人物：${people}。`
+          : "播客内容适合挖观点和人物判断。";
   return `${angle}方向；${sourceBoost}`;
 }
 
@@ -272,6 +294,95 @@ function makeSummary(item) {
     return item.summary || "这是一条 WaytoAGI 最近 7 天工具/工作流更新，适合判断是否能转成贴近从业者的实用选题。";
   }
   return "上游源提供了这条 AI 产业线索，建议点开原文做二次确认。";
+}
+
+function fallbackPodcastSummary(item) {
+  const people = (item.peopleMatches || [])
+    .map((person) => `${person.name}（${person.company}）`)
+    .join("、");
+  const topic = item.title.replace(/^#\d+\s*[–-]\s*/, "");
+  const base = people
+    ? `命中必看人物：${people}。`
+    : "这是一条 AI 访谈线索。";
+  return `${base}本期主题是「${topic}」。建议重点判断这期是否提供了公司路线、技术判断、产品方向或行业格局变化；RSS 简介尚未做全文转写核验。`;
+}
+
+async function maybeSummarizePodcastsWithModel(items) {
+  const targets = items
+    .filter((item) => item.sourceType === "podcast" && item.isMustWatchPodcast)
+    .slice(0, 30);
+  if (!targets.length) return items;
+
+  const fallback = new Map(targets.map((item) => [item.id, fallbackPodcastSummary(item)]));
+  if (!process.env.OPENAI_API_KEY || process.env.AI_TOPIC_PODCAST_SUMMARY === "0") {
+    return items.map((item) => fallback.has(item.id) ? { ...item, summary: fallback.get(item.id) } : item);
+  }
+
+  const candidates = targets.map((item) => ({
+    id: item.id,
+    title: item.title,
+    source: item.sourceName,
+    people: item.peopleMatches,
+    rssSummary: item.summary.slice(0, 900)
+  }));
+  const prompt = [
+    "你是中文 AI 自媒体选题编辑。请把这些播客/访谈 RSS 信息改写为中文摘要。",
+    "要求：每条 80-130 字；只说发生了什么、嘉宾是谁、为什么对 AI 产业/技术路线/公司格局有选题价值；不要编造 RSS 没有的信息；如果信息不足，请明确说需要点开核验。",
+    "只返回 JSON：{\"summaries\":[{\"id\":\"...\",\"summary\":\"中文摘要\"}]}",
+    JSON.stringify(candidates)
+  ].join("\n\n");
+
+  try {
+    const res = await fetch("https://api.openai.com/v1/responses", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        model: process.env.OPENAI_MODEL || "gpt-5.1-mini",
+        input: prompt,
+        max_output_tokens: 5000,
+        text: {
+          format: {
+            type: "json_schema",
+            name: "podcast_summaries",
+            schema: {
+              type: "object",
+              additionalProperties: false,
+              properties: {
+                summaries: {
+                  type: "array",
+                  items: {
+                    type: "object",
+                    additionalProperties: false,
+                    properties: {
+                      id: { type: "string" },
+                      summary: { type: "string" }
+                    },
+                    required: ["id", "summary"]
+                  }
+                }
+              },
+              required: ["summaries"]
+            },
+            strict: true
+          }
+        }
+      })
+    });
+    if (!res.ok) throw new Error(`OpenAI podcast summary failed: ${res.status}`);
+    const data = await res.json();
+    const rawText = data.output_text || data.output?.flatMap((part) => part.content || []).map((part) => part.text || "").join("") || "";
+    const parsed = JSON.parse(rawText);
+    const summaryMap = new Map(parsed.summaries.map((item) => [item.id, item.summary]));
+    return items.map((item) => {
+      const summary = summaryMap.get(item.id) || fallback.get(item.id);
+      return summary ? { ...item, summary, sourceNote: `${item.sourceNote} 中文摘要由 AI 基于 RSS 简介生成，需点开核验。` } : item;
+    });
+  } catch {
+    return items.map((item) => fallback.has(item.id) ? { ...item, summary: fallback.get(item.id) } : item);
+  }
 }
 
 function isAiIndustrySignal(item) {
@@ -381,6 +492,8 @@ async function loadPodcasts() {
         const summaryText = getFieldValue(item, "description", "summary", "content", "itunes:summary", "content:encoded")
           || getFieldValue(item?.["media:group"], "media:description");
         const summary = text(summaryText).slice(0, 360);
+        if (shouldDropPodcast(title, summary)) continue;
+        const peopleMatches = findPodcastPeople(title, summary);
         const idKey = normalizeKey({ title: `${feedConfig.name}-${title}` });
         all.push({
           id: `podcast-${idKey}`,
@@ -391,6 +504,8 @@ async function loadPodcasts() {
           summary,
           upstreamScore: Number(feedConfig.priority || 6.5),
           upstreamLabel: "podcast_interview",
+          peopleMatches,
+          isMustWatchPodcast: peopleMatches.length > 0,
           sourceNote: feedConfig.language === "en"
             ? `英文播客 RSS 简介，暂未转写核验。${feedConfig.note || ""}`.trim()
             : `播客 RSS 简介，未做转写核验。${feedConfig.note || ""}`.trim(),
@@ -474,6 +589,10 @@ function heuristicScore(item, mode, todayKey) {
   if (item.sourceType === "horizon") score += 1.1;
   if (item.sourceType === "waytoagi") score += 0.4;
   if (item.sourceType === "podcast") score += mode.includes("podcast") ? 0.3 : 0.2;
+  if (item.sourceType === "podcast" && item.isMustWatchPodcast) {
+    const topTier = Math.max(...(item.peopleMatches || []).map((person) => person.tier || 0), 0);
+    score += mode.includes("podcast") ? Math.min(2.2, topTier / 5) : 0.8;
+  }
   if (mode.includes("practical") || mode.includes("tools")) {
     if (/developer_tool|agent_workflow|curated_hotlist|workflow_update/.test(item.upstreamLabel || "")) score += 1.4;
     if (/ai_product_update/.test(item.upstreamLabel || "") && !isPracticalSignal(item)) score -= 2;
@@ -493,6 +612,10 @@ function heuristicScore(item, mode, todayKey) {
 function selectionReason(item, mode) {
   const h = item.searchText || itemSearchText(item);
   if (mode.includes("podcast")) {
+    if (item.peopleMatches?.length) {
+      const people = item.peopleMatches.map((person) => `${person.name}（${person.company}）`).join("、");
+      return `命中必看人物：${people}，优先判断是否能做人物、公司或技术路线选题。`;
+    }
     if (/founder|ceo|researcher|engineer|scientist|karpathy|jensen|altman|ilya|黄仁勋|马斯克/.test(h)) return "人物或一线从业者访谈，适合提炼观点、路线判断和公司/人物选题。";
     if (/agent|llm|model|模型|芯片|gpu|infra|inference|coding|mcp/.test(h)) return "围绕技术路线或工程实践，适合补充深度解读素材。";
     return "播客线索适合先判断嘉宾和主题质量，后续可接转写稿做深挖。";
@@ -710,7 +833,7 @@ const [horizonItems, radarItems, waytoagiItems, podcastItems] = await Promise.al
   loadPodcasts()
 ]);
 
-const merged = dedupe([...horizonItems, ...radarItems, ...waytoagiItems, ...podcastItems])
+let merged = dedupe([...horizonItems, ...radarItems, ...waytoagiItems, ...podcastItems])
   .map((item) => {
     const summary = makeSummary(item);
     const searchText = itemSearchText({ ...item, summary });
@@ -724,6 +847,8 @@ const merged = dedupe([...horizonItems, ...radarItems, ...waytoagiItems, ...podc
       upstreamScore: Number((item.upstreamScore || 0).toFixed(1)),
       upstreamLabel: item.upstreamLabel,
       sourceNote: item.sourceNote || "",
+      peopleMatches: item.peopleMatches || [],
+      isMustWatchPodcast: Boolean(item.isMustWatchPodcast),
       angle: classifyAngle(item.title, summary, item.sourceType),
       summary,
       topicReason: topicReason({ ...item, summary }),
@@ -737,6 +862,12 @@ const merged = dedupe([...horizonItems, ...radarItems, ...waytoagiItems, ...podc
     categoryIds: categoryIdsFor(item)
   }))
   .sort(compareByUpstream);
+
+merged = (await maybeSummarizePodcastsWithModel(merged)).map((item) => ({
+  ...item,
+  topicReason: topicReason(item),
+  searchText: itemSearchText(item)
+}));
 
 const historyItems = await readHistoryItems(todayKey);
 const rollingItems = dedupeForHistory([...merged, ...historyItems]).map((item) => ({
@@ -784,8 +915,8 @@ let selections = [
   buildBalancedSelection(
     "podcast_watch",
     "播客访谈观察",
-    "单独查看 AI 访谈和播客线索。这里优先放高质量英文深访和少量中文聚合，后续接转写稿后可升级为深度选题库。",
-    monthItems.filter((item) => item.sourceType === "podcast"),
+    "单独查看命中必看人物白名单的 AI 访谈和播客线索。没有命中人物的泛 AI 播客先不进入主列表。",
+    monthItems.filter((item) => item.sourceType === "podcast" && item.isMustWatchPodcast),
     "podcast_watch",
     todayKey,
     selectionSize,
@@ -878,7 +1009,8 @@ const sourceCoverage = {
   podcasts: {
     totalLoaded: podcastItems.length,
     sourceCount: (config.podcasts || []).filter((feed) => feed.enabled).length,
-    note: "播客源已接入开源中文 AI 播客聚合与多个高质量英文官方 RSS。当前摘要主要来自 RSS 简介，后续接转写稿后才能做更强的深度筛选。"
+    mustWatchPeople: (podcastRules.mustWatchPeople || []).length,
+    note: "播客源已接入开源中文 AI 播客聚合与多个高质量英文官方 RSS。主栏目只收命中必看人物白名单的访谈；当前摘要主要来自 RSS 简介，后续接转写稿后才能做更强的深度筛选。"
   },
   waytoagi: {
     totalLoaded: waytoagiItems.length,
