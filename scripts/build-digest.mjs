@@ -41,6 +41,18 @@ function daysAgo(dateKey, todayKey) {
   return dayNumber(todayKey) - dayNumber(dateKey);
 }
 
+function dateKeyFromIso(value) {
+  if (!value) return "";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "";
+  return shanghaiDateKey(date);
+}
+
+function publishedWithinDays(item, todayKey, days) {
+  const dateKey = dateKeyFromIso(item.publishedAt);
+  return dateKey ? daysAgo(dateKey, todayKey) >= 0 && daysAgo(dateKey, todayKey) <= days : false;
+}
+
 function text(value) {
   if (value == null) return "";
   return String(value)
@@ -914,10 +926,20 @@ let selections = [
   ),
   buildBalancedSelection(
     "podcast_watch",
-    "播客访谈观察",
-    "单独查看命中必看人物白名单的 AI 访谈和播客线索。没有命中人物的泛 AI 播客先不进入主列表。",
-    monthItems.filter((item) => item.sourceType === "podcast" && item.isMustWatchPodcast),
+    "最新播客访谈观察",
+    "最近 30 天发布、且命中必看人物白名单的 AI 访谈。没有命中人物的新访谈时，这里会为空。",
+    monthItems.filter((item) => item.sourceType === "podcast" && item.isMustWatchPodcast && publishedWithinDays(item, todayKey, 30)),
     "podcast_watch",
+    todayKey,
+    selectionSize,
+    6
+  ),
+  buildBalancedSelection(
+    "podcast_archive",
+    "播客人物档案库",
+    "已抓到但不是最近 30 天发布的必看人物访谈，适合补课、做人物页或公司页资料。",
+    monthItems.filter((item) => item.sourceType === "podcast" && item.isMustWatchPodcast && !publishedWithinDays(item, todayKey, 30)),
+    "podcast_archive",
     todayKey,
     selectionSize,
     6
