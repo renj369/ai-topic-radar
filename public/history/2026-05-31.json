@@ -1,7 +1,27 @@
 {
-  "generatedAt": "2026-05-31T01:33:54.155Z",
+  "generatedAt": "2026-05-31T05:53:23.611Z",
   "dateKey": "2026-05-31",
   "items": [
+    {
+      "id": "radar-78be3249606994475c1da23f2be3e4c9925e3ea6",
+      "title": "6000 多公里全程零干预：特斯拉 FSD 完成全球首次横穿加拿大自动驾驶",
+      "url": "https://www.ithome.com/0/957/718.htm",
+      "sourceType": "radar",
+      "sourceName": "IT之家（RSS）",
+      "publishedAt": "2026-05-31T01:30:46Z",
+      "upstreamScore": 10,
+      "upstreamLabel": "ai_general",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 trusted_ai_source_default_keep。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "apps"
+      ]
+    },
     {
       "id": "radar-25393032d87860f16e60aa376d847b30fe419a3f",
       "title": "NVIDIA 或将于六月发布整合 Blackwell GPU 与 AI 单元的 ARM 笔记本芯片 N1X",
@@ -113,74 +133,6 @@
       "observedDate": "2026-05-31",
       "categoryIds": [
         "deep"
-      ]
-    },
-    {
-      "id": "radar-2a7e1f0d0dee74d27176c95cae08c014f02e9460",
-      "title": "xAI放弃JAX GPU转向自研训练框架",
-      "url": "https://x.com/SemiAnalysis_/status/2060571944575963482",
-      "sourceType": "radar",
-      "sourceName": "X：SemiAnalysis (@SemiAnalysis_)",
-      "publishedAt": "2026-05-30T04:00:09Z",
-      "upstreamScore": 10,
-      "upstreamLabel": "infra_compute",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "算力与芯片",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 trusted_ai_source_default_keep。需要点开原文确认细节和可用角度。",
-      "topicReason": "算力与芯片方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "infra",
-        "company_strategy"
-      ]
-    },
-    {
-      "id": "radar-5fe51dbc52452e926be88bdf7369ed0087089b39",
-      "title": "Show HN： Tiny-vLLM--基于 C 和 CUDA 的高性能大型语言模型推理引擎",
-      "url": "https://github.com/jmaczan/tiny-vllm",
-      "sourceType": "radar",
-      "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）",
-      "publishedAt": "2026-05-30T03:25:01Z",
-      "upstreamScore": 10,
-      "upstreamLabel": "model_release",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 trusted_ai_source_default_keep。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "model_eval",
-        "apps",
-        "infra"
-      ]
-    },
-    {
-      "id": "radar-a41fb19647cb9ffb26e1639d6d6a2d341c158f8b",
-      "title": "阿里云与Qwen成为UEFA多年全球AI合作伙伴",
-      "url": "https://x.com/alibaba_cloud/status/2060520586489770167",
-      "sourceType": "radar",
-      "sourceName": "X：阿里云 / Alibaba Cloud (@alibaba_cloud)",
-      "publishedAt": "2026-05-30T00:36:05Z",
-      "upstreamScore": 10,
-      "upstreamLabel": "ai_tech",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 trusted_ai_source_default_keep。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "model_eval",
-        "infra",
-        "company_strategy"
       ]
     },
     {
@@ -1534,50 +1486,6 @@
       ]
     },
     {
-      "id": "radar-736bfa051915887e24a430de171e1f6f60c3d1d5",
-      "title": "今天我在 Codex 仪表板上看到了一个数字，这让我很高兴。有关该号码的更多消息很快就会公布。 👀 感谢所有不断采用 Codex 的人。我们还早。这么早。",
-      "url": "https://x.com/thsottiaux/status/2060565265906290786",
-      "sourceType": "radar",
-      "sourceName": "Follow Builders · X · Thibault Sottiaux",
-      "publishedAt": "2026-05-30T03:33:37Z",
-      "upstreamScore": 8.1,
-      "upstreamLabel": "developer_tool",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "AI 编程与 Agent",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "AI 编程与 Agent方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "practical",
-        "agent_dev"
-      ]
-    },
-    {
-      "id": "radar-5a38f54d86f4d8bd051e5119608338d5ff9d8449",
-      "title": "戴上 Codex 眼镜，世界变得更有趣 https://t.co/HYgxSCdaks",
-      "url": "https://x.com/thsottiaux/status/2060529970523603099",
-      "sourceType": "radar",
-      "sourceName": "Follow Builders · X · Thibault Sottiaux",
-      "publishedAt": "2026-05-30T01:13:22Z",
-      "upstreamScore": 8.1,
-      "upstreamLabel": "developer_tool",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "AI 编程与 Agent",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "AI 编程与 Agent方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "practical",
-        "agent_dev"
-      ]
-    },
-    {
       "id": "horizon-3-newsroomaccenturecomnews2026accenturetoacquireooklatostrengthennetworkintelligenceandexperiencewithdataandaiforenterprises",
       "title": "埃森哲以 12 亿美元收购 Ookla",
       "url": "https://newsroom.accenture.com/news/2026/accenture-to-acquire-ookla-to-strengthen-network-intelligence-and-experience-with-data-and-ai-for-enterprises",
@@ -2857,6 +2765,49 @@
       ]
     },
     {
+      "id": "radar-40f79144567c2b3754fe5c69a8b8c9e96a8db0d4",
+      "title": "网易智企 IM 研发多智能体中心建设与实践：从单点 Agent 到研发基础设施｜AICon上海",
+      "url": "https://www.infoq.cn/article/GlN4vSis105MkMajCcJz",
+      "sourceType": "radar",
+      "sourceName": "InfoQ CN",
+      "publishedAt": "2026-05-31T10:00:00Z",
+      "upstreamScore": 7.1,
+      "upstreamLabel": "agent_workflow",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "AI 编程与 Agent",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "AI 编程与 Agent方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "deep",
+        "practical",
+        "agent_dev"
+      ]
+    },
+    {
+      "id": "radar-b284dd18ac8530a403ea4db1e20f8c04ebdeddb9",
+      "title": "引用路透社 Breakingviews 郭凯伦的话",
+      "url": "https://simonwillison.net/2026/May/31/anthropic-run-rate",
+      "sourceType": "radar",
+      "sourceName": "Simon Willison",
+      "publishedAt": "2026-05-31T01:48:12Z",
+      "upstreamScore": 7.1,
+      "upstreamLabel": "ai_product_update",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "apps",
+        "company_strategy"
+      ]
+    },
+    {
       "id": "podcast-lexfridmanpodcast",
       "title": "#494 – Jensen Huang: NVIDIA – The $4 Trillion Company & the AI Revolution",
       "url": "https://lexfridman.com/jensen-huang/?utm_source=rss&utm_medium=rss&utm_campaign=jensen-huang",
@@ -2922,6 +2873,984 @@
       "observedDate": "2026-05-31",
       "categoryIds": [
         "company_strategy"
+      ]
+    },
+    {
+      "id": "radar-429eaeb07e640a5052a92e761622814b24c9c987",
+      "title": "从零开始:前端转型AI agent直到就业第五十七天-第五十八天",
+      "url": "https://juejin.cn/post/7644752607552274458",
+      "sourceType": "radar",
+      "sourceName": "juejin",
+      "publishedAt": "2026-05-31T05:01:36.674000Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "agent_workflow",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "AI 编程与 Agent",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "AI 编程与 Agent方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "deep",
+        "practical",
+        "agent_dev"
+      ]
+    },
+    {
+      "id": "radar-40b8aa06f1b3a71bbaaaf300f0255e79a7961318",
+      "title": "AI 提效之 Skills - Agent 的扩展技能教程",
+      "url": "https://juejin.cn/post/7644476634998358025",
+      "sourceType": "radar",
+      "sourceName": "juejin",
+      "publishedAt": "2026-05-31T05:01:36.674000Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "agent_workflow",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "AI 编程与 Agent",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "AI 编程与 Agent方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "deep",
+        "practical",
+        "agent_dev"
+      ]
+    },
+    {
+      "id": "radar-698ea6d529adfd454fae7f9ebae343971c369679",
+      "title": "你的 Mac 里，藏着一支 AI 开发团队",
+      "url": "https://juejin.cn/post/7645115061830631467",
+      "sourceType": "radar",
+      "sourceName": "juejin",
+      "publishedAt": "2026-05-31T05:01:36.674000Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_general",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical"
+      ]
+    },
+    {
+      "id": "radar-3f092157e8175d8e18319167c5fbc5e4a312e91d",
+      "title": "王小川和李开复，领着六小虎“AI的迫降”",
+      "url": "https://www.36kr.com/p/3831204618477824",
+      "sourceType": "radar",
+      "sourceName": "36氪 · 24小时热榜",
+      "publishedAt": "2026-05-31T05:00:57.965122Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_general",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "general"
+      ]
+    },
+    {
+      "id": "radar-eef02224c61ef6dfdb9158963a4905ef5ba83b8c",
+      "title": "沉浸式用 AI，或许正在侵蚀你的长期效率",
+      "url": "https://www.36kr.com/p/3800711989910532",
+      "sourceType": "radar",
+      "sourceName": "36氪 · 24小时热榜",
+      "publishedAt": "2026-05-31T05:00:57.965122Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_general",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical"
+      ]
+    },
+    {
+      "id": "radar-631188dcf7287eb343ac9b67c4cdf7b87be7c2ed",
+      "title": "从Token无上限到全员Agent：MiniMax的AI Native组织进化实践",
+      "url": "https://www.qbitai.com/2026/05/426793.html",
+      "sourceType": "radar",
+      "sourceName": "量子位 · 每日最新",
+      "publishedAt": "2026-05-31T05:00:57.965122Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "agent_workflow",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "AI 编程与 Agent",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "AI 编程与 Agent方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "deep",
+        "practical",
+        "agent_dev"
+      ]
+    },
+    {
+      "id": "radar-207ceed5589933dbe49c9cd628f7fe215701812c",
+      "title": "软银承诺斥资 750 亿欧元在法国建设人工智能设施",
+      "url": "https://36kr.com/newsflashes/3832585694193541?f=rss",
+      "sourceType": "radar",
+      "sourceName": "Readhub · AI",
+      "publishedAt": "2026-05-31T05:00:57.965122Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_general",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "general"
+      ]
+    },
+    {
+      "id": "radar-7fbabb288bafd5709242bfc0966ac484091363f5",
+      "title": "北京推动「人工智能 + 文旅」发展，长城等将试点应用具身智能设备",
+      "url": "https://finance.sina.com.cn/jjxw/2026-05-31/doc-inhzuetr9397449.shtml",
+      "sourceType": "radar",
+      "sourceName": "Readhub · AI",
+      "publishedAt": "2026-05-31T05:00:57.965122Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "robotics",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "deep",
+        "apps"
+      ]
+    },
+    {
+      "id": "radar-dd93873c392f06e5c12e91f1138390548825e116",
+      "title": "帮 Gemini 拿下 IMO 金牌的关键先生，差点成了职业钢琴家",
+      "url": "https://hub.baai.ac.cn/view/55107",
+      "sourceType": "radar",
+      "sourceName": "Readhub · AI",
+      "publishedAt": "2026-05-31T05:00:57.965122Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "model_release",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "deep",
+        "model_eval",
+        "apps"
+      ]
+    },
+    {
+      "id": "radar-df080f5e895fd7d4e8b17aff8735486567a33df7",
+      "title": "时代的甘蔗：AI 越甜，普通人越苦",
+      "url": "https://www.huxiu.com/article/4863072.html?f=rss",
+      "sourceType": "radar",
+      "sourceName": "Readhub · AI",
+      "publishedAt": "2026-05-31T05:00:57.965122Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_general",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "general"
+      ]
+    },
+    {
+      "id": "radar-75dd7c240024525f06c2140643b36a05dad1ea31",
+      "title": "南 A 中心两个项目进入收官冲刺阶段 预计 6 月 30 日实现主体完工",
+      "url": "https://finance.sina.com.cn/jjxw/2026-05-31/doc-inhzuetw5003377.shtml",
+      "sourceType": "radar",
+      "sourceName": "Readhub · AI",
+      "publishedAt": "2026-05-31T05:00:57.965122Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_general",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical",
+        "hot_projects"
+      ]
+    },
+    {
+      "id": "radar-0df5c47247a16d233cefbeb75dd28f7cf19736ed",
+      "title": "最失败的 AI 硬件，被苹果、OpenAI、 Meta 抢着「复活」",
+      "url": "https://www.huxiu.com/article/4863070.html?f=rss",
+      "sourceType": "radar",
+      "sourceName": "Readhub · AI",
+      "publishedAt": "2026-05-31T05:00:57.965122Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_product_update",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "apps",
+        "company_strategy"
+      ]
+    },
+    {
+      "id": "radar-fecb778fb704a08060a9bebd01b5b67b02351562",
+      "title": "北京推动「人工智能 + 文旅」发展，长城等将试点应用具身智能设备",
+      "url": "https://wallstreetcn.com/livenews/3111877",
+      "sourceType": "radar",
+      "sourceName": "Readhub · AI",
+      "publishedAt": "2026-05-31T05:00:57.965122Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "robotics",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "deep",
+        "apps"
+      ]
+    },
+    {
+      "id": "radar-8755ba81f43a90e5a282480afb9bac07f8600ae5",
+      "title": "260 亿美元，「全华班」撑起全球 AI 编程估值最高公司",
+      "url": "https://www.huxiu.com/article/4863055.html?f=rss",
+      "sourceType": "radar",
+      "sourceName": "Readhub · AI",
+      "publishedAt": "2026-05-31T05:00:57.965122Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "developer_tool",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "资本与公司格局",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "资本与公司格局方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical",
+        "agent_dev",
+        "capital"
+      ]
+    },
+    {
+      "id": "radar-c5a5144a68a31fc73c2936b3b637d35f0888eb75",
+      "title": "字节的「掌上明珠」，让好莱坞彻底不淡定了",
+      "url": "https://www.cyzone.cn/article/835137.html",
+      "sourceType": "radar",
+      "sourceName": "Readhub · AI",
+      "publishedAt": "2026-05-31T05:00:57.965122Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_general",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "general"
+      ]
+    },
+    {
+      "id": "radar-f037a8f0e33cc5efa667e6f17a0c00a324ae8101",
+      "title": "里德・霍夫曼 30 年，搭建了硅谷最深的网（SocialNet → PayPal → LinkedIn → 投资→ OpenAI → Inflection AI）",
+      "url": "https://www.huxiu.com/article/4863067.html?f=rss",
+      "sourceType": "radar",
+      "sourceName": "Readhub · AI",
+      "publishedAt": "2026-05-31T05:00:57.965122Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_product_update",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "apps",
+        "company_strategy",
+        "capital"
+      ]
+    },
+    {
+      "id": "radar-4ec6968685912687ce6f9fd05948d84a034f2cec",
+      "title": "克劳德·勒米厄的家人将把他的大脑捐赠给CTE研究",
+      "url": "https://www.reuters.com/sports/claude-lemieuxs-family-donate-his-brain-cte-research--flm-2026-05-31",
+      "sourceType": "radar",
+      "sourceName": "www.reuters.com",
+      "publishedAt": "2026-05-31T04:43:50.020000Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "model_release",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "deep",
+        "model_eval",
+        "apps",
+        "policy_safety"
+      ]
+    },
+    {
+      "id": "radar-448ca66e187c743f4b3213dabfa2d05225214cb3",
+      "title": "软银承诺斥资750亿欧元在法国建设人工智能设施",
+      "url": "https://www.36kr.com/newsflashes/3832585694193541",
+      "sourceType": "radar",
+      "sourceName": "36kr",
+      "publishedAt": "2026-05-31T04:33:39.133000Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_general",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "general"
+      ]
+    },
+    {
+      "id": "radar-22c5fc93b04def440f1cc98299f4589770b5dc6a",
+      "title": "人工智能已经到来。你对它有什么期待？",
+      "url": "https://www.ft.com/content/da80e72b-31e5-42ca-995c-5fc7d457915e",
+      "sourceType": "radar",
+      "sourceName": "www.ft.com",
+      "publishedAt": "2026-05-31T04:28:20.349000Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_general",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "general"
+      ]
+    },
+    {
+      "id": "radar-6ab2483945a09943e9c1ed5a5666b8f65a2b79bf",
+      "title": "如果黄仁勋能实现人工智能增长目标，英伟达股价或将再度上涨 - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPNW4yM19KQVZfU3hSZ2dKT08yb2FYUUVpeFZhSURnZFBNUklRVmRzY1czTkJ4Qk1ERlZTcVBTblZ1aUJjQVhNellsS2JmTTExRVFBTDZwNkpMbnh1cGl2YnBpN1ZzVGVoYl9lWW85eFRNcVVCM21hbnlZWS1jd0dhbVVCcW8yTlJpWWxnNjQ4WURGMjRDQkxV?oc=5&hl=en-US&gl=US&ceid=US%3Aen",
+      "sourceType": "radar",
+      "sourceName": "news.google.com",
+      "publishedAt": "2026-05-31T04:28:20.334000Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_product_update",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "deep",
+        "apps",
+        "infra",
+        "company_strategy"
+      ]
+    },
+    {
+      "id": "radar-215b3d8c40931c47305bc92705e5f9753a7449c6",
+      "title": "[人工智能] 是不是 claude code 没有 hermers 智能啊？",
+      "url": "https://www.v2ex.com/t/1216767",
+      "sourceType": "radar",
+      "sourceName": "V2EX (创意工作者社区)",
+      "publishedAt": "2026-05-31T04:21:31Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "model_release",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "AI 编程与 Agent",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "AI 编程与 Agent方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "deep",
+        "practical",
+        "model_eval",
+        "agent_dev",
+        "apps"
+      ]
+    },
+    {
+      "id": "radar-65dd67b3fb2ce87a5a2c24cc7b5ad626becb4ae2",
+      "title": "[分享创造] FlashLog — 对着手机说几句， AI 帮你记工时",
+      "url": "https://www.v2ex.com/t/1216765",
+      "sourceType": "radar",
+      "sourceName": "V2EX (创意工作者社区)",
+      "publishedAt": "2026-05-31T04:16:42Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_general",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical"
+      ]
+    },
+    {
+      "id": "radar-b56fefa1756f23820d05120fd4b8bb6960e109d0",
+      "title": "Anthropic上市前二级市场内幕：10%手续费、嵌套SPV和10-20%的欺诈率，Anthropic股票”可能根本不存在",
+      "url": "https://www.huxiu.com/article/4863066.html?f=rss",
+      "sourceType": "radar",
+      "sourceName": "虎嗅 (Huxiu)",
+      "publishedAt": "2026-05-31T04:08:12Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_product_update",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "apps",
+        "company_strategy",
+        "capital"
+      ]
+    },
+    {
+      "id": "radar-5849c02565a8c5628520e7630c3ae7f13f062fd6",
+      "title": "ChatGPT 无法在树林里撒尿",
+      "url": "https://medium.com/@annamercury/chatgpt-cant-pee-in-the-woods-8e819eafafb3",
+      "sourceType": "radar",
+      "sourceName": "Medium",
+      "publishedAt": "2026-05-31T04:02:06Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "model_release",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "deep",
+        "model_eval",
+        "apps"
+      ]
+    },
+    {
+      "id": "radar-5272cf3e298b2c92e74390e750b40b2cbd2aba5d",
+      "title": "[程序员] X 上的中文帖子是真的低能啊(仅限 AI 领域)",
+      "url": "https://www.v2ex.com/t/1216763",
+      "sourceType": "radar",
+      "sourceName": "V2EX (创意工作者社区)",
+      "publishedAt": "2026-05-31T03:47:26Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_general",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "general"
+      ]
+    },
+    {
+      "id": "radar-f4656c793c5b2ef92d2495e658c7053739ea0307",
+      "title": "AI 编程工具普及背后：效率提升的假象与代码维护的隐患",
+      "url": "https://www.ithome.com/0/957/744.htm",
+      "sourceType": "radar",
+      "sourceName": "IT之家 (ITHome)",
+      "publishedAt": "2026-05-31T03:37:34Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "developer_tool",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "AI 编程与 Agent",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "AI 编程与 Agent方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "deep",
+        "practical",
+        "agent_dev"
+      ]
+    },
+    {
+      "id": "radar-98ac01398e5034583451af5e87cf2d480b2b8e56",
+      "title": "厌倦了 Vibe 编码器，开发人员偷偷地将数据破坏提示注入到测试应用程序中",
+      "url": "https://developers.slashdot.org/story/26/05/31/0016209/fed-up-with-vibe-coders-dev-sneaks-data-nuking-prompt-injection-into-testing-app",
+      "sourceType": "radar",
+      "sourceName": "Slashdot (科技资讯)",
+      "publishedAt": "2026-05-31T03:34:00Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "developer_tool",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "deep",
+        "practical",
+        "agent_dev",
+        "apps"
+      ]
+    },
+    {
+      "id": "radar-f8d9521f93009d7604d12cc63cfe831adb7477d6",
+      "title": "请不要 Vibe 他妈的这个软件 – Rsync",
+      "url": "https://github.com/RsyncProject/rsync/issues/929",
+      "sourceType": "radar",
+      "sourceName": "Hacker News · 24h最热",
+      "publishedAt": "2026-05-31T03:16:48Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "curated_hotlist",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical",
+        "hot_projects"
+      ]
+    },
+    {
+      "id": "radar-4c4ee13a47cf11533d10250cf28f3add02e9d616",
+      "title": "一对55岁的夫妇如何利用人工智能对六种退休方案进行压力测试，并发现他们原本深信不疑的计划存在21.4万美元的缺口",
+      "url": "https://finance.yahoo.com/markets/options/articles/55-old-couple-used-ai-205049440.html",
+      "sourceType": "radar",
+      "sourceName": "finance.yahoo.com",
+      "publishedAt": "2026-05-31T03:07:57.253000Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_general",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "general"
+      ]
+    },
+    {
+      "id": "radar-f9dbcfadb8c671e1e27558f0e991320505f22bd4",
+      "title": "得益于人工智能服务器的推动，戴尔股价创下2018年以来最大涨幅",
+      "url": "https://finance.yahoo.com/news/dell-shares-soar-40-after-outlook-tops-estimates-on-ai-boom-000332694.html",
+      "sourceType": "radar",
+      "sourceName": "finance.yahoo.com",
+      "publishedAt": "2026-05-31T02:51:47.741000Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_general",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "general"
+      ]
+    },
+    {
+      "id": "radar-058b9dcb582f396501c2f0f2899000880cc0f810",
+      "title": "[Local LLM] 消费级显卡(16G A 卡)是不是不适合运行 vllm 和 sglang，好像使用 transformer 推理都比这两个框架快，并且占用显存低",
+      "url": "https://www.v2ex.com/t/1216752",
+      "sourceType": "radar",
+      "sourceName": "V2EX (创意工作者社区)",
+      "publishedAt": "2026-05-31T02:41:52Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "model_release",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "deep",
+        "model_eval",
+        "apps"
+      ]
+    },
+    {
+      "id": "radar-4ee601e0b9c4693853ca11a0b78d19b2825593f8",
+      "title": "蚂蚁三代CTO闭门对话：周期穿越、技术决策与AI-Native组织",
+      "url": "https://www.huxiu.com/article/4863049.html?f=rss",
+      "sourceType": "radar",
+      "sourceName": "虎嗅 (Huxiu)",
+      "publishedAt": "2026-05-31T02:33:23Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_tech",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "deep",
+        "podcast"
+      ]
+    },
+    {
+      "id": "radar-ec6197f667767a961f8b3cb89c08175b3bbed92b",
+      "title": "299 元，黑鲨首款 AI 智能耳机“凤鸣耳夹式耳机 Pro”首销",
+      "url": "https://www.ithome.com/0/957/731.htm",
+      "sourceType": "radar",
+      "sourceName": "IT之家 (ITHome)",
+      "publishedAt": "2026-05-31T02:29:57Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_general",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "general"
+      ]
+    },
+    {
+      "id": "radar-fe37d6aea6f6b305ec216a935304be644c836714",
+      "title": "[酷工作] AI 多智能体平台核心团队招募｜ Senior Multi-Agent Engineer｜全栈 AI 工程师｜北京/可远程",
+      "url": "https://www.v2ex.com/t/1216748",
+      "sourceType": "radar",
+      "sourceName": "V2EX (创意工作者社区)",
+      "publishedAt": "2026-05-31T02:15:13Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "agent_workflow",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "AI 编程与 Agent",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "AI 编程与 Agent方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "deep",
+        "practical",
+        "agent_dev",
+        "company_strategy"
+      ]
+    },
+    {
+      "id": "radar-6e8aa73879bcfcc52f998e75b2be2517664a9193",
+      "title": "微星 Claw 8 EX AI+ 掌机实物亮相，确认升级人体工学防滑握把",
+      "url": "https://www.ithome.com/0/957/723.htm",
+      "sourceType": "radar",
+      "sourceName": "IT之家 (ITHome)",
+      "publishedAt": "2026-05-31T02:04:52Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_general",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "general"
+      ]
+    },
+    {
+      "id": "radar-e1dc2b3b2f6d431381696b10e6b9ec72275c3e90",
+      "title": "[分享创造] Liber（永存图书馆）：一个去中心化、AI Agent 友好的公共领域开放书库（Cloudflare + Sui + Walrus）",
+      "url": "https://www.v2ex.com/t/1216747",
+      "sourceType": "radar",
+      "sourceName": "V2EX (创意工作者社区)",
+      "publishedAt": "2026-05-31T01:53:15Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "agent_workflow",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "AI 编程与 Agent",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "AI 编程与 Agent方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "deep",
+        "practical",
+        "agent_dev",
+        "infra"
+      ]
+    },
+    {
+      "id": "radar-8a56d2bb69a9347dd2a72417c4904175035e9da9",
+      "title": "Show HN: 我开发了一款名为“Gemma 4 Mac”的应用程序，它能利用本地人工智能为截图命名",
+      "url": "https://snapname.app",
+      "sourceType": "radar",
+      "sourceName": "snapname.app",
+      "publishedAt": "2026-05-31T01:47:51.986000Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_general",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical",
+        "apps"
+      ]
+    },
+    {
+      "id": "radar-ee2a02717a62fe3cd493e1b3e7217049d55bd87f",
+      "title": "[OpenAI] ChatGPT Pro 5X 双倍结束，建议升级 Pro 20X",
+      "url": "https://www.v2ex.com/t/1216742",
+      "sourceType": "radar",
+      "sourceName": "V2EX (创意工作者社区)",
+      "publishedAt": "2026-05-31T01:17:37Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "model_release",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "deep",
+        "model_eval",
+        "apps",
+        "company_strategy"
+      ]
+    },
+    {
+      "id": "radar-906b45d6e7188ae5be639474e3f1ce9813b52ed2",
+      "title": "Snowflake首席执行官表示，这一季度的惊人业绩表明，软件公司为何需要新的定价模式才能在人工智能时代蓬勃发展 - Fortune",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFA2WDdOQWFkYUZEbHpkTkpzekpCN0cxQUJZemo5R3JDeHNKcW53dzg2bWs1Q1lCVlJVd0lvRzFjYXZESnB3ak4tOXp0ZEp5M3ZQaEdEN2dQaU1oZGVDOWNyTGExRHZGaGI0U3JFcnZqSkRNZ2dRRlZBTA?oc=5&hl=en-US&gl=US&ceid=US%3Aen",
+      "sourceType": "radar",
+      "sourceName": "news.google.com",
+      "publishedAt": "2026-05-31T01:16:00.684000Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "industry_business",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "company_strategy"
+      ]
+    },
+    {
+      "id": "radar-7f481ce97696a95530e3c0d3ab90461b277c8dc9",
+      "title": "AI引发的职业焦虑：席卷科技从业者的心理危机",
+      "url": "https://jackmaguire.org/blog/ai-job-grief",
+      "sourceType": "radar",
+      "sourceName": "jackmaguire.org",
+      "publishedAt": "2026-05-31T01:15:59.947000Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_general",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "general"
+      ]
+    },
+    {
+      "id": "radar-3f27068b8721e056a50f569c96bf02ced604b8ca",
+      "title": "UA 航班 –“关闭蓝牙，否则我们就掉头”",
+      "url": "https://old.reddit.com/r/unitedairlines/comments/1tse6mq/ua_flight_turn_bluetooth_off_or_were_turning",
+      "sourceType": "radar",
+      "sourceName": "Hacker News · 24h最热",
+      "publishedAt": "2026-05-31T01:08:21Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "curated_hotlist",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical",
+        "hot_projects"
+      ]
+    },
+    {
+      "id": "radar-0e4e1e80d24ee9d459b842a0a2f0bfa98bbbd676",
+      "title": "现在任何人都可以建立一个平台。几乎没有人能让人们找到它",
+      "url": "https://claudefolio.com/blog/anyone-can-build-a-platform-now-almost-nobody-can-get-people-to-find-it",
+      "sourceType": "radar",
+      "sourceName": "Hacker News",
+      "publishedAt": "2026-05-31T00:55:17Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "model_release",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "deep",
+        "model_eval",
+        "apps",
+        "company_strategy"
+      ]
+    },
+    {
+      "id": "radar-d2f5ff67ba202625671753e7b576e29ba93f05ff",
+      "title": "[程序员] AI 原生开发，大伙能分享一下经验吗？",
+      "url": "https://www.v2ex.com/t/1216739",
+      "sourceType": "radar",
+      "sourceName": "V2EX (创意工作者社区)",
+      "publishedAt": "2026-05-31T00:51:22Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_general",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "general"
+      ]
+    },
+    {
+      "id": "radar-d178fb6cf28f53417707ec92d87f550dafa6f822",
+      "title": "SpaceX 和 OpenAI 的意外之财助推了市场对下一波亚洲人工智能赢家的押注",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-31/spacex-openai-windfall-fuels-bets-on-next-wave-asian-ai-winners",
+      "sourceType": "radar",
+      "sourceName": "www.bloomberg.com",
+      "publishedAt": "2026-05-31T00:27:45.622000Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "ai_product_update",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "apps",
+        "company_strategy"
+      ]
+    },
+    {
+      "id": "radar-1265640b9cb0feb21ee6a2d981ae50237b2e68b9",
+      "title": "AI 骗子正在创建虚假的黑人形象来销售 Shein 劣质商品",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/938844/ai-tiktok-shop-blackface-shein-dropshipping",
+      "sourceType": "radar",
+      "sourceName": "Hacker News · 24h最热",
+      "publishedAt": "2026-05-31T00:23:33Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "curated_hotlist",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical",
+        "hot_projects"
+      ]
+    },
+    {
+      "id": "radar-2db72a0e0cf2cdefae9b4ffe455c07496d1b3429",
+      "title": "微软 GitHub Copilot 改计费模式后成本暴涨，引开发者吐槽",
+      "url": "https://www.ithome.com/0/957/707.htm",
+      "sourceType": "radar",
+      "sourceName": "IT之家 (ITHome)",
+      "publishedAt": "2026-05-31T00:10:03Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "developer_tool",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "开源生态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "topicReason": "开源生态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "deep",
+        "practical",
+        "agent_dev",
+        "hot_projects"
       ]
     },
     {
@@ -3077,7 +4006,7 @@
     },
     {
       "id": "radar-b5628b56abf5e649391941c553ace508468110c7",
-      "title": "微软降低了永久许可的离线产品的功能",
+      "title": "微软削弱了永久许可离线产品的功能",
       "url": "https://consumerrights.wiki/w/Microsoft_Office_2019_and_2021_for_Mac_view-only_conversion_(2026)",
       "sourceType": "radar",
       "sourceName": "Hacker News · 24h最热",
@@ -3162,6 +4091,27 @@
       ]
     },
     {
+      "id": "radar-38e949e316b6bd6b8c7611e3dcc5ad73b9c3a188",
+      "title": "Cheese Paper：专为写作而设计的文本编辑器",
+      "url": "https://brie.gay/cheese-paper",
+      "sourceType": "radar",
+      "sourceName": "Hacker News · 24h最热",
+      "publishedAt": "2026-05-30T22:58:41Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "curated_hotlist",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical",
+        "hot_projects"
+      ]
+    },
+    {
       "id": "radar-aac60b4882fe0090600278fd420ee59dfc52d4b9",
       "title": "Show HN：开放信封——用于定义人工智能代理团队的开放模式",
       "url": "https://news.ycombinator.com/item?id=48315016",
@@ -3225,6 +4175,48 @@
       ]
     },
     {
+      "id": "radar-ec3dc05c4b95aabb71d061250aed9f329000285a",
+      "title": "星巴克放弃了无法计数的人工智能库存工具",
+      "url": "https://gizmodo.com/starbucks-abandons-borked-ai-inventory-tool-that-couldnt-count-report-2000762252",
+      "sourceType": "radar",
+      "sourceName": "Hacker News · 24h最热",
+      "publishedAt": "2026-05-30T22:27:52Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "curated_hotlist",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical",
+        "hot_projects"
+      ]
+    },
+    {
+      "id": "radar-d2b310efe019b2c252ab3633e52011b8d5462070",
+      "title": "两架废弃的苏联航天飞机留在哈萨克斯坦草原上（2017 年）",
+      "url": "https://www.cnn.com/style/article/baikonur-buran-soviet-space-shuttle",
+      "sourceType": "radar",
+      "sourceName": "Hacker News · 24h最热",
+      "publishedAt": "2026-05-30T22:25:37Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "curated_hotlist",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical",
+        "hot_projects"
+      ]
+    },
+    {
       "id": "radar-b71fda8fde1d3a2add03a2e018cf5c04dc15ce99",
       "title": "Show HN: Thaw – 用于运行中的大型语言模型（LLM）的 Git 分支（分叉代理，跳过预填充）",
       "url": "https://github.com/thaw-ai/thaw",
@@ -3269,6 +4261,27 @@
         "apps",
         "capital",
         "policy_safety"
+      ]
+    },
+    {
+      "id": "radar-fefaf02c3d00b40c9b1ab34a71c378d0c03768ef",
+      "title": "尚特尔无体 (2023)",
+      "url": "https://shantellsans.com/process",
+      "sourceType": "radar",
+      "sourceName": "Hacker News · 24h最热",
+      "publishedAt": "2026-05-30T22:06:38Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "curated_hotlist",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical",
+        "hot_projects"
       ]
     },
     {
@@ -3360,6 +4373,48 @@
       ]
     },
     {
+      "id": "radar-06bdc71a0713db991f1ecbdd997a6fd783898db7",
+      "title": "AV2 v1.0.0 规范",
+      "url": "https://av2.aomedia.org",
+      "sourceType": "radar",
+      "sourceName": "Hacker News · 24h最热",
+      "publishedAt": "2026-05-30T21:46:18Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "curated_hotlist",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical",
+        "hot_projects"
+      ]
+    },
+    {
+      "id": "radar-c199fe121480eb4fe83fca6cd4c2b25e5eedfabf",
+      "title": "即将发生的原油危机的时机",
+      "url": "https://www.brookings.edu/articles/the-timing-of-the-impending-crude-crisis",
+      "sourceType": "radar",
+      "sourceName": "Hacker News · 24h最热",
+      "publishedAt": "2026-05-30T21:40:58Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "curated_hotlist",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical",
+        "hot_projects"
+      ]
+    },
+    {
       "id": "radar-e0c0194731b222c97ef43288ca97d3ed4e192bfd",
       "title": "报道：软银承诺投资 750 亿欧元在法国建设 AI 设施，总规模 5 GW",
       "url": "https://wallstreetcn.com/livenews/3111836",
@@ -3443,6 +4498,30 @@
         "apps",
         "company_strategy",
         "capital"
+      ]
+    },
+    {
+      "id": "radar-dd3e7ef4d08b3555995e4895e46a582c1c1cc39a",
+      "title": "Rotary GPU：探索有限 VRAM 下大型 MoE 模型的本地执行",
+      "url": "https://arxiv.org/abs/2605.29135",
+      "sourceType": "radar",
+      "sourceName": "Hacker News · 24h最热",
+      "publishedAt": "2026-05-30T21:05:40Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "curated_hotlist",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "算力与芯片",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
+      "topicReason": "算力与芯片方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "deep",
+        "practical",
+        "model_eval",
+        "hot_projects",
+        "infra"
       ]
     },
     {
@@ -3659,6 +4738,28 @@
       ]
     },
     {
+      "id": "radar-98fa74fc66a789de14fec9275599258728f8df0d",
+      "title": "神秘公司意外单月就在 Claude AI 上砸了 5 亿美元",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/mystery-company-accidentally-blew-usd500-million-on-claude-in-a-single-month-failed-to-put-usage-limit-on-licenses-for-employees",
+      "sourceType": "radar",
+      "sourceName": "Hacker News · 24h最热",
+      "publishedAt": "2026-05-30T20:36:21Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "curated_hotlist",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical",
+        "model_eval",
+        "hot_projects"
+      ]
+    },
+    {
       "id": "radar-daaa9f07aa789ea01dfccd0700875c25115034b9",
       "title": "软银将斥巨资在法国建设人工智能数据中心",
       "url": "https://finance.yahoo.com/sectors/technology/articles/softbank-build-ai-data-centres-190150588.html",
@@ -3804,6 +4905,27 @@
       "categoryIds": [
         "apps",
         "capital"
+      ]
+    },
+    {
+      "id": "radar-2ff9d39c4b32a48d751018bc14d2208eff69889b",
+      "title": "消失的服务处理器 (2025)",
+      "url": "https://oxide.computer/blog/cosmo-sp",
+      "sourceType": "radar",
+      "sourceName": "Hacker News · 24h最热",
+      "publishedAt": "2026-05-30T20:05:21Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "curated_hotlist",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical",
+        "hot_projects"
       ]
     },
     {
@@ -4108,22 +5230,24 @@
       ]
     },
     {
-      "id": "radar-1fd59666058f54f0653895c197a31e0b95b0e1bf",
+      "id": "radar-2f7e9bbf18c9ca3a636859a8d792b4c643a51e6a",
       "title": "据报道 Meta 正在开发一款 AI 挂件",
       "url": "https://techcrunch.com/2026/05/30/meta-is-reportedly-developing-an-ai-pendant",
       "sourceType": "radar",
-      "sourceName": "Hacker News (黑客新闻)",
+      "sourceName": "Hacker News · 24h最热",
       "publishedAt": "2026-05-30T19:05:29Z",
       "upstreamScore": 6.5,
-      "upstreamLabel": "ai_general",
+      "upstreamLabel": "curated_hotlist",
       "sourceNote": "",
       "peopleMatches": [],
       "isMustWatchPodcast": false,
       "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
       "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
       "observedDate": "2026-05-31",
       "categoryIds": [
+        "practical",
+        "hot_projects",
         "company_strategy"
       ]
     },
@@ -5068,6 +6192,28 @@
       ]
     },
     {
+      "id": "radar-ee798529e510e59fc6bf2aab772128ba2102e07a",
+      "title": "丹麦养老基金将 SpaceX 列入黑名单，称其治理不善导致估值过高",
+      "url": "https://thenextweb.com/news/danish-pension-spacex-blacklist-governance-overvalued",
+      "sourceType": "radar",
+      "sourceName": "Hacker News · 24h最热",
+      "publishedAt": "2026-05-30T15:40:58Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "curated_hotlist",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "资本与公司格局",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
+      "topicReason": "资本与公司格局方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical",
+        "hot_projects",
+        "capital"
+      ]
+    },
+    {
       "id": "radar-754bb0cb9d0ecb6d0bb13b3994ffd8a8465dd36e",
       "title": "Claude AI 建议您在回调时买入 Inter (INTR)",
       "url": "https://finance.yahoo.com/markets/stocks/articles/claude-ai-says-shoud-buy-151959229.html",
@@ -5435,27 +6581,6 @@
       ]
     },
     {
-      "id": "radar-77817c729d03a856c690d34a1d525ed1e85a2383",
-      "title": "人工智能工作悲痛：科技工作者面临的心理危机",
-      "url": "https://jackmaguire.org/blog/ai-job-grief",
-      "sourceType": "radar",
-      "sourceName": "Hacker News · 24h最热",
-      "publishedAt": "2026-05-30T14:41:26Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "curated_hotlist",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "practical",
-        "hot_projects"
-      ]
-    },
-    {
       "id": "radar-3a073bd7ac5923e0bdabf47f889ed49fe8cd9e92",
       "title": "[推广] 推荐一下自己开发的中转站， Claude Max 1r 1 刀",
       "url": "https://www.v2ex.com/t/1216711",
@@ -5786,6 +6911,27 @@
       ]
     },
     {
+      "id": "radar-ffb53806413395db9fa8cf06ee50804eac65b7ee",
+      "title": "航空公司不能根据你的穿着向你收费",
+      "url": "https://voyagecoat.com",
+      "sourceType": "radar",
+      "sourceName": "Hacker News · 24h最热",
+      "publishedAt": "2026-05-30T13:35:43Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "curated_hotlist",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical",
+        "hot_projects"
+      ]
+    },
+    {
       "id": "radar-ab6159e5b5e5a3a0d48e83b66c8478718485e931",
       "title": "美联储威廉姆斯打趣称，随着人工智能浪潮的到来，经济学家的工作依然稳如泰山",
       "url": "https://www.bloomberg.com/news/articles/2026-05-30/fed-s-williams-quips-economist-jobs-are-safe-as-ai-shift-unfolds",
@@ -5895,26 +7041,6 @@
       "sourceType": "radar",
       "sourceName": "www.producthunt.com",
       "publishedAt": "2026-05-30T13:01:01.624000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_general",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "general"
-      ]
-    },
-    {
-      "id": "radar-90412ea973a1a70afe1a6bf4d7778053f12f7df4",
-      "title": "AI 骗子正在创建虚假的黑人形象来销售 Shein 劣质商品",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/938844/ai-tiktok-shop-blackface-shein-dropshipping",
-      "sourceType": "radar",
-      "sourceName": "The Verge",
-      "publishedAt": "2026-05-30T13:00:00Z",
       "upstreamScore": 6.5,
       "upstreamLabel": "ai_general",
       "sourceNote": "",
@@ -6383,7 +7509,7 @@
     },
     {
       "id": "radar-66d0ff374dba1b883d2126cd99df049c0a8d39cd",
-      "title": "美国拟议的新资助规则：我们可随时取消任何拨款",
+      "title": "拟议的美国新资助规则：我们可以随时取消任何资助",
       "url": "https://arstechnica.com/science/2026/05/the-office-of-management-and-budget-tries-again-to-cripple-us-science",
       "sourceType": "radar",
       "sourceName": "Hacker News · 24h最热",
@@ -7102,6 +8228,27 @@
         "deep",
         "practical",
         "agent_dev"
+      ]
+    },
+    {
+      "id": "radar-2c420820039f46fdfecb8d14d8baffe3cd30e13a",
+      "title": "国会采取行动整合美国和以色列军队",
+      "url": "https://responsiblestatecraft.org/israel-us-military",
+      "sourceType": "radar",
+      "sourceName": "Hacker News · 24h最热",
+      "publishedAt": "2026-05-30T10:35:49Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "curated_hotlist",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical",
+        "hot_projects"
       ]
     },
     {
@@ -8255,6 +9402,28 @@
       ]
     },
     {
+      "id": "radar-3bcf528dca2ad0caa42d4f7bb3e874cfbdebc34a",
+      "title": "特斯拉在德克萨斯州对 4 级自动驾驶汽车进行自我认证",
+      "url": "https://www.notateslaapp.com/news/4216/tesla-self-certifies-l4-autonomy-in-texas",
+      "sourceType": "radar",
+      "sourceName": "Hacker News · 24h最热",
+      "publishedAt": "2026-05-30T07:58:30Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "curated_hotlist",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical",
+        "hot_projects",
+        "apps"
+      ]
+    },
+    {
       "id": "radar-b77b5be8f0aacb3d90ecf36e261d30c2668a58fe",
       "title": "我的 AI 总是在胡编乱造职业发展路径。我放弃了这个项目。GitHub Copilot 帮我修复了真正存在的问题。",
       "url": "https://dev.to/sreejit_/my-ai-kept-hallucinating-career-paths-i-abandoned-the-project-github-copilot-helped-me-fix-what-7c5",
@@ -8861,6 +10030,27 @@
       ]
     },
     {
+      "id": "radar-f1c521bd4d17b92910ae1eb8b50d43518aae255f",
+      "title": "最重要的证据表明某些东西是由人工智能编写的",
+      "url": "https://www.theatlantic.com/technology/2026/05/how-to-tell-ai-writing/687345",
+      "sourceType": "radar",
+      "sourceName": "Hacker News · 24h最热",
+      "publishedAt": "2026-05-30T05:31:05Z",
+      "upstreamScore": 6.5,
+      "upstreamLabel": "curated_hotlist",
+      "sourceNote": "",
+      "peopleMatches": [],
+      "isMustWatchPodcast": false,
+      "angle": "产业动态",
+      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
+      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
+      "observedDate": "2026-05-31",
+      "categoryIds": [
+        "practical",
+        "hot_projects"
+      ]
+    },
+    {
       "id": "radar-703eab3d11639a81ea690648d28c05354fcee7e2",
       "title": "[职场话题] 大家对 AI 的应用都有哪些？",
       "url": "https://www.v2ex.com/t/1216652",
@@ -8921,1296 +10111,6 @@
       "observedDate": "2026-05-31",
       "categoryIds": [
         "general"
-      ]
-    },
-    {
-      "id": "radar-3bbc97ab4ced4fa0332726dcefc25f859888b1e6",
-      "title": "两大AI“妖股”，杀回A 股",
-      "url": "https://www.huxiu.com/article/4862950.html?f=rss",
-      "sourceType": "radar",
-      "sourceName": "虎嗅 (Huxiu)",
-      "publishedAt": "2026-05-30T04:55:22Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_general",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "general"
-      ]
-    },
-    {
-      "id": "radar-b6b71db526ccb6caa8c555ae5eda060cfabd4ce0",
-      "title": "一道著名的数学难题曾让人类苦思80年——而人工智能刚刚破解了它。",
-      "url": "https://on.wsj.com/4uGRWGI",
-      "sourceType": "radar",
-      "sourceName": "on.wsj.com",
-      "publishedAt": "2026-05-30T04:45:02.103000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_general",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "general"
-      ]
-    },
-    {
-      "id": "radar-49f4797352740a2d1da65540739889b39ad00a62",
-      "title": "据《The Information》报道，Meta计划推出AI挂件及“工作用可穿戴设备”，以推动硬件业务发展",
-      "url": "https://reut.rs/3RyKdvH",
-      "sourceType": "radar",
-      "sourceName": "reut.rs",
-      "publishedAt": "2026-05-30T04:28:57.406000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_general",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "company_strategy",
-        "policy_safety"
-      ]
-    },
-    {
-      "id": "radar-40d40f685feb8c8cd1a1962a8823b12a8518da84",
-      "title": "人工智能应该抢走你的工作吗？",
-      "url": "https://www.ft.com/content/aceabeb1-1152-43d1-ad76-e1531cd37f39",
-      "sourceType": "radar",
-      "sourceName": "www.ft.com",
-      "publishedAt": "2026-05-30T04:28:57.302000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_general",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "general"
-      ]
-    },
-    {
-      "id": "radar-8f04bbe8c74fd2ef88ba6f537bba3b893817da93",
-      "title": "红杉对话Serval创始人：入职时你以为的工作，80%都是不该存在的流程：AI原生思维如何吃掉企业软件",
-      "url": "https://www.huxiu.com/article/4862944.html?f=rss",
-      "sourceType": "radar",
-      "sourceName": "虎嗅 (Huxiu)",
-      "publishedAt": "2026-05-30T04:28:11Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_tech",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "company_strategy",
-        "podcast"
-      ]
-    },
-    {
-      "id": "radar-1244b7c40de1a2b7198a0b48137f3538064c76f6",
-      "title": "Shift将免费提供家政服务，以此培训未来的机器人",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/939765/ai-training-data-startup-shift-free-cleaning",
-      "sourceType": "radar",
-      "sourceName": "www.theverge.com",
-      "publishedAt": "2026-05-30T04:13:23.996000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "robotics",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "apps"
-      ]
-    },
-    {
-      "id": "radar-fc8bde8775031dd5a378d0c5f41647f66bc6b452",
-      "title": "人工智能没有抢走你的工作。你的老板做到了。",
-      "url": "https://medium.com/generative-ai/ai-didnt-take-your-job-your-boss-did-7bfdee42341f",
-      "sourceType": "radar",
-      "sourceName": "Medium",
-      "publishedAt": "2026-05-30T03:58:59Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_general",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "general"
-      ]
-    },
-    {
-      "id": "radar-6642859bb069dd551467137eb3cd664c269f3218",
-      "title": "[OpenAI] Windows Codex app 终于支持移动端同步了，设置成功",
-      "url": "https://www.v2ex.com/t/1216641",
-      "sourceType": "radar",
-      "sourceName": "V2EX (创意工作者社区)",
-      "publishedAt": "2026-05-30T03:49:57Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "developer_tool",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "AI 编程与 Agent",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "AI 编程与 Agent方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "practical",
-        "agent_dev",
-        "apps",
-        "company_strategy"
-      ]
-    },
-    {
-      "id": "radar-0871eaf8c2d2e8ea6d35861fc57e348e61b7dd5d",
-      "title": "700亿融资赶紧到位吧，DeepSeek开始限制重生、修改次数了",
-      "url": "https://www.huxiu.com/article/4862909.html?f=rss",
-      "sourceType": "radar",
-      "sourceName": "虎嗅 (Huxiu)",
-      "publishedAt": "2026-05-30T03:44:35Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "model_release",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "资本与公司格局",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "资本与公司格局方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "model_eval",
-        "apps",
-        "capital"
-      ]
-    },
-    {
-      "id": "radar-c97b34d50323c0d5f2b0119cca7cbc8da4bfe1b9",
-      "title": "[阅读] 穿越，带着 Codex 回到互联网的黄金时代",
-      "url": "https://www.v2ex.com/t/1216640",
-      "sourceType": "radar",
-      "sourceName": "V2EX (创意工作者社区)",
-      "publishedAt": "2026-05-30T03:43:28Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "developer_tool",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "AI 编程与 Agent",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "AI 编程与 Agent方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "practical",
-        "agent_dev"
-      ]
-    },
-    {
-      "id": "radar-c443cf79b9640b98987db7270c37f11a4f00efc6",
-      "title": "努比亚 M153 豆包手机推送 Obric UI 2 大版本更新：新增华为 Freeclip2 配对弹窗、锁屏 AI 空间，支持跨设备记忆迁移",
-      "url": "https://www.ithome.com/0/957/455.htm",
-      "sourceType": "radar",
-      "sourceName": "IT之家 (ITHome)",
-      "publishedAt": "2026-05-30T03:30:12Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_product_update",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "practical",
-        "apps"
-      ]
-    },
-    {
-      "id": "radar-7677027ee2574ed61b116f2506b0f3f0f133efc0",
-      "title": "英伟达清华团队提出 Gamma-World：世界模型从「一个人玩」到「多人共处」",
-      "url": "https://www.qbitai.com/2026/05/426643.html",
-      "sourceType": "radar",
-      "sourceName": "Readhub · AI",
-      "publishedAt": "2026-05-30T03:27:36.015088Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "model_release",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "model_eval",
-        "apps",
-        "infra"
-      ]
-    },
-    {
-      "id": "radar-c9113f26e87edbc41fc007798a21a31f01da9f9a",
-      "title": "MiniMax 拟冲刺科创板",
-      "url": "https://finance.sina.com.cn/wm/2026-05-30/doc-inhzrvnr8887220.shtml",
-      "sourceType": "radar",
-      "sourceName": "Readhub · AI",
-      "publishedAt": "2026-05-30T03:27:36.015088Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_general",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "general"
-      ]
-    },
-    {
-      "id": "radar-bdce16e8ab151d1dd12f4595710805a149cd5576",
-      "title": "深成交黎曦：深圳为无人驾驶提供了肥沃的土壤",
-      "url": "https://finance.sina.com.cn/hy/hyjz/2026-05-30/doc-inhzrvnu0352645.shtml",
-      "sourceType": "radar",
-      "sourceName": "Readhub · AI",
-      "publishedAt": "2026-05-30T03:27:36.015088Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_general",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "general"
-      ]
-    },
-    {
-      "id": "radar-9506a1385e7c872ba2af36ca3ff98fc32bc87ceb",
-      "title": "40 余款 AI 大模型集中亮相 2026 世界智能产业博览会",
-      "url": "https://36kr.com/newsflashes/3831203586745984?f=rss",
-      "sourceType": "radar",
-      "sourceName": "Readhub · AI",
-      "publishedAt": "2026-05-30T03:27:36.015088Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "model_release",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "model_eval",
-        "apps"
-      ]
-    },
-    {
-      "id": "radar-5846b1627d4a4f28fe647d127154d8278a1df97f",
-      "title": "比亚迪璇玑 A3 拆解：车企开始争夺 AI 芯片定义权",
-      "url": "https://www.huxiu.com/article/4862930.html?f=rss",
-      "sourceType": "radar",
-      "sourceName": "Readhub · AI",
-      "publishedAt": "2026-05-30T03:27:36.015088Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "infra_compute",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "算力与芯片",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "算力与芯片方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "infra"
-      ]
-    },
-    {
-      "id": "radar-d4b2f74fb181787ca452d25f2422b0bc64ee71b8",
-      "title": "苹果用 AI 重新发明了图像压缩：同样画质，文件只要三分之一",
-      "url": "https://www.huxiu.com/article/4862928.html?f=rss",
-      "sourceType": "radar",
-      "sourceName": "Readhub · AI",
-      "publishedAt": "2026-05-30T03:27:36.015088Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_general",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "general"
-      ]
-    },
-    {
-      "id": "radar-f0218cc9a1d02effa61c6cee44adc46a432dd4e4",
-      "title": "分析师观点汇总：英伟达仍是 AI 核心引擎；沃尔玛等五只股票受关注",
-      "url": "https://www.tmtpost.com/8008410.html",
-      "sourceType": "radar",
-      "sourceName": "Readhub · AI",
-      "publishedAt": "2026-05-30T03:27:36.015088Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_general",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "infra"
-      ]
-    },
-    {
-      "id": "radar-81a2d975a647d8cf63d78fa447928f82df480ce2",
-      "title": "被 AI「忽悠」了 N 次后，我们总结了这份避坑指南",
-      "url": "https://www.huxiu.com/article/4862927.html?f=rss",
-      "sourceType": "radar",
-      "sourceName": "Readhub · AI",
-      "publishedAt": "2026-05-30T03:27:36.015088Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_general",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "practical"
-      ]
-    },
-    {
-      "id": "radar-ca1455ab4a8f6d976b3a38d7e2f28a8aa6f2301b",
-      "title": "国家制造强国建设战略咨询委员会副主任苏波：要深度把握 AI 与先进制造的融合趋势，完善顶层设计",
-      "url": "https://wallstreetcn.com/livenews/3111707",
-      "sourceType": "radar",
-      "sourceName": "Readhub · AI",
-      "publishedAt": "2026-05-30T03:27:36.015088Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_general",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "company_strategy"
-      ]
-    },
-    {
-      "id": "radar-0b7c8213d78e72c7246bccaffd7efa4f062f0d1f",
-      "title": "AdamW 和 Muon 的失稳根源有解了，港中文新优化器 Pion：在等谱流形上更新大模型",
-      "url": "https://news.qq.com/rain/a/20260530A03ZLP00",
-      "sourceType": "radar",
-      "sourceName": "Readhub · AI",
-      "publishedAt": "2026-05-30T03:27:36.015088Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "model_release",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "practical",
-        "model_eval",
-        "apps"
-      ]
-    },
-    {
-      "id": "radar-d2e5534e5f4b3728e2f55b44813c6e3dfa501e69",
-      "title": "美国司法界被要求出台规定，以遏制诉讼文件中出现由人工智能生成的虚假案件",
-      "url": "https://reut.rs/4dULdl6",
-      "sourceType": "radar",
-      "sourceName": "reut.rs",
-      "publishedAt": "2026-05-30T03:25:01.845000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_general",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "policy_safety"
-      ]
-    },
-    {
-      "id": "radar-29005b4391dee3a41e6add3a5fd8cadad134b5f6",
-      "title": "戴尔股价因人工智能数据中心销售额强劲增长而飙升33% - Investor's Business Daily",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQN1E3LVZmQ1hPYWdONEVsamVZUEVYWXF0UDR2ZC11S08tYklFQmgtNG1Bc2NyZUNQcTI2SXpQRWFiSDZabWd6bWl6bFJ2bXd4Nnl1ZmtuTXZ0SVA3WUlBWjFILWhQYUJCclUwQmJMSG83amw5Z2pVZjBBUlZKUnMyY2JHS2JRTnVDQnRJclJnOGc4UTRLNjRYeUYtQ1l0Zw?oc=5&hl=en-US&gl=US&ceid=US%3Aen",
-      "sourceType": "radar",
-      "sourceName": "news.google.com",
-      "publishedAt": "2026-05-30T03:25:01.809000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_product_update",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "apps",
-        "infra",
-        "company_strategy"
-      ]
-    },
-    {
-      "id": "radar-082a661b7ad0c88315c8ebbd480a53b48b5b8c0c",
-      "title": "TempleOS WASM",
-      "url": "https://templeos.reiko.app",
-      "sourceType": "radar",
-      "sourceName": "Hacker News · 24h最热",
-      "publishedAt": "2026-05-30T03:22:00Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "curated_hotlist",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "practical",
-        "hot_projects"
-      ]
-    },
-    {
-      "id": "radar-e58bd5a06bd3d7cec0aa58532af55cd46c30697c",
-      "title": "三星 Galaxy Watch9 Classic 智能手表曝光，AI 智能洞察佩戴者健康",
-      "url": "https://www.ithome.com/0/957/453.htm",
-      "sourceType": "radar",
-      "sourceName": "IT之家 (ITHome)",
-      "publishedAt": "2026-05-30T03:16:15Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_general",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "general"
-      ]
-    },
-    {
-      "id": "radar-58e746a02052a08afba00f30e57fd725997ebba1",
-      "title": "Perry 使用 SWC 和 LLVM 将 TypeScript 直接编译为可执行文件",
-      "url": "https://www.perryts.com",
-      "sourceType": "radar",
-      "sourceName": "Hacker News · 24h最热",
-      "publishedAt": "2026-05-30T03:14:25Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "curated_hotlist",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "practical",
-        "hot_projects"
-      ]
-    },
-    {
-      "id": "radar-fc7dc3ee3a02f1b7886e723a578dff7f1f26de45",
-      "title": "阿波罗正筹备一笔360亿美元的债务交易，旨在为Anthropic收购谷歌芯片",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/apollo-shops-36-billion-debt-210011269.html",
-      "sourceType": "radar",
-      "sourceName": "finance.yahoo.com",
-      "publishedAt": "2026-05-30T03:09:03.142000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "infra_compute",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "资本与公司格局",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "资本与公司格局方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "infra",
-        "company_strategy",
-        "capital"
-      ]
-    },
-    {
-      "id": "radar-798006f379dddc3c43442e93eaa6397ba6c5ffd7",
-      "title": "美光还是英特尔？其中一家更适合布局人工智能。",
-      "url": "https://www.barrons.com/articles/micron-stock-price-intel-ai-chips-523a5dc6?siteid=yhoof2&yptr=yahoo",
-      "sourceType": "radar",
-      "sourceName": "www.barrons.com",
-      "publishedAt": "2026-05-30T03:09:03.127000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "infra_compute",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "infra"
-      ]
-    },
-    {
-      "id": "radar-71e46db36705914d0b2648689a12979f3b226eba",
-      "title": "40余款AI大模型集中亮相2026世界智能产业博览会",
-      "url": "https://www.36kr.com/newsflashes/3831203586745984",
-      "sourceType": "radar",
-      "sourceName": "36kr",
-      "publishedAt": "2026-05-30T03:01:53.391000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "model_release",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "model_eval",
-        "apps"
-      ]
-    },
-    {
-      "id": "radar-9338b38a5ef2f2dbf79e4aeda575a809fcf70ade",
-      "title": "不仅只收流量费了？AI时代，运营商即将开启token收费模式",
-      "url": "https://www.huxiu.com/article/4862533.html?f=rss",
-      "sourceType": "radar",
-      "sourceName": "虎嗅 (Huxiu)",
-      "publishedAt": "2026-05-30T03:00:00Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_general",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "general"
-      ]
-    },
-    {
-      "id": "radar-b78521b7a310d7d684ba2d3ae43703f22bcb58d1",
-      "title": "让 AI 替你写代码：Claude Code 完全配置与高效使用手册",
-      "url": "https://juejin.cn/post/7644153319699365939",
-      "sourceType": "radar",
-      "sourceName": "juejin",
-      "publishedAt": "2026-05-30T02:59:38.866000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "model_release",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "AI 编程与 Agent",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "AI 编程与 Agent方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "practical",
-        "model_eval",
-        "agent_dev",
-        "apps"
-      ]
-    },
-    {
-      "id": "radar-c4be0d621983261de2067e5803fe9ed82fa89c58",
-      "title": "30天11万行代码，我用 Trae 和 Gemini 造了个 AI 测试引擎",
-      "url": "https://juejin.cn/post/7644628270764965914",
-      "sourceType": "radar",
-      "sourceName": "juejin",
-      "publishedAt": "2026-05-30T02:59:38.866000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "model_release",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "model_eval",
-        "agent_dev",
-        "apps"
-      ]
-    },
-    {
-      "id": "radar-5a41f74d0dbdc18b0b6a6eb260913cf863dbda3c",
-      "title": "用 Stitch 实现 AI 前端工程化：找回消失的UI美学（别再 Vibe 瞎Coding 了）",
-      "url": "https://juejin.cn/post/7644125554529075206",
-      "sourceType": "radar",
-      "sourceName": "juejin",
-      "publishedAt": "2026-05-30T02:59:38.866000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "developer_tool",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "AI 编程与 Agent",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "AI 编程与 Agent方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "practical",
-        "agent_dev"
-      ]
-    },
-    {
-      "id": "radar-8f7734e3cd6c677a840c4dfc5f3a6367af86b361",
-      "title": "Claude Code 9 大神级 Skills，开发效率直接翻倍（安装、使用场景、踩坑经验）",
-      "url": "https://juejin.cn/post/7644099022208581668",
-      "sourceType": "radar",
-      "sourceName": "juejin",
-      "publishedAt": "2026-05-30T02:59:38.866000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "model_release",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "AI 编程与 Agent",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "AI 编程与 Agent方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "practical",
-        "model_eval",
-        "agent_dev",
-        "apps"
-      ]
-    },
-    {
-      "id": "radar-fb0b7f381505e17f613b2b30001217117c110782",
-      "title": "Utiq – 您的（欧洲）ISP 的广告跟踪以及如何避免它",
-      "url": "https://korben.info/utiq-identifiant-publicitaire-telcos.html",
-      "sourceType": "radar",
-      "sourceName": "Hacker News · 24h最热",
-      "publishedAt": "2026-05-30T02:59:13Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "curated_hotlist",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "practical",
-        "hot_projects"
-      ]
-    },
-    {
-      "id": "radar-ee6864f55e556c20266964e957fe51fd17e0bb85",
-      "title": "[人工智能] 我还以为大模型的训练语料早就覆盖了 zlib 或安娜档案这类的资料库了呢",
-      "url": "https://www.v2ex.com/t/1216630",
-      "sourceType": "radar",
-      "sourceName": "V2EX (创意工作者社区)",
-      "publishedAt": "2026-05-30T02:59:00Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "model_release",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "model_eval",
-        "apps"
-      ]
-    },
-    {
-      "id": "radar-6efa4f71ab1ab5ca429839bbc4733f95f30e054f",
-      "title": "据彭博社报道，阿波罗和黑石正为Anthropic筹备一笔360亿美元的债务交易",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/apollo-blackstone-36-billion-debt-212728374.html",
-      "sourceType": "radar",
-      "sourceName": "finance.yahoo.com",
-      "publishedAt": "2026-05-30T02:53:08.449000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_product_update",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "apps",
-        "company_strategy"
-      ]
-    },
-    {
-      "id": "radar-e1ae52dd9688b41dd515fd5bc0879b3a24ac0fa1",
-      "title": "Cerebras 股票将凭借创新驱动的增长乘上人工智能浪潮",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/cerebras-stock-ride-ai-wave-212104038.html",
-      "sourceType": "radar",
-      "sourceName": "finance.yahoo.com",
-      "publishedAt": "2026-05-30T02:53:08.442000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_general",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "general"
-      ]
-    },
-    {
-      "id": "radar-4d8583349d29d058f19dca63bf6271577f7b8b05",
-      "title": "ACA集团称，合规领域对人工智能的应用仍较为有限",
-      "url": "https://finance.yahoo.com/sectors/technology/articles/ai-adoption-compliance-remains-limited-205506841.html",
-      "sourceType": "radar",
-      "sourceName": "finance.yahoo.com",
-      "publishedAt": "2026-05-30T02:53:08.435000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_general",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "apps",
-        "policy_safety"
-      ]
-    },
-    {
-      "id": "radar-c1a75d9982042665ee50645090b6db8efa09d254",
-      "title": "MCP 死了？",
-      "url": "https://www.quandri.io/engineering-blog/mcp-is-dead",
-      "sourceType": "radar",
-      "sourceName": "www.quandri.io",
-      "publishedAt": "2026-05-30T02:53:08.387000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "developer_tool",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "practical",
-        "agent_dev"
-      ]
-    },
-    {
-      "id": "radar-2906c7d2e7ba84ce02c487a75d683aa47502c755",
-      "title": "美国打击贩毒船行动致200人死亡",
-      "url": "https://www.independent.co.uk/news/world/americas/us-politics/drug-boat-strikes-cocaine-trafficking-b2986243.html",
-      "sourceType": "radar",
-      "sourceName": "Hacker News · 24h最热",
-      "publishedAt": "2026-05-30T02:32:08Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "curated_hotlist",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "practical",
-        "hot_projects"
-      ]
-    },
-    {
-      "id": "radar-77b02fbd89e404b8af673c24c7389e88b73baaf6",
-      "title": "英伟达推出 LocateAnything，主打 AI 高速、高精度检测对象",
-      "url": "https://www.ithome.com/0/957/446.htm",
-      "sourceType": "radar",
-      "sourceName": "IT之家 (ITHome)",
-      "publishedAt": "2026-05-30T02:30:49Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_general",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "infra"
-      ]
-    },
-    {
-      "id": "radar-15fd63248b945684a3d923b779f9b27b8d4e019e",
-      "title": "[OpenAI] Codex 移动端连电脑问题",
-      "url": "https://www.v2ex.com/t/1216621",
-      "sourceType": "radar",
-      "sourceName": "V2EX (创意工作者社区)",
-      "publishedAt": "2026-05-30T02:25:48Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "developer_tool",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "AI 编程与 Agent",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "AI 编程与 Agent方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "practical",
-        "agent_dev",
-        "company_strategy"
-      ]
-    },
-    {
-      "id": "radar-091e2d37fe3fd397ab385d0cbbbbc7564577cd3e",
-      "title": "总部位于迈阿密的 Canals 使用人工智能帮助分销商实现销售、客户服务等工作流程自动化，并筹集了由 Base10 领投的 3500 万美元 A 轮融资（Chris Metinko/Axios）",
-      "url": "https://www.techmeme.com/260529/p37",
-      "sourceType": "radar",
-      "sourceName": "Techmeme",
-      "publishedAt": "2026-05-30T02:25:01Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "agent_workflow",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "资本与公司格局",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "资本与公司格局方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "practical",
-        "agent_dev",
-        "capital"
-      ]
-    },
-    {
-      "id": "radar-098cf9dcf9627ccbbebb24b36f7d8510fd391efb",
-      "title": "消息人士称，美国尚未证实伊朗在霍尔木兹海峡布设了水雷 - NBC News",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQLTV0TDhtUVZoNElLM1BlNXBtVmN4QkkxVF9aU1c3MHowMk83T3E1LVVOQ0pYSHMxeFRFM2ZOREZZbldHTkNKZmlEa3I1VVVRT25QeFFBLWhKQm1QVFZNczFrRUF0MTBvUmNEekg4aTFDTl9lV2h6UXpLenVpT1lVYzl2c1pOZ2o0dUlIeHpuMmJ4SmpQR3BkelpJMkgzUTU1cjBRelI5ZGJ6LUdXSXNzQnAyUnh3M2NiekR1bFp2Zw?oc=5&hl=en-US&gl=US&ceid=US%3Aen",
-      "sourceType": "radar",
-      "sourceName": "news.google.com",
-      "publishedAt": "2026-05-30T02:21:15.157000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "model_release",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "model_eval",
-        "apps",
-        "company_strategy"
-      ]
-    },
-    {
-      "id": "radar-1405da89c4bf9b68cc5dc64382dd917b3c462849",
-      "title": "开发者机会雷达 #1：10万美元的人工智能资助金、两项研究员奖学金以及人工智能代理资源",
-      "url": "https://dev.to/hemapriya_kanagala/dev-opportunity-radar-1-a-100k-ai-grant-two-fellowships-and-an-ai-agent-resource-2ja3",
-      "sourceType": "radar",
-      "sourceName": "dev.to",
-      "publishedAt": "2026-05-30T02:21:14.577000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "developer_tool",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "practical",
-        "agent_dev"
-      ]
-    },
-    {
-      "id": "radar-8e8fdd46fb9dad698f6fc159136ce58e58af2b04",
-      "title": "Show HN: 一种克劳德·科德（Claude Code）技能，能像彼得·诺尔（Peter Naur）那样剖析问题",
-      "url": "https://github.com/spinchange/cartographer-skill/blob/main/skills/cartographer/SKILL.md",
-      "sourceType": "radar",
-      "sourceName": "github.com",
-      "publishedAt": "2026-05-30T02:21:14.573000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "model_release",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "AI 编程与 Agent",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "AI 编程与 Agent方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "practical",
-        "model_eval",
-        "agent_dev",
-        "hot_projects",
-        "apps"
-      ]
-    },
-    {
-      "id": "radar-74ce986fc4937991e8e9e4b2ce28e26edc3eb472",
-      "title": "日本石脑油短缺",
-      "url": "https://www.nippon.com/en/japan-data/h02783",
-      "sourceType": "radar",
-      "sourceName": "Hacker News · 24h最热",
-      "publishedAt": "2026-05-30T02:20:40Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "curated_hotlist",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "practical",
-        "hot_projects"
-      ]
-    },
-    {
-      "id": "radar-4e89e655353ba29cc093e476c6a74a0b78f3e8d8",
-      "title": "OpenAI 升级 GPT-5.5 Instant 模型，AI 回复更自然、易读",
-      "url": "https://www.ithome.com/0/957/437.htm",
-      "sourceType": "radar",
-      "sourceName": "IT之家 (ITHome)",
-      "publishedAt": "2026-05-30T02:14:38Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "model_release",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "model_eval",
-        "apps",
-        "company_strategy"
-      ]
-    },
-    {
-      "id": "radar-9d5ed36930fbb55817fb28fd0d2542bb84693487",
-      "title": "[Claude] 有大佬用上了 Claude Mythos Preview 吗？感觉挖洞是下一个被颠覆的工作了",
-      "url": "https://www.v2ex.com/t/1216615",
-      "sourceType": "radar",
-      "sourceName": "V2EX (创意工作者社区)",
-      "publishedAt": "2026-05-30T02:02:10Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "model_release",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "model_eval",
-        "apps"
-      ]
-    },
-    {
-      "id": "radar-1518b0d9d47e20222e78801b390809809e178140",
-      "title": "LLMShare 攻击披露：ChatGPT 共享页变恶意入口，通过谷歌搜索精准投毒",
-      "url": "https://www.ithome.com/0/957/434.htm",
-      "sourceType": "radar",
-      "sourceName": "IT之家 (ITHome)",
-      "publishedAt": "2026-05-30T01:54:10Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "model_release",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "practical",
-        "model_eval",
-        "apps"
-      ]
-    },
-    {
-      "id": "radar-e5a61cab2094c0dc8ae4d3f1358d8123433a7113",
-      "title": "三星内存部门员工的巨额奖金如何引发了关于公司和政府应如何分享人工智能繁荣带来的利润的争论（彭博社）",
-      "url": "https://www.techmeme.com/260529/p36",
-      "sourceType": "radar",
-      "sourceName": "Techmeme",
-      "publishedAt": "2026-05-30T01:50:50Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_tech",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep"
-      ]
-    },
-    {
-      "id": "radar-c07ba8ed559b07579e4a3651fc4eff053a6656cc",
-      "title": "[Ai2You智友社] 智友社上新啦， ChatGPT 全新自助接码服务（ATT 实体卡接近 1 个月有效期，有效期内可无限接码），欢迎您的试用反馈。",
-      "url": "https://www.v2ex.com/t/1216614",
-      "sourceType": "radar",
-      "sourceName": "V2EX (创意工作者社区)",
-      "publishedAt": "2026-05-30T01:50:30Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "model_release",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "model_eval",
-        "apps"
-      ]
-    },
-    {
-      "id": "radar-dfc0d2980ae1c786c339b448c244cf0c02c28765",
-      "title": "乌克兰正利用人工智能无人机打击向俄军运送补给的关键车队",
-      "url": "https://www.bbc.com/news/articles/cdjp0n7rn41o?at_medium=RSS&at_campaign=rss",
-      "sourceType": "radar",
-      "sourceName": "www.bbc.com",
-      "publishedAt": "2026-05-30T01:49:03.725000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_general",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "general"
-      ]
-    },
-    {
-      "id": "radar-893539b4ab107cdbdae36ad00c09574a430adf6e",
-      "title": "白宫提议制定新规，赋予政治任命官员对研究拨款的最终审批权",
-      "url": "https://www.scientificamerican.com/article/white-house-proposes-new-rules-giving-political-appointees-final-say-on-research-grants",
-      "sourceType": "radar",
-      "sourceName": "Hacker News · 24h最热",
-      "publishedAt": "2026-05-30T01:39:52Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "curated_hotlist",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "practical",
-        "hot_projects"
-      ]
-    },
-    {
-      "id": "radar-7b243352949384fe47d7db35ddc2fd1f833f298b",
-      "title": "[Claude] iOS 端 Claude App 无法使用， Web 端可用",
-      "url": "https://www.v2ex.com/t/1216608",
-      "sourceType": "radar",
-      "sourceName": "V2EX (创意工作者社区)",
-      "publishedAt": "2026-05-30T01:19:13Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "model_release",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "practical",
-        "model_eval",
-        "apps"
-      ]
-    },
-    {
-      "id": "radar-9a456f7c05f543ea6ebb4dae26405002713f000b",
-      "title": "你的手机变遥控器，OpenAI 扩展 Codex 远程控制支持 Win10/Win11",
-      "url": "https://www.ithome.com/0/957/422.htm",
-      "sourceType": "radar",
-      "sourceName": "IT之家 (ITHome)",
-      "publishedAt": "2026-05-30T01:05:18Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "developer_tool",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "AI 编程与 Agent",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "AI 编程与 Agent方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "practical",
-        "agent_dev",
-        "company_strategy"
-      ]
-    },
-    {
-      "id": "radar-6e1c66c8b6906c97e99f01966448bbd2a99b3f8c",
-      "title": "缓解亏损压力，消息称 Meta 明年将推 AI 吊坠寻找新收入",
-      "url": "https://www.ithome.com/0/957/418.htm",
-      "sourceType": "radar",
-      "sourceName": "IT之家 (ITHome)",
-      "publishedAt": "2026-05-30T00:41:43Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "ai_general",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "company_strategy"
-      ]
-    },
-    {
-      "id": "radar-76ea70454f1c27d22c44eab0cd7d3d735ffc7ea1",
-      "title": "神秘的Hy3 LLM以巨大优势领跑OpenRouter模型排行榜",
-      "url": "https://minimaxir.com/2026/05/openrouter-hy3",
-      "sourceType": "radar",
-      "sourceName": "minimaxir.com",
-      "publishedAt": "2026-05-30T00:29:00.382000Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "model_release",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 matched_ai_signal。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "deep",
-        "model_eval",
-        "apps"
-      ]
-    },
-    {
-      "id": "radar-769873e1acd078471488c8df334768b144f2e989",
-      "title": "英国压制了移民，也伤害了自己",
-      "url": "https://www.economist.com/britain/2026/05/28/britain-has-crushed-immigration-and-harmed-itself",
-      "sourceType": "radar",
-      "sourceName": "Hacker News · 24h最热",
-      "publishedAt": "2026-05-30T00:23:35Z",
-      "upstreamScore": 6.5,
-      "upstreamLabel": "curated_hotlist",
-      "sourceNote": "",
-      "peopleMatches": [],
-      "isMustWatchPodcast": false,
-      "angle": "产业动态",
-      "summary": "这条来自 AI News Radar 的强相关信号，当前系统判断为 zeli_24h_hot_allowlist。需要点开原文确认细节和可用角度。",
-      "topicReason": "产业动态方向；来自 24 小时 AI 信号池，适合作为候选线索。",
-      "observedDate": "2026-05-31",
-      "categoryIds": [
-        "practical",
-        "hot_projects"
       ]
     }
   ]

@@ -38,7 +38,8 @@ function sourceLabel(item) {
     horizon: "Horizon",
     radar: "AI News Radar",
     waytoagi: "WaytoAGI",
-    podcast: "Podcast"
+    podcast: "Podcast",
+    rule: "规则"
   };
   return `${map[item.sourceType] || item.sourceType} · ${item.sourceName}`;
 }
@@ -55,7 +56,7 @@ function renderCoverage() {
     ["AI News Radar", `${coverage.aiNewsRadar.totalLoaded} 条`, "广覆盖：模型、Agent、产品、基础设施、开发者工具、热门清单"],
     ["Horizon", `${coverage.horizon.totalLoaded} 条`, "少量高分：中文摘要、背景解释、0-10 分"],
     ["WaytoAGI 7d", `${coverage.waytoagi.totalLoaded} 条`, "一周工具、工作流、实践内容，适合贴身影响型选题"],
-    ["Podcast", `${coverage.podcasts.totalLoaded} 条`, "补充播客线索，后续接转写稿后更有价值"]
+    ["Podcast", `${coverage.podcasts.totalLoaded} 条`, `${coverage.podcasts.mustWatchPeople || 0} 人白名单；人物命中、其他播客、全量池分开看`]
   ];
   coverageEl.innerHTML = "";
   for (const [title, value, copy] of rows) {
@@ -122,7 +123,8 @@ function renderItem(item) {
   node.querySelector(".summary").textContent = item.summary;
   node.querySelector(".reason").textContent = item.selectionReason || item.topicReason || "";
   const link = node.querySelector(".read-link");
-  link.href = item.url;
+  link.href = item.url || "#";
+  link.hidden = !item.url;
   return node;
 }
 

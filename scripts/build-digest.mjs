@@ -711,6 +711,37 @@ function buildBalancedSelection(id, title, description, items, mode, todayKey, l
   };
 }
 
+function buildPeopleRulesSelection(todayKey) {
+  const items = (podcastRules.mustWatchPeople || []).map((person, index) => ({
+    id: `must-watch-person-${normalizeKey({ title: person.name })}`,
+    title: person.name,
+    url: "",
+    sourceType: "rule",
+    sourceName: "必看人物名单",
+    publishedAt: `${todayKey}T00:00:00+08:00`,
+    upstreamScore: Number(person.tier || 0),
+    upstreamLabel: `tier_${person.tier || 0}`,
+    sourceNote: "",
+    peopleMatches: [],
+    isMustWatchPodcast: false,
+    angle: "人物名单",
+    summary: `${person.company}。别名：${(person.aliases || []).join(" / ")}。`,
+    topicReason: "出现在 AI 播客或访谈标题、简介中时，进入人物命中栏目。",
+    observedDate: todayKey,
+    categoryIds: ["podcast"],
+    selectionScore: Number(person.tier || 0),
+    selectionReason: `白名单第 ${index + 1} 位，tier ${person.tier || 0}。`
+  }));
+  return {
+    id: "podcast_people_rules",
+    title: "50人必看名单",
+    description: "当前播客人物命中的白名单。只有命中这些人，才会进入人物命中栏目。",
+    mode: "podcast_people_rules",
+    count: items.length,
+    items
+  };
+}
+
 async function readHistoryItems(todayKey) {
   try {
     const files = await fs.readdir(historyDir);
@@ -924,6 +955,7 @@ let selections = [
     "waytoagi_watch",
     todayKey
   ),
+  buildPeopleRulesSelection(todayKey),
   buildBalancedSelection(
     "podcast_watch",
     "最新播客访谈观察",
@@ -940,6 +972,26 @@ let selections = [
     "已抓到但不是最近 30 天发布的必看人物访谈，适合补课、做人物页或公司页资料。",
     monthItems.filter((item) => item.sourceType === "podcast" && item.isMustWatchPodcast && !publishedWithinDays(item, todayKey, 30)),
     "podcast_archive",
+    todayKey,
+    selectionSize,
+    6
+  ),
+  buildBalancedSelection(
+    "podcast_other",
+    "其他播客观察",
+    "没有命中 50 人白名单的播客/访谈，单独保留，方便你扫漏网选题。",
+    monthItems.filter((item) => item.sourceType === "podcast" && !item.isMustWatchPodcast),
+    "podcast_other",
+    todayKey,
+    selectionSize,
+    6
+  ),
+  buildBalancedSelection(
+    "podcast_all",
+    "播客全量池",
+    "所有已抓到的播客/访谈线索，包含人物命中与非人物命中，用来快速扫全量。",
+    monthItems.filter((item) => item.sourceType === "podcast"),
+    "podcast_all",
     todayKey,
     selectionSize,
     6
