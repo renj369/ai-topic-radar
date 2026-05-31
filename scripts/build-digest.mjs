@@ -711,34 +711,65 @@ function buildBalancedSelection(id, title, description, items, mode, todayKey, l
   };
 }
 
-function buildPeopleRulesSelection(todayKey) {
-  const items = (podcastRules.mustWatchPeople || []).map((person, index) => ({
-    id: `must-watch-person-${normalizeKey({ title: person.name })}`,
-    title: person.name,
-    url: "",
-    sourceType: "rule",
-    sourceName: "必看人物名单",
-    publishedAt: `${todayKey}T00:00:00+08:00`,
-    upstreamScore: Number(person.tier || 0),
-    upstreamLabel: `tier_${person.tier || 0}`,
-    sourceNote: "",
-    peopleMatches: [],
-    isMustWatchPodcast: false,
-    angle: "人物名单",
-    summary: `${person.company}。别名：${(person.aliases || []).join(" / ")}。`,
-    topicReason: "出现在 AI 播客或访谈标题、简介中时，进入人物命中栏目。",
-    observedDate: todayKey,
-    categoryIds: ["podcast"],
-    selectionScore: Number(person.tier || 0),
-    selectionReason: `白名单第 ${index + 1} 位，tier ${person.tier || 0}。`
-  }));
+function aliasMatchesItem(person, item) {
+  const haystack = itemSearchText(item);
+  return (person.aliases || [person.name]).some((alias) => keywordMatches(haystack, alias));
+}
+
+function buildPeopleRulesSelection(items, todayKey) {
+  const peopleItems = (podcastRules.mustWatchPeople || []).map((person, index) => {
+    const related = items
+      .filter((item) => item.sourceType !== "rule")
+      .filter((item) => item.peopleMatches?.some((match) => match.name === person.name) || aliasMatchesItem(person, item))
+      .sort((a, b) => new Date(b.publishedAt || b.observedDate) - new Date(a.publishedAt || a.observedDate))
+      .slice(0, 5);
+    const latest = related[0];
+    const latestDate = latest ? dateKeyFromIso(latest.publishedAt) || latest.observedDate || "日期未知" : "";
+    const relatedSummary = related.length
+      ? related.slice(0, 3).map((item) => {
+        const itemDate = dateKeyFromIso(item.publishedAt) || item.observedDate || "日期未知";
+        return `${itemDate}｜${item.sourceName}｜${item.title}`;
+      }).join("；")
+      : "当前资料池暂无命中。";
+    const score = Number(person.tier || 0) + Math.min(3, related.length);
+    return {
+      id: `must-watch-person-${normalizeKey({ title: person.name })}`,
+      title: person.name,
+      url: latest?.url || "",
+      sourceType: "rule",
+      sourceName: related.length ? `人物雷达 · ${related.length} 条命中` : "人物雷达 · 暂无命中",
+      publishedAt: latest?.publishedAt || `${todayKey}T00:00:00+08:00`,
+      upstreamScore: Number(person.tier || 0),
+      upstreamLabel: related.length ? `命中_${related.length}` : "暂无命中",
+      sourceNote: related.length ? "按最新命中排序" : "",
+      peopleMatches: [],
+      isMustWatchPodcast: false,
+      angle: "人物名单",
+      summary: `${person.company}。当前资料池命中 ${related.length} 条。${relatedSummary}`,
+      topicReason: related.length
+        ? `最新命中：${latestDate}｜${latest.sourceName}｜${latest.title}`
+        : `白名单第 ${index + 1} 位，tier ${person.tier || 0}；当前资料池没有命中。`,
+      observedDate: todayKey,
+      categoryIds: ["podcast"],
+      selectionScore: score,
+      selectionReason: related.length
+        ? `有近期信息，最新命中 ${latestDate}。`
+        : `暂无资料池命中；白名单第 ${index + 1} 位，tier ${person.tier || 0}。`
+    };
+  });
+  const itemsWithInfo = peopleItems.filter((item) => item.url);
+  const itemsWithoutInfo = peopleItems.filter((item) => !item.url);
+  const ordered = [
+    ...itemsWithInfo.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt) || b.selectionScore - a.selectionScore),
+    ...itemsWithoutInfo.sort((a, b) => b.selectionScore - a.selectionScore)
+  ];
   return {
     id: "podcast_people_rules",
     title: "50人必看名单",
-    description: "当前播客人物命中的白名单。只有命中这些人，才会进入人物命中栏目。",
+    description: "按近期命中排序的人物雷达：有播客/新闻/活动信息的人排上面，没信息的人排下面。",
     mode: "podcast_people_rules",
-    count: items.length,
-    items
+    count: ordered.length,
+    items: ordered
   };
 }
 
@@ -955,7 +986,7 @@ let selections = [
     "waytoagi_watch",
     todayKey
   ),
-  buildPeopleRulesSelection(todayKey),
+  buildPeopleRulesSelection(monthItems, todayKey),
   buildBalancedSelection(
     "podcast_watch",
     "最新播客访谈观察",
