@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-31T10:14:13.243Z",
+  "generatedAt": "2026-05-31T10:15:02.456Z",
   "dateKey": "2026-05-31",
   "title": "AI 产业选题编辑台",
   "description": "基于 AI News Radar、Horizon、WaytoAGI 7d 和 AI 播客 RSS 的中文候选选题摘要。默认脚本排序，可选低成本大模型评审。",
