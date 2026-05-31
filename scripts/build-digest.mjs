@@ -731,6 +731,18 @@ function buildPeopleRulesSelection(items, todayKey) {
         return `${itemDate}｜${item.sourceName}｜${item.title}`;
       }).join("；")
       : "当前资料池暂无命中。";
+    const relatedSignals = related.map((item) => ({
+      id: item.id,
+      title: item.title,
+      url: item.url,
+      sourceName: item.sourceName,
+      sourceType: item.sourceType,
+      publishedAt: item.publishedAt,
+      date: dateKeyFromIso(item.publishedAt) || item.observedDate || "日期未知",
+      upstreamScore: item.upstreamScore,
+      upstreamLabel: item.upstreamLabel,
+      summary: item.summary
+    }));
     const score = Number(person.tier || 0) + Math.min(3, related.length);
     return {
       id: `must-watch-person-${normalizeKey({ title: person.name })}`,
@@ -742,6 +754,7 @@ function buildPeopleRulesSelection(items, todayKey) {
       upstreamScore: Number(person.tier || 0),
       upstreamLabel: related.length ? `命中_${related.length}` : "暂无命中",
       sourceNote: related.length ? "按最新命中排序" : "",
+      relatedSignals,
       peopleMatches: [],
       isMustWatchPodcast: false,
       angle: "人物名单",

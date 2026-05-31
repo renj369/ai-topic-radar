@@ -121,10 +121,30 @@ function renderItem(item) {
   note.textContent = item.sourceNote || "";
   note.hidden = !item.sourceNote;
   node.querySelector(".summary").textContent = item.summary;
+  const relatedSignals = node.querySelector(".related-signals");
+  if (item.relatedSignals?.length) {
+    relatedSignals.hidden = false;
+    const rows = item.relatedSignals.map((signal) => {
+      const score = signal.upstreamScore != null ? ` · ${Number(signal.upstreamScore).toFixed(1)}` : "";
+      const label = signal.upstreamLabel ? `<span>${signal.upstreamLabel}${score}</span>` : "";
+      return `
+        <div class="signal-row">
+          <span class="signal-date">${signal.date || formatDate(signal.publishedAt)}</span>
+          <span class="signal-source">${signal.sourceName || ""}</span>
+          <a href="${signal.url}" target="_blank" rel="noopener noreferrer">${signal.title}</a>
+          ${label}
+        </div>
+      `;
+    }).join("");
+    relatedSignals.innerHTML = `<div class="signal-table">${rows}</div>`;
+  } else {
+    relatedSignals.hidden = true;
+    relatedSignals.innerHTML = "";
+  }
   node.querySelector(".reason").textContent = item.selectionReason || item.topicReason || "";
   const link = node.querySelector(".read-link");
   link.href = item.url || "#";
-  link.hidden = !item.url;
+  link.hidden = !item.url || item.relatedSignals?.length;
   return node;
 }
 

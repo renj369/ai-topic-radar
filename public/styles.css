@@ -316,6 +316,50 @@ button {
   color: var(--warn);
 }
 
+.related-signals {
+  margin: 10px 0 12px;
+}
+
+.signal-table {
+  display: grid;
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--border);
+}
+
+.signal-row {
+  display: grid;
+  grid-template-columns: 92px 150px minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  min-height: 42px;
+  background: var(--surface);
+  padding: 8px 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.signal-row a {
+  color: var(--text);
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.signal-row a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.signal-source,
+.signal-date {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .read-link {
   display: inline-flex;
   color: var(--accent);
@@ -381,5 +425,10 @@ button {
 
   .topic-card {
     padding: 15px;
+  }
+
+  .signal-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 }
